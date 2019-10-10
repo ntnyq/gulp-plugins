@@ -32,26 +32,7 @@ exports.dev = gulp.series(views)
 Input:
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>gulp-format-html</title>
-  </head>
-  <body>
-    <header>
-      <h1><span>I am h1 in header</span></h1>
-    </header>
-    <main>
-      <p><span>span</span><b>b</b><strong>strong</strong><em>em</em></p>
-    </main>
-    <footer>
-      <p>
-        <a href="https://github.com/ntnyq/gulp-format-html">gulp-format-html</a>
-      </p>
-    </footer>
-  </body>
-</html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>gulp-format-html</title></head><body><header><h1><span>I am h1 in header</span></h1></header><main><p><span>span</span><b>b</b><strong>strong</strong><em>em</em></p></main><footer><p><a href="https://github.com/ntnyq/gulp-format-html">gulp-format-html</a></p></footer></body></html>
 ```
 
 Output:

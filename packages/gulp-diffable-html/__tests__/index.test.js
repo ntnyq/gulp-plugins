@@ -42,7 +42,7 @@ describe('gulp-diffable-html', () => {
       stream.on('data', file => {
         expect(file).toBeDefined()
         expect(file.isBuffer()).toBe(true)
-        expect(file.contents.toString()).toBe(expected)
+        expect(file.contents.toString().trim()).toBe(expected.trim())
         done()
       })
       stream.write(fakeFile)
@@ -55,7 +55,7 @@ describe('gulp-diffable-html', () => {
       stream.on('data', file => {
         expect(file).toBeDefined()
         expect(file.isBuffer()).toBe(true)
-        expect(file.contents.toString()).toBe(expected)
+        expect(file.contents.toString().trim()).toBe(expected.trim())
         done()
       })
       stream.write(fakeFile)
@@ -72,7 +72,7 @@ describe('gulp-diffable-html', () => {
           expect(file.isStream()).toBe(true)
 
           file.contents.on('data', data => {
-            expect(data.toString()).toBe(expected)
+            expect(data.toString().trim()).toBe(expected.trim())
             done()
           })
         })

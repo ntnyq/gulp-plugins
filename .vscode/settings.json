@@ -1,11 +1,13 @@
 {
+  "eslint.enable": true,
+  "eslint.validate": ["javascript"],
+  "editor.codeActionsOnSave": {
+    "souce.eslint.fixAll": true
+  },
   "[html]": {
     "editor.formatOnSave": false
   },
-  "eslint.validate": [
-    {
-      "language": "javascript",
-      "autoFix": true
-    }
-  ]
+  "[javascript]": {
+    "editor.formatOnSave": false
+  }
 }

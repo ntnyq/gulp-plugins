@@ -1,6 +1,6 @@
 {
   "name": "gulp-upload-alioss",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "gulp plugin for uploading static files to Aliyun OSS",
   "keywords": [
     "gulp",

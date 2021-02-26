@@ -1,15 +1,9 @@
 module.exports = {
-  roots: [
-    '<rootDir>/packages',
-  ],
+  roots: ['<rootDir>/packages'],
 
   testRegex: '(/__tests?__/.*|(\\.|/)(test|spec)\\.js$)',
 
-  moduleFileExtensions: [
-    'js',
-    'json',
-    'node',
-  ],
+  moduleFileExtensions: ['js', 'json', 'node'],
 
   moduleNameMapper: {},
 }

@@ -7,5 +7,5 @@ some gulp plugins
 
 ## packages
 
-- [gulp-format-html](./packages/gulp-format-html)
-- [gulp-diffable-html](./packages/gulp-diffable-html)
+-   [gulp-format-html](./packages/gulp-format-html)
+-   [gulp-diffable-html](./packages/gulp-diffable-html)

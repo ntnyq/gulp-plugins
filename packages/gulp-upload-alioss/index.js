@@ -32,12 +32,19 @@ module.exports = function (options = {}) {
     }
 
     if (file.isStream()) {
-      this.emit('error', new PluginError(PLUGIN_NAME, 'Streams are not supported!'))
+      this.emit(
+        'error',
+        new PluginError(PLUGIN_NAME, 'Streams are not supported!'),
+      )
       return cb()
     }
 
     if (maxSize && file.contents.length > maxSize) {
-      log(`${PLUGIN_NAME}: ${colors.red(`${file.path}\t${file.contents.lengthy}`)}`)
+      log(
+        `${PLUGIN_NAME}: ${colors.red(
+          `${file.path}\t${file.contents.lengthy}`,
+        )}`,
+      )
       return cb()
     }
 
@@ -51,12 +58,17 @@ module.exports = function (options = {}) {
         region,
       })
 
-      oss.put(fileKey, file.path)
+      oss
+        .put(fileKey, file.path)
         .then(res => {
           log(`${PLUGIN_NAME}: ${colors.green(`${fileKey} upload done!`)}`)
         })
         .catch(err => {
-          log(`${PLUGIN_NAME}: ${colors.red(`${fileKey} upload failed. ${err.code}`)}`)
+          log(
+            `${PLUGIN_NAME}: ${colors.red(
+              `${fileKey} upload failed. ${err.code}`,
+            )}`,
+          )
         })
     }
 

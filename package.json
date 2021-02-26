@@ -1,14 +1,11 @@
 {
   "name": "root",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "release": "lerna version",
-    "test": "jest"
+    "test": "jest",
+    "release": "npx changeset version"
   },
   "husky": {
     "hooks": {
@@ -18,8 +15,7 @@
   },
   "commitlint": {
     "extends": [
-      "@commitlint/config-conventional",
-      "@commitlint/config-lerna-scopes"
+      "@commitlint/config-conventional"
     ]
   },
   "lint-staged": {
@@ -38,14 +34,12 @@
   "devDependencies": {
     "@commitlint/cli": "^12.0.0",
     "@commitlint/config-conventional": "^12.0.0",
-    "@commitlint/config-lerna-scopes": "^12.0.0",
     "@ntnyq/eslint-config": "^0.3.2",
     "@ntnyq/prettier-config": "^0.3.0",
     "@types/jest": "^26.0.20",
     "eslint": "^7.20.0",
     "husky": "4.3.8",
     "jest": "^26.6.3",
-    "lerna": "^3.22.1",
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
     "sort-package-json": "^1.49.0"

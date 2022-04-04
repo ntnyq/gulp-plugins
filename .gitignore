@@ -3,3 +3,7 @@ node_modules
 
 # Log files
 *.log*
+*.local
+*.tsbuildinfo
+dist
+packages/**/lib

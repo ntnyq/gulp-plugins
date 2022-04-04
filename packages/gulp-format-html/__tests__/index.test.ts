@@ -1,12 +1,14 @@
-const fs = require('fs')
-const path = require('path')
-const through = require('through2')
-const File = require('vinyl')
-const format = require('..')
+import fs from 'fs'
+import path from 'path'
+import { Transform } from 'stream'
+import through from 'through2'
+import File from 'vinyl'
+import { describe, it, expect } from 'vitest'
+import format from '../lib'
 
-const resolve = (...args) => path.resolve(__dirname, ...args)
+const resolve = (...args: string[]): string => path.resolve(__dirname, ...args)
 
-function toStream (contents) {
+function toStream (contents): Transform {
   const stream = through()
 
   stream.write(contents)

@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.base.json",
+  "references": [
+    {
+      "path": "./packages/gulp-format-html/tsconfig.json"
+    },
+    {
+      "path": "./packages/gulp-diffable-html/tsconfig.json"
+    }
+  ],
+  "files": [],
+  "include": ["./vitest.config.ts"]
+}

@@ -1,13 +1,9 @@
 {
-  "eslint.validate": ["javascript"],
-  "editor.codeActionsOnSave": {
-    "source.eslint.fixAll": true
-  },
   "[html]": {
     "editor.formatOnSave": false
   },
-  "[javascript]": {
+  "[typescript]": {
     "editor.formatOnSave": false
   },
-  "cSpell.words": ["fcall"]
+  "cSpell.words": ["fcall", "pnpm", "tsbuildinfo", "vitest"]
 }

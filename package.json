@@ -2,16 +2,11 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "test": "jest",
-    "release": "changeset version"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+    "build": "pnpm -r run build",
+    "clean": "pnpm -r run clean",
+    "prepare": "husky install",
+    "release": "changeset version",
+    "test": "vitest"
   },
   "commitlint": {
     "extends": [
@@ -19,30 +14,34 @@
     ]
   },
   "lint-staged": {
-    "*.{js,jsx}": "eslint --fix",
+    "*.{js,ts,jsx,tsx}": "eslint --fix",
     "*.{json,md}": "prettier --write",
     "package.json": "sort-package-json"
   },
   "prettier": "@ntnyq/prettier-config",
   "eslintConfig": {
-    "env": {
-      "jest": true
-    },
-    "extends": "@ntnyq",
+    "extends": "@ntnyq/typescript",
     "root": true
   },
   "devDependencies": {
     "@changesets/cli": "^2.14.1",
-    "@commitlint/cli": "^12.0.0",
-    "@commitlint/config-conventional": "^12.0.0",
-    "@ntnyq/eslint-config": "^0.3.2",
+    "@commitlint/cli": "^16.2.3",
+    "@commitlint/config-conventional": "^16.2.1",
+    "@ntnyq/eslint-config-typescript": "^0.5.0",
     "@ntnyq/prettier-config": "^0.3.0",
-    "@types/jest": "^26.0.20",
-    "eslint": "^7.20.0",
-    "husky": "4.3.8",
-    "jest": "^26.6.3",
-    "lint-staged": "^10.5.4",
+    "@types/fancy-log": "^1.3.1",
+    "@types/js-beautify": "^1.13.3",
+    "@types/through2": "^2.0.36",
+    "@types/vinyl": "^2.0.6",
+    "eslint": "^8.12.0",
+    "husky": "7.0.4",
+    "lint-staged": "^12.3.7",
+    "pnpm": "^6.32.4",
     "prettier": "^2.2.1",
-    "sort-package-json": "^1.49.0"
+    "rimraf": "^3.0.2",
+    "sort-package-json": "^1.49.0",
+    "typescript": "^4.6.3",
+    "vinyl": "^2.2.1",
+    "vitest": "^0.8.4"
   }
 }

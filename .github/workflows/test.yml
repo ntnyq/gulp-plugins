@@ -1,0 +1,28 @@
+name: Test
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: ['14', '16']
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: latest
+          run_install: true
+      - run: pnpm run build
+      - run: pnpm run test

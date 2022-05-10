@@ -26,60 +26,60 @@ const expected = fs.readFileSync(expectedFilePath, 'utf8')
 
 describe('gulp-diffable-html', () => {
   describe('file-contents - buffer', () => {
-    it('Should ignore empty file', done => {
+    it('Should ignore empty file', () => new Promise((resolve, reject) => {
       const stream = format()
 
-      stream.on('error', done)
+      stream.on('error', reject)
       stream.on('data', file => {
         expect(file.isNull()).toBe(true)
-        done()
+        resolve()
       })
       stream.write(new File({}))
-    })
+    }))
 
-    it('Should format my HTML files as expected', done => {
+    it('Should format my HTML files as expected', () => new Promise((resolve, reject) => {
       const stream = format()
 
-      stream.on('error', done)
+      stream.on('error', reject)
       stream.on('data', file => {
         expect(file).toBeDefined()
         expect(file.isBuffer()).toBe(true)
         expect(file.contents.toString().trim()).toBe(expected.trim())
-        done()
+        resolve()
       })
       stream.write(fakeFile)
-    })
+    }))
 
-    it('Should works well when option verbose set', done => {
+    it('Should works well when option verbose set', () => new Promise((resolve, reject) => {
       const stream = format({ verbose: true })
 
-      stream.on('error', done)
+      stream.on('error', reject)
       stream.on('data', file => {
         expect(file).toBeDefined()
         expect(file.isBuffer()).toBe(true)
         expect(file.contents.toString().trim()).toBe(expected.trim())
-        done()
+        resolve()
       })
       stream.write(fakeFile)
-    })
+    }))
+  })
 
-    describe('file-contents - stream', () => {
-      it('Should format my HTML files', done => {
-        const fixture = new File({ contents: toStream(fakeFileContent) })
-        const stream = format()
+  describe('file-contents - stream', () => {
+    it('Should format my HTML files', () => new Promise((resolve, reject) => {
+      const fixture = new File({ contents: toStream(fakeFileContent) })
+      const stream = format()
 
-        stream.on('error', done)
-        stream.on('data', file => {
-          expect(file).toBeDefined()
-          expect(file.isStream()).toBe(true)
+      stream.on('error', reject)
+      stream.on('data', file => {
+        expect(file).toBeDefined()
+        expect(file.isStream()).toBe(true)
 
-          file.contents.on('data', data => {
-            expect(data.toString().trim()).toBe(expected.trim())
-            done()
-          })
+        file.contents.on('data', data => {
+          expect(data.toString().trim()).toBe(expected.trim())
+          resolve()
         })
-        stream.write(fixture)
       })
-    })
+      stream.write(fixture)
+    }))
   })
 })

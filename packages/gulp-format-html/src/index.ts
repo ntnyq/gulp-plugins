@@ -1,35 +1,38 @@
-import { Transform } from 'stream'
-import through, { TransformCallback } from 'through2'
+import type { Transform } from 'stream'
+import type { TransformCallback } from 'through2'
+import type { HTMLBeautifyOptions } from 'js-beautify'
+import type File from 'vinyl'
+
+import through from 'through2'
 import PluginError from 'plugin-error'
-import { html as beautifyHtml, HTMLBeautifyOptions } from 'js-beautify'
+import { html as beautifyHtml } from 'js-beautify'
 import log from 'fancy-log'
-import File from 'vinyl'
 
 interface GulpFormatHtmlOptions extends HTMLBeautifyOptions {
   /**
    * Display name of file from stream that is being formatting.
    */
-   verbose?: boolean
+  verbose?: boolean
 }
 
-type DiffableContents = Buffer | NodeJS.ReadableStream | null
+type FormatableContents = Buffer | NodeJS.ReadableStream | null
 
-const PLUGIN_NAME = 'gulp-format-html'
+const PLUGIN_NAME = `gulp-format-html`
 const DEFAULT_OPTIONS = {
   indent_size: 2,
   inline: [],
-  content_unformatted: ['pre', 'textarea', 'script'],
+  content_unformatted: [`pre`, `textarea`, `script`],
 }
 
 const GulpFormatHtml = (options: GulpFormatHtmlOptions = {}): Transform => {
   options = Object.assign({}, DEFAULT_OPTIONS, options)
 
-  return through.obj(function (file: File, enc, next) {
+  return through.obj((file: File, enc, next) => {
     if (file.isNull()) return next(null, file)
 
-    const beautify = (buf:DiffableContents, _: unknown, cb:TransformCallback):void => {
+    const beautify = (buf: FormatableContents, _: unknown, cb: TransformCallback): void => {
       try {
-        const contents = Buffer.from(beautifyHtml(buf?.toString() ?? '', options))
+        const contents = Buffer.from(beautifyHtml(buf?.toString() ?? ``, options))
 
         if (next === cb) {
           file.contents = contents

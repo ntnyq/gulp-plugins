@@ -1,11 +1,13 @@
-import { Transform } from 'stream'
-import through, { TransformCallback } from 'through2'
+import type { Transform } from 'stream'
+import type { TransformCallback } from 'through2'
+import type File from 'vinyl'
+
+import through from 'through2'
 import toDiffableHtml from 'diffable-html'
 import PluginError from 'plugin-error'
 import log from 'fancy-log'
-import File from 'vinyl'
 
-const PLUGIN_NAME = 'gulp-diffable-html'
+const PLUGIN_NAME = `gulp-diffable-html`
 
 interface GulpDiffableHtmlOptions {
   verbose?: boolean
@@ -14,7 +16,7 @@ interface GulpDiffableHtmlOptions {
 type DiffableContents = Buffer | NodeJS.ReadableStream | null
 
 const GulpDiffableHtml = (options: GulpDiffableHtmlOptions = {}): Transform =>
-  through.obj(function (file: File, enc, next) {
+  through.obj((file: File, enc, next) => {
     if (file.isNull()) return next(null, file)
 
     const diffable = (
@@ -23,7 +25,7 @@ const GulpDiffableHtml = (options: GulpDiffableHtmlOptions = {}): Transform =>
       cb: TransformCallback,
     ): void => {
       try {
-        const contents = Buffer.from(toDiffableHtml(buf?.toString()))
+        const contents = Buffer.from(toDiffableHtml(buf?.toString(), options))
 
         if (next === cb) {
           file.contents = contents

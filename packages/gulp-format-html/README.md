@@ -14,14 +14,14 @@ $ yarn add gulp-format-html -D
 ## Setup
 
 ```js
-const gulp = require('gulp')
-const formatHtml = require('gulp-format-html')
+const gulp = require(`gulp`)
+const formatHtml = require(`gulp-format-html`)
 
 function views() {
     return gulp
-        .src('views/**/*.html')
+        .src(`views/**/*.html`)
         .pipe(formatHtml())
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest(`dist`))
 }
 
 exports.dev = gulp.series(views)

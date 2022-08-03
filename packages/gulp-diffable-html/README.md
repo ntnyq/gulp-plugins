@@ -16,14 +16,14 @@ $ yarn add gulp-diffable-html -D
 ## Setup
 
 ```js
-const gulp = require('gulp')
-const diffableHtml = require('gulp-diffable-html')
+const gulp = require(`gulp`)
+const diffableHtml = require(`gulp-diffable-html`)
 
 function views() {
     return gulp
-        .src('views/**/*.html')
+        .src(`views/**/*.html`)
         .pipe(diffableHtml())
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest(`dist`))
 }
 
 exports.dev = gulp.series(views)
@@ -100,7 +100,14 @@ Output:
 
 ## Options
 
-**gulp-diffable-html** is based on [diffable-html](https://github.com/rayrutjes/diffable-html) which is a **zero-config** HTML formatter.
+**gulp-diffable-html** is based on [diffable-html](https://github.com/rayrutjes/diffable-html).
+
+### sortAttributes
+
+-   **type** `function`
+-   **default** `(names) => names`
+
+Customize the order of attributes on HTML tag.
 
 ### verbose
 

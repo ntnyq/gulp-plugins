@@ -17,14 +17,11 @@ jobs:
         node: [14, 16, 18]
     steps:
       - uses: actions/checkout@v3
-
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
-
       - uses: pnpm/action-setup@v2
-        with:
-          run_install: true
 
+      - run: pnpm install --frozen-lockfile
       - run: pnpm run build
       - run: pnpm run test

@@ -1,17 +1,19 @@
 import type { Transform } from 'stream'
-import type { TransformCallback } from 'through2'
-import type File from 'vinyl'
-
 import through from 'through2'
 import toDiffableHtml from 'diffable-html'
 import PluginError from 'plugin-error'
-import log from 'fancy-log'
-
-const PLUGIN_NAME = `gulp-diffable-html`
+import { createLogger } from '@ntnyq/logger'
+import type { TransformCallback } from 'through2'
+import type File from 'vinyl'
 
 interface GulpDiffableHtmlOptions {
   verbose?: boolean
 }
+
+const PLUGIN_NAME = `gulp-diffable-html`
+const logger = createLogger({
+  time: `HH:mm:ss`,
+})
 
 type DiffableContents = Buffer | NodeJS.ReadableStream | null
 
@@ -50,7 +52,7 @@ const GulpDiffableHtml = (options: GulpDiffableHtmlOptions = {}): Transform =>
       file.contents = file.contents.pipe(through(diffable))
     } else {
       if (options.verbose) {
-        log(`${PLUGIN_NAME} is formmating file:`, file.path)
+        logger.info(`${PLUGIN_NAME} is formmating file: ${file.path}`)
       }
 
       diffable(file.contents, null, next)

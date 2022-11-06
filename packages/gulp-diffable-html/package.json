@@ -1,6 +1,6 @@
 {
   "name": "gulp-diffable-html",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "gulp plugin formatting html via diffable-html",
   "keywords": [
     "beauty",
@@ -16,13 +16,16 @@
     "url": "https://github.com/ntnyq/gulp-plugins/issues"
   },
   "license": "MIT",
-  "author": "ntnyq <ntnyq13@gmail.com>",
+  "author": {
+    "name": "ntnyq",
+    "email": "ntnyq13@gmail.com"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ntnyq/gulp-plugins.git",
     "directory": "packages/gulp-diffable-html"
   },
-  "main": "lib/index.js",
+  "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "files": [
     "lib"
@@ -32,8 +35,8 @@
     "clean": "rimraf lib *.tsbuildinfo"
   },
   "dependencies": {
+    "@ntnyq/logger": "^0.0.2",
     "diffable-html": "^5.0.0",
-    "fancy-log": "^2.0.0",
     "plugin-error": "^2.0.0",
     "through2": "^4.0.2"
   },

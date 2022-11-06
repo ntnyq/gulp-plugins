@@ -1,12 +1,11 @@
 import type { Transform } from 'stream'
-import type { TransformCallback } from 'through2'
-import type { HTMLBeautifyOptions } from 'js-beautify'
-import type File from 'vinyl'
-
 import through from 'through2'
 import PluginError from 'plugin-error'
 import { html as beautifyHtml } from 'js-beautify'
-import log from 'fancy-log'
+import { createLogger } from '@ntnyq/logger'
+import type { TransformCallback } from 'through2'
+import type { HTMLBeautifyOptions } from 'js-beautify'
+import type File from 'vinyl'
 
 interface GulpFormatHtmlOptions extends HTMLBeautifyOptions {
   /**
@@ -23,6 +22,9 @@ const DEFAULT_OPTIONS = {
   inline: [],
   content_unformatted: [`pre`, `textarea`, `script`],
 }
+const logger = createLogger({
+  time: `HH:mm:ss`,
+})
 
 const GulpFormatHtml = (options: GulpFormatHtmlOptions = {}): Transform => {
   options = Object.assign({}, DEFAULT_OPTIONS, options)
@@ -57,7 +59,7 @@ const GulpFormatHtml = (options: GulpFormatHtmlOptions = {}): Transform => {
       file.contents = file.contents.pipe(through(beautify))
     } else {
       if (options.verbose) {
-        log(`${PLUGIN_NAME} is formatting file:`, file.path)
+        logger.info(`${PLUGIN_NAME} is formatting file: ${file.path}`)
       }
 
       beautify(file.contents, null, next)

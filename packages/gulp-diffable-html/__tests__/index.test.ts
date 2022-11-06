@@ -8,7 +8,7 @@ import format from '../lib'
 
 const resolve = (...args: string[]): string => path.resolve(__dirname, ...args)
 
-function toStream (contents): Transform {
+function toStream (contents: Buffer): Transform {
   const stream = through()
   stream.write(contents)
   return stream

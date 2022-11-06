@@ -17,11 +17,8 @@ $ yarn add gulp-format-html -D
 const gulp = require(`gulp`)
 const formatHtml = require(`gulp-format-html`)
 
-function views() {
-    return gulp
-        .src(`views/**/*.html`)
-        .pipe(formatHtml())
-        .pipe(gulp.dest(`dist`))
+function views () {
+  return gulp.src(`views/**/*.html`).pipe(formatHtml()).pipe(gulp.dest(`dist`))
 }
 
 exports.dev = gulp.series(views)

@@ -8,7 +8,7 @@ import format from '../lib'
 
 const resolve = (...args: string[]): string => path.resolve(__dirname, ...args)
 
-function toStream (contents): Transform {
+function toStream (contents: Buffer): Transform {
   const stream = through()
   stream.write(contents)
   return stream
@@ -21,7 +21,7 @@ const fakeFile = new File({
   contents: fakeFileContent,
 })
 
-describe(`gulp-diffable-html`, () => {
+describe(`gulp-format-html`, () => {
   describe(`file-contents - buffer`, () => {
     it(`Should ignore empty file`, () => new Promise<void>((resolve, reject) => {
       const stream = format()

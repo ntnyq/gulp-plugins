@@ -19,11 +19,8 @@ $ yarn add gulp-diffable-html -D
 const gulp = require(`gulp`)
 const diffableHtml = require(`gulp-diffable-html`)
 
-function views() {
-    return gulp
-        .src(`views/**/*.html`)
-        .pipe(diffableHtml())
-        .pipe(gulp.dest(`dist`))
+function views () {
+  return gulp.src(`views/**/*.html`).pipe(diffableHtml()).pipe(gulp.dest(`dist`))
 }
 
 exports.dev = gulp.series(views)

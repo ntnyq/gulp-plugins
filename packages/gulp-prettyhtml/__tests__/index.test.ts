@@ -21,11 +21,10 @@ const fakeFile = new File({
   contents: fakeFileContent,
 })
 
-describe(`gulp-format-html`, () => {
+describe(`gulp-prettyhtml`, () => {
   describe(`file-contents - buffer`, () => {
     it(`Should ignore empty file`, () => new Promise<void>((resolve, reject) => {
       const stream = format()
-
       stream.on(`error`, reject)
       stream.on(`data`, file => {
         expect(file.isNull()).toBeTruthy()
@@ -42,14 +41,14 @@ describe(`gulp-format-html`, () => {
         expect(file).toBeDefined()
         expect(file.isBuffer()).toBeTruthy()
         expect(file.contents.toString().trim()).toMatchInlineSnapshot(`
-          "<!DOCTYPE html>
+          "<!doctype html>
+          <!--[if IE 9]>.... some HTML here ....<![endif]-->
+
           <html lang=\\"en\\">
-
           <head>
-            <meta charset=\\"UTF-8\\">
-            <title>gulp-format-html</title>
+            <meta charset=\\"UTF-8\\" />
+            <title>gulp-prettyhtml</title>
           </head>
-
           <body>
             <header>
               <h1>
@@ -58,19 +57,24 @@ describe(`gulp-format-html`, () => {
             </header>
             <main>
               <p>
-                <span>span</span>
+                <!---->
+                <span></span>
                 <b>b</b>
                 <strong>strong</strong>
-                <em>em</em>
+                <em>&copy;</em>
+                <!-- This comment should be removed -->
               </p>
             </main>
             <footer>
               <p>
-                <a href=\\"https://github.com/ntnyq/gulp-format-html\\">gulp-format-html</a>
+                <a
+                  href=\\"https://github.com/ntnyq/gulp-prettyhtml\\"
+                  target=\\"_blank\\"
+                  rel=\\"noopener\\"
+                >gulp-prettyhtml</a>
               </p>
             </footer>
           </body>
-
           </html>"
         `)
         resolve()
@@ -86,14 +90,15 @@ describe(`gulp-format-html`, () => {
         expect(file).toBeDefined()
         expect(file.isBuffer()).toBeTruthy()
         expect(file.contents.toString().trim()).toMatchInlineSnapshot(`
-          "<!DOCTYPE html>
+          "<!doctype html>
+          <!--[if IE 9]>.... some HTML here ....<![endif]-->
+
+
           <html lang=\\"en\\">
-
           <head>
-            <meta charset=\\"UTF-8\\">
-            <title>gulp-format-html</title>
+            <meta charset=\\"UTF-8\\" />
+            <title>gulp-prettyhtml</title>
           </head>
-
           <body>
             <header>
               <h1>
@@ -102,19 +107,24 @@ describe(`gulp-format-html`, () => {
             </header>
             <main>
               <p>
-                <span>span</span>
+                <!---->
+                <span></span>
                 <b>b</b>
                 <strong>strong</strong>
-                <em>em</em>
+                <em>&copy;</em>
+                <!-- This comment should be removed -->
               </p>
             </main>
             <footer>
               <p>
-                <a href=\\"https://github.com/ntnyq/gulp-format-html\\">gulp-format-html</a>
+                <a
+                  href=\\"https://github.com/ntnyq/gulp-prettyhtml\\"
+                  target=\\"_blank\\"
+                  rel=\\"noopener\\"
+                >gulp-prettyhtml</a>
               </p>
             </footer>
           </body>
-
           </html>"
         `)
         resolve()
@@ -132,17 +142,16 @@ describe(`gulp-format-html`, () => {
       stream.on(`data`, file => {
         expect(file).toBeDefined()
         expect(file.isStream()).toBeTruthy()
-
         file.contents.on(`data`, data => {
           expect(data.toString().trim()).toMatchInlineSnapshot(`
-            "<!DOCTYPE html>
+            "<!doctype html>
+            <!--[if IE 9]>.... some HTML here ....<![endif]-->
+
             <html lang=\\"en\\">
-
             <head>
-              <meta charset=\\"UTF-8\\">
-              <title>gulp-format-html</title>
+              <meta charset=\\"UTF-8\\" />
+              <title>gulp-prettyhtml</title>
             </head>
-
             <body>
               <header>
                 <h1>
@@ -151,19 +160,24 @@ describe(`gulp-format-html`, () => {
               </header>
               <main>
                 <p>
-                  <span>span</span>
+                  <!---->
+                  <span></span>
                   <b>b</b>
                   <strong>strong</strong>
-                  <em>em</em>
+                  <em>&copy;</em>
+                  <!-- This comment should be removed -->
                 </p>
               </main>
               <footer>
                 <p>
-                  <a href=\\"https://github.com/ntnyq/gulp-format-html\\">gulp-format-html</a>
+                  <a
+                    href=\\"https://github.com/ntnyq/gulp-prettyhtml\\"
+                    target=\\"_blank\\"
+                    rel=\\"noopener\\"
+                  >gulp-prettyhtml</a>
                 </p>
               </footer>
             </body>
-
             </html>"
           `)
           resolve()

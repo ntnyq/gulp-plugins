@@ -6,6 +6,9 @@
     },
     {
       "path": "./packages/gulp-diffable-html/tsconfig.json"
+    },
+    {
+      "path": "./packages/gulp-prettyhtml/tsconfig.json"
     }
   ],
   "files": [],

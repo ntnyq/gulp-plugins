@@ -27,7 +27,7 @@ describe(`gulp-diffable-html`, () => {
       const stream = format()
       stream.on(`error`, reject)
       stream.on(`data`, file => {
-        expect(file.isNull()).toBe(true)
+        expect(file.isNull()).toBeTruthy()
         resolve()
       })
       stream.write(new File({}))
@@ -39,7 +39,7 @@ describe(`gulp-diffable-html`, () => {
       stream.on(`error`, reject)
       stream.on(`data`, file => {
         expect(file).toBeDefined()
-        expect(file.isBuffer()).toBe(true)
+        expect(file.isBuffer()).toBeTruthy()
         expect(file.contents.toString().trim()).toMatchInlineSnapshot(`
           "<!DOCTYPE html>
           <!--[if IE 9]>.... some HTML here ....<![endif]-->
@@ -98,7 +98,7 @@ describe(`gulp-diffable-html`, () => {
       stream.on(`error`, reject)
       stream.on(`data`, file => {
         expect(file).toBeDefined()
-        expect(file.isBuffer()).toBe(true)
+        expect(file.isBuffer()).toBeTruthy()
         expect(file.contents.toString().trim()).toMatchInlineSnapshot(`
           "<!DOCTYPE html>
           <!--[if IE 9]>.... some HTML here ....<![endif]-->
@@ -160,7 +160,7 @@ describe(`gulp-diffable-html`, () => {
       stream.on(`error`, reject)
       stream.on(`data`, file => {
         expect(file).toBeDefined()
-        expect(file.isStream()).toBe(true)
+        expect(file.isStream()).toBeTruthy()
         file.contents.on(`data`, data => {
           expect(data.toString().trim()).toMatchInlineSnapshot(`
             "<!DOCTYPE html>

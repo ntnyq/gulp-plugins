@@ -23,6 +23,7 @@
     "fcall",
     "noopener",
     "pnpm",
+    "starptech",
     "tsbuildinfo",
     "vitest"
   ]

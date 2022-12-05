@@ -21,7 +21,7 @@ const fakeFile = new File({
   contents: fakeFileContent,
 })
 
-describe(`gulp-prettyhtml`, () => {
+describe(`@ntnyq/gulp-prettyhtml`, () => {
   describe(`file-contents - buffer`, () => {
     it(`Should ignore empty file`, () => new Promise<void>((resolve, reject) => {
       const stream = format()
@@ -47,7 +47,7 @@ describe(`gulp-prettyhtml`, () => {
           <html lang=\\"en\\">
           <head>
             <meta charset=\\"UTF-8\\" />
-            <title>gulp-prettyhtml</title>
+            <title>@ntnyq/gulp-prettyhtml</title>
           </head>
           <body>
             <header>
@@ -68,7 +68,7 @@ describe(`gulp-prettyhtml`, () => {
             <footer>
               <p>
                 <a
-                  href=\\"https://github.com/ntnyq/gulp-prettyhtml\\"
+                  href=\\"https://github.com/ntnyq/gulp-plugins/tree/main/packages/@ntnyq/gulp-prettyhtml\\"
                   target=\\"_blank\\"
                   rel=\\"noopener\\"
                 >gulp-prettyhtml</a>
@@ -97,7 +97,7 @@ describe(`gulp-prettyhtml`, () => {
           <html lang=\\"en\\">
           <head>
             <meta charset=\\"UTF-8\\" />
-            <title>gulp-prettyhtml</title>
+            <title>@ntnyq/gulp-prettyhtml</title>
           </head>
           <body>
             <header>
@@ -118,7 +118,7 @@ describe(`gulp-prettyhtml`, () => {
             <footer>
               <p>
                 <a
-                  href=\\"https://github.com/ntnyq/gulp-prettyhtml\\"
+                  href=\\"https://github.com/ntnyq/gulp-plugins/tree/main/packages/@ntnyq/gulp-prettyhtml\\"
                   target=\\"_blank\\"
                   rel=\\"noopener\\"
                 >gulp-prettyhtml</a>
@@ -150,7 +150,7 @@ describe(`gulp-prettyhtml`, () => {
             <html lang=\\"en\\">
             <head>
               <meta charset=\\"UTF-8\\" />
-              <title>gulp-prettyhtml</title>
+              <title>@ntnyq/gulp-prettyhtml</title>
             </head>
             <body>
               <header>
@@ -171,7 +171,7 @@ describe(`gulp-prettyhtml`, () => {
               <footer>
                 <p>
                   <a
-                    href=\\"https://github.com/ntnyq/gulp-prettyhtml\\"
+                    href=\\"https://github.com/ntnyq/gulp-plugins/tree/main/packages/@ntnyq/gulp-prettyhtml\\"
                     target=\\"_blank\\"
                     rel=\\"noopener\\"
                   >gulp-prettyhtml</a>

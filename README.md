@@ -7,9 +7,9 @@ some gulp plugins
 
 ## packages
 
--   [gulp-prettyhtml](./packages/gulp-prettyhtml)
 -   [gulp-format-html](./packages/gulp-format-html)
 -   [gulp-diffable-html](./packages/gulp-diffable-html)
+-   [@ntnyq/gulp-prettyhtml](./packages/gulp-prettyhtml)
 
 ## License
 

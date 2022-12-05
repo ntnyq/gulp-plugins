@@ -1,21 +1,21 @@
-# gulp-prettyhtml
+# @ntnyq/gulp-prettyhtml
 
-[![NPM VERSION](https://img.shields.io/npm/v/gulp-prettyhtml.svg)](https://www.npmjs.com/package/gulp-prettyhtml)
-[![NPM DOWNLOADS](https://img.shields.io/npm/dm/gulp-prettyhtml.svg)](https://www.npmjs.com/package/gulp-prettyhtml)
+[![NPM VERSION](https://img.shields.io/npm/v/@ntnyq/gulp-prettyhtml.svg)](https://www.npmjs.com/package/@ntnyq/gulp-prettyhtml)
+[![NPM DOWNLOADS](https://img.shields.io/npm/dm/@ntnyq/gulp-prettyhtml.svg)](https://www.npmjs.com/package/@ntnyq/gulp-prettyhtml)
 
 ## Install
 
 ```bash
-$ npm install gulp-prettyhtml --save-dev
+$ npm install @ntnyq/gulp-prettyhtml --save-dev
 # OR
-$ yarn add gulp-prettyhtml -D
+$ yarn add @ntnyq/gulp-prettyhtml -D
 ```
 
 ## Setup
 
 ```js
 const gulp = require(`gulp`)
-const prettyHtml = require(`gulp-prettyhtml`)
+const prettyHtml = require(`@ntnyq/gulp-prettyhtml`)
 
 function views () {
   return gulp.src(`views/**/*.html`).pipe(prettyHtml()).pipe(gulp.dest(`dist`))
@@ -30,7 +30,7 @@ Input:
 
 <!-- prettier-ignore-start -->
 ```html
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>gulp-prettyhtml</title></head><body><header><h1><span>I am h1 in header</span></h1></header><main><p><span>span</span><b>b</b><strong>strong</strong><em>em</em></p></main><footer><p><a href="https://github.com/ntnyq/gulp-prettyhtml">gulp-prettyhtml</a></p></footer></body></html>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>@ntnyq/gulp-prettyhtml</title></head><body><header><h1><span>I am h1 in header</span></h1></header><main><p><span>span</span><b>b</b><strong>strong</strong><em>em</em></p></main><footer><p><a href="https://github.com/ntnyq/gulp-plugins/tree/main/packages/gulp-prettyhtml">@ntnyq/gulp-prettyhtml</a></p></footer></body></html>
 ```
 <!-- prettier-ignore-end -->
 
@@ -44,7 +44,7 @@ Output:
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>gulp-prettyhtml</title>
+  <title>@ntnyq/gulp-prettyhtml</title>
 </head>
 <body>
   <header>
@@ -65,10 +65,10 @@ Output:
   <footer>
     <p>
       <a
-        href="https://github.com/ntnyq/gulp-prettyhtml"
+        href="https://github.com/ntnyq/gulp-plugins/tree/main/packages/gulp-prettyhtml"
         target="_blank"
         rel="noopener"
-      >gulp-prettyhtml</a>
+      >@ntnyq/gulp-prettyhtml</a>
     </p>
   </footer>
 </body>
@@ -78,7 +78,7 @@ Output:
 
 ## Options
 
-**gulp-prettyhtml** is based on [@starptech/prettyhtml](https://github.com/Prettyhtml/prettyhtml#readme). All it's [options](https://github.com/Prettyhtml/prettyhtml#prettyhtmldoc-string-options-vfile) is supported.
+**@ntnyq/gulp-prettyhtml** is based on [@starptech/prettyhtml](https://github.com/Prettyhtml/prettyhtml#readme). All it's [options](https://github.com/Prettyhtml/prettyhtml#prettyhtmldoc-string-options-vfile) is supported.
 
 ### verbose
 

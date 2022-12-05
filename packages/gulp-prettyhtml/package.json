@@ -1,5 +1,5 @@
 {
-  "name": "gulp-prettyhtml",
+  "name": "@ntnyq/gulp-prettyhtml",
   "version": "1.0.0",
   "description": "gulp plugin formatting html via prettyhtml",
   "keywords": [
@@ -41,5 +41,8 @@
   },
   "engines": {
     "node": ">=14.19.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

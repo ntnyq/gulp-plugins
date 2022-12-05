@@ -38,40 +38,47 @@ Output:
 
 <!-- prettier-ignore-start -->
 ```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>gulp-prettyhtml</title>
-  </head>
+<!doctype html>
+<!--[if IE 9]>.... some HTML here ....<![endif]-->
 
-  <body>
-    <header>
-      <h1>
-        <span>I am h1 in header</span>
-      </h1>
-    </header>
-    <main>
-      <p>
-        <span>span</span>
-        <b>b</b>
-        <strong>strong</strong>
-        <em>em</em>
-      </p>
-    </main>
-    <footer>
-      <p>
-        <a href="https://github.com/ntnyq/gulp-prettyhtml">gulp-prettyhtml</a>
-      </p>
-    </footer>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>gulp-prettyhtml</title>
+</head>
+<body>
+  <header>
+    <h1>
+      <span>I am h1 in header</span>
+    </h1>
+  </header>
+  <main>
+    <p>
+      <!---->
+      <span></span>
+      <b>b</b>
+      <strong>strong</strong>
+      <em>&copy;</em>
+      <!-- This comment should be removed -->
+    </p>
+  </main>
+  <footer>
+    <p>
+      <a
+        href="https://github.com/ntnyq/gulp-prettyhtml"
+        target="_blank"
+        rel="noopener"
+      >gulp-prettyhtml</a>
+    </p>
+  </footer>
+</body>
 </html>
 ```
 <!-- prettier-ignore-end -->
 
 ## Options
 
-**gulp-prettyhtml** is based on [js-beautify](https://github.com/beautify-web/js-beautify), Check it's [HTML options](https://github.com/beautify-web/js-beautify#css--html) for detail.
+**gulp-prettyhtml** is based on [@starptech/prettyhtml](https://github.com/Prettyhtml/prettyhtml#readme). All it's [options](https://github.com/Prettyhtml/prettyhtml#prettyhtmldoc-string-options-vfile) is supported.
 
 ### verbose
 

@@ -10,3 +10,7 @@ some gulp plugins
 -   [gulp-prettyhtml](./packages/gulp-prettyhtml)
 -   [gulp-format-html](./packages/gulp-format-html)
 -   [gulp-diffable-html](./packages/gulp-diffable-html)
+
+## License
+
+[MIT](./LICENSE) License © 2022 [ntnyq](https://github.com/ntnyq)

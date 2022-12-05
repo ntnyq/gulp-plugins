@@ -7,9 +7,12 @@
     "clean": "pnpm -r run clean",
     "lint": "eslint .",
     "prepare": "husky install",
-    "test": "vitest"
+    "test": "vitest",
+    "publish": "pnpm build && changeset publish"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^0.4.7",
+    "@changesets/cli": "^2.25.2",
     "@ntnyq/eslint-config-typescript": "^1.1.0",
     "@ntnyq/prettier-config": "^1.1.0",
     "@types/js-beautify": "^1.13.3",

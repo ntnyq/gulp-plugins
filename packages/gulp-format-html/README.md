@@ -24,6 +24,17 @@ function views () {
 exports.dev = gulp.series(views)
 ```
 
+```ts
+import gulp from 'gulp'
+import formatHtml from 'gulp-format-html'
+
+function views () {
+  return gulp.src(`views/**/*.html`).pipe(formatHtml()).pipe(gulp.dest(`dist`))
+}
+
+export const dev = gulp.series(views)
+```
+
 ## Example
 
 Input:

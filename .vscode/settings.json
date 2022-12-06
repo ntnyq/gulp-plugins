@@ -16,6 +16,9 @@
   "[html]": {
     "editor.formatOnSave": false
   },
+  "[markdown]": {
+    "editor.formatOnSave": true
+  },
   "[typescript]": {
     "editor.formatOnSave": false
   },

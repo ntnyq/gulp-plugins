@@ -26,6 +26,17 @@ function views () {
 exports.dev = gulp.series(views)
 ```
 
+```ts
+import gulp from 'gulp'
+import diffableHtml from 'gulp-diffable-html'
+
+function views () {
+  return gulp.src(`views/**/*.html`).pipe(diffableHtml()).pipe(gulp.dest(`dist`))
+}
+
+export const dev = gulp.series(views)
+```
+
 ## Features
 
 -   zero-config

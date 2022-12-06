@@ -150,6 +150,65 @@ describe(`gulp-diffable-html`, () => {
       })
       stream.write(fakeFile)
     }))
+
+    it(`Should sort attributes as expected`, () => new Promise<void>((resolve, reject) => {
+      const stream = format({ sortAttributes: (names: string[]) => names.sort() })
+
+      stream.on(`error`, reject)
+      stream.on(`data`, file => {
+        expect(file).toBeDefined()
+        expect(file.isBuffer()).toBeTruthy()
+        expect(file.contents.toString().trim()).toMatchInlineSnapshot(`
+          "<!DOCTYPE html>
+          <!--[if IE 9]>.... some HTML here ....<![endif]-->
+          <html lang=\\"en\\">
+            <head>
+              <meta charset=\\"UTF-8\\">
+              <title>
+                gulp-diffable-html
+              </title>
+            </head>
+            <body>
+              <header>
+                <h1>
+                  <span>
+                    I am h1 in header
+                  </span>
+                </h1>
+              </header>
+              <main>
+                <p>
+                  <span>
+                  </span>
+                  <b>
+                    b
+                  </b>
+                  <strong>
+                    strong
+                  </strong>
+                  <em>
+                    &copy;
+                  </em>
+                </p>
+              </main>
+              <footer>
+                <p>
+                  <a
+                    href=\\"https://github.com/ntnyq/gulp-diffable-html\\"
+                    rel=\\"noopener\\"
+                    target=\\"_blank\\"
+                  >
+                    gulp-diffable-html
+                  </a>
+                </p>
+              </footer>
+            </body>
+          </html>"
+        `)
+        resolve()
+      })
+      stream.write(fakeFile)
+    }))
   })
 
   describe(`file-contents - stream`, () => {

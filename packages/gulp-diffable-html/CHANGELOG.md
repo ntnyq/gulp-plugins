@@ -1,5 +1,11 @@
 # gulp-diffable-html
 
+## 1.3.0
+
+### Minor Changes
+
+- [`abe8121`](https://github.com/ntnyq/gulp-plugins/commit/abe812142f50e545ad51accc8133f53edf3f81f2) Thanks [@ntnyq](https://github.com/ntnyq)! - feat: export type options
+
 ## 1.2.1
 
 ### Patch Changes

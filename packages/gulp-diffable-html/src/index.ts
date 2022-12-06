@@ -7,7 +7,7 @@ import type { TransformCallback } from 'through2'
 import type File from 'vinyl'
 
 interface GulpDiffableHtmlOptions {
-  sortAttributes?: (...names: string[]) => string[]
+  sortAttributes?: (names: string[]) => string[]
   verbose?: boolean
 }
 

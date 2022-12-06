@@ -13,7 +13,7 @@ interface Prettier {
   singleQuote?: boolean
 }
 
-interface GulpPrettyHtmlOptions {
+export interface Options {
   // https://github.com/Prettyhtml/prettyhtml/blob/master/packages/prettyhtml/index.d.ts
   tabWidth?: number
   useTabs?: boolean
@@ -37,7 +37,7 @@ const logger = createLogger({
   time: `HH:mm:ss`,
 })
 
-const GulpPrettyHtml = (options: GulpPrettyHtmlOptions = {}): Transform => {
+const GulpPrettyHtml = (options: Options = {}): Transform => {
   return through.obj((file: File, enc, next) => {
     if (file.isNull()) return next(null, file)
 

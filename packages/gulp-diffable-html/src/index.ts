@@ -6,7 +6,7 @@ import { createLogger } from '@ntnyq/logger'
 import type { TransformCallback } from 'through2'
 import type File from 'vinyl'
 
-interface GulpDiffableHtmlOptions {
+export interface Options {
   sortAttributes?: (names: string[]) => string[]
   verbose?: boolean
 }
@@ -18,7 +18,7 @@ const logger = createLogger({
 
 type DiffableContents = Buffer | NodeJS.ReadableStream | null
 
-const GulpDiffableHtml = (options: GulpDiffableHtmlOptions = {}): Transform =>
+const GulpDiffableHtml = (options: Options = {}): Transform =>
   through.obj((file: File, enc, next) => {
     if (file.isNull()) return next(null, file)
 

@@ -7,7 +7,7 @@ import type { TransformCallback } from 'through2'
 import type { HTMLBeautifyOptions } from 'js-beautify'
 import type File from 'vinyl'
 
-interface GulpFormatHtmlOptions extends HTMLBeautifyOptions {
+export interface Options extends HTMLBeautifyOptions {
   /**
    * Display name of file from stream that is being formatting.
    */
@@ -26,7 +26,7 @@ const logger = createLogger({
   time: `HH:mm:ss`,
 })
 
-const GulpFormatHtml = (options: GulpFormatHtmlOptions = {}): Transform => {
+const GulpFormatHtml = (options: Options = {}): Transform => {
   options = Object.assign({}, DEFAULT_OPTIONS, options)
 
   return through.obj((file: File, enc, next) => {

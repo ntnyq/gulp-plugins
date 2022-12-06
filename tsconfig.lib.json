@@ -1,13 +1,17 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "preserve",
+    "outDir": "dist",
     "composite": true,
     "declaration": true,
     "declarationMap": false,
+    "target": "ES2020",
     "lib": [
       "DOM",
       "ES2020"
     ],
-    "module": "CommonJS",
+    "module": "ESNext",
     "moduleResolution": "node",
     "newLine": "lf",
     "noEmitOnError": true,
@@ -18,7 +22,14 @@
     "skipLibCheck": true,
     "sourceMap": false,
     "strict": true,
-    "strictNullChecks": true,
-    "target": "ES2018"
-  }
+    "strictNullChecks": true
+  },
+  "include": [
+    "packages",
+    "scripts"
+  ],
+  "exclude": [
+    "**/dist",
+    "**/tests"
+  ]
 }

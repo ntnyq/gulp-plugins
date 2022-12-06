@@ -4,7 +4,7 @@ import path from 'path'
 import through from 'through2'
 import File from 'vinyl'
 import { describe, expect, it } from 'vitest'
-import format from '../lib'
+import format from '..'
 
 const resolve = (...args: string[]): string => path.resolve(__dirname, ...args)
 

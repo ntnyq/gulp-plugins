@@ -25,6 +25,7 @@
     "pnpm",
     "starptech",
     "tsbuildinfo",
+    "tsup",
     "vitest"
   ]
 }

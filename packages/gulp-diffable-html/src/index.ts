@@ -59,4 +59,4 @@ const GulpDiffableHtml = (options: GulpDiffableHtmlOptions = {}): Transform =>
     }
   })
 
-export = GulpDiffableHtml
+export default GulpDiffableHtml

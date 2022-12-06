@@ -25,14 +25,22 @@
     "url": "https://github.com/ntnyq/gulp-plugins.git",
     "directory": "packages/gulp-diffable-html"
   },
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./*": "./*"
+  },
   "files": [
-    "lib"
+    "dist"
   ],
   "scripts": {
-    "build": "tsc -b tsconfig.build.json",
-    "clean": "rimraf lib *.tsbuildinfo"
+    "dev": "DEV=1 tsup",
+    "build": "tsup && tsx ../../scripts/postbuild.mts"
   },
   "dependencies": {
     "@ntnyq/logger": "^0.0.2",

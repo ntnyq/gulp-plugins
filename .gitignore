@@ -4,4 +4,3 @@ node_modules
 *.local
 *.tsbuildinfo
 dist
-packages/**/lib

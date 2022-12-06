@@ -67,4 +67,4 @@ const GulpFormatHtml = (options: GulpFormatHtmlOptions = {}): Transform => {
   })
 }
 
-export = GulpFormatHtml
+export default GulpFormatHtml

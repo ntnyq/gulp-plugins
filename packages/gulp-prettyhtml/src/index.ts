@@ -76,4 +76,4 @@ const GulpPrettyHtml = (options: GulpPrettyHtmlOptions = {}): Transform => {
   })
 }
 
-export = GulpPrettyHtml
+export default GulpPrettyHtml

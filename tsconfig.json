@@ -1,18 +1,8 @@
 {
-  "extends": "./tsconfig.base.json",
+  "files": [],
   "references": [
     {
-      "path": "./packages/gulp-format-html/tsconfig.json"
-    },
-    {
-      "path": "./packages/gulp-diffable-html/tsconfig.json"
-    },
-    {
-      "path": "./packages/gulp-prettyhtml/tsconfig.json"
+      "path": "./tsconfig.lib.json"
     }
-  ],
-  "files": [],
-  "include": [
-    "./vitest.config.ts"
   ]
 }

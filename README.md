@@ -13,4 +13,4 @@ some gulp plugins
 
 ## License
 
-[MIT](./LICENSE) License © 2022 [ntnyq](https://github.com/ntnyq)
+[MIT](./LICENSE) License © 2019-PRESENT [ntnyq](https://github.com/ntnyq)

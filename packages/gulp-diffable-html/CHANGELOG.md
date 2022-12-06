@@ -1,5 +1,13 @@
 # gulp-diffable-html
 
+## 1.2.1
+
+### Patch Changes
+
+- [`f746d65`](https://github.com/ntnyq/gulp-plugins/commit/f746d65bfe0a9a70bee590e23b07d6a0fb150fa5) Thanks [@ntnyq](https://github.com/ntnyq)! - fix wrong type
+
+* [`85f4198`](https://github.com/ntnyq/gulp-plugins/commit/85f4198d07c03d7a5966ea1f1b93dfa0cf700ab1) Thanks [@ntnyq](https://github.com/ntnyq)! - add missing type
+
 ## 1.2.0
 
 ### Minor Changes

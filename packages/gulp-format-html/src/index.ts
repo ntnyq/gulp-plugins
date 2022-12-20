@@ -1,11 +1,11 @@
 import type { Transform } from 'stream'
 import through from 'through2'
 import PluginError from 'plugin-error'
-import { html as beautifyHtml } from 'js-beautify'
+import jsBeautify from 'js-beautify'
 import { createLogger } from '@ntnyq/logger'
+import type File from 'vinyl'
 import type { TransformCallback } from 'through2'
 import type { HTMLBeautifyOptions } from 'js-beautify'
-import type File from 'vinyl'
 
 export interface Options extends HTMLBeautifyOptions {
   /**
@@ -25,6 +25,8 @@ const DEFAULT_OPTIONS = {
 const logger = createLogger({
   time: `HH:mm:ss`,
 })
+// Fix import html in esm
+const beautifyHtml = jsBeautify.html
 
 const GulpFormatHtml = (options: Options = {}): Transform => {
   options = Object.assign({}, DEFAULT_OPTIONS, options)

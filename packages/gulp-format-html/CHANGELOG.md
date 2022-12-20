@@ -1,5 +1,11 @@
 # gulp-format-html
 
+## 1.4.1
+
+### Patch Changes
+
+- [`c30c6a3`](https://github.com/ntnyq/gulp-plugins/commit/c30c6a3830d9a33ef5969d1d627303a2d33a12c3) Thanks [@ntnyq](https://github.com/ntnyq)! - fix import html in esm
+
 ## 1.4.0
 
 ### Minor Changes

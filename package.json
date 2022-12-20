@@ -1,39 +1,39 @@
 {
-  "name": "root",
+  "name": "gulp-plugins",
   "private": true,
-  "packageManager": "pnpm@7.18.0",
+  "packageManager": "pnpm@7.18.2",
   "scripts": {
-    "dev": "pnpm run --filter=\"./packages/*\" --parallel dev",
     "build": "pnpm run --filter=\"./packages/*\" --parallel build",
     "clean": "rimraf packages/*/dist packages/*/*.tsbuildinfo",
+    "dev": "pnpm run --filter=\"./packages/*\" --parallel dev",
     "lint": "eslint .",
     "prepare": "husky install",
+    "publish": "pnpm build && changeset publish",
     "test": "vitest",
-    "typecheck": "tsc --noEmit -p tsconfig.lib.json",
-    "publish": "pnpm build && changeset publish"
+    "typecheck": "tsc --noEmit -p tsconfig.lib.json"
   },
   "devDependencies": {
-    "@changesets/changelog-github": "^0.4.7",
-    "@changesets/cli": "^2.25.2",
-    "@ntnyq/eslint-config-typescript": "^1.1.0",
-    "@ntnyq/prettier-config": "^1.1.0",
+    "@changesets/changelog-github": "^0.4.8",
+    "@changesets/cli": "^2.26.0",
+    "@ntnyq/eslint-config-typescript": "^1.2.1",
+    "@ntnyq/prettier-config": "^1.2.1",
     "@types/js-beautify": "^1.13.3",
     "@types/through2": "^2.0.38",
     "@types/vinyl": "^2.0.7",
-    "eslint": "^8.29.0",
+    "eslint": "^8.30.0",
     "fast-glob": "^3.2.12",
     "husky": "8.0.2",
     "nano-staged": "^0.8.0",
-    "pnpm": "^7.18.0",
+    "pnpm": "^7.18.2",
     "rimraf": "^3.0.2",
     "tsup": "^6.5.0",
     "tsx": "^3.12.1",
-    "typescript": "^4.9.3",
+    "typescript": "^4.9.4",
     "vinyl": "^3.0.0",
-    "vitest": "^0.25.4"
+    "vitest": "^0.26.1"
   },
+  "prettier": "@ntnyq/prettier-config",
   "nano-staged": {
     "*.{js,ts,json,yml,md,yaml}": "eslint --fix"
-  },
-  "prettier": "@ntnyq/prettier-config"
+  }
 }

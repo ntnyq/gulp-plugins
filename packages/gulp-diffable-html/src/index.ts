@@ -3,8 +3,8 @@ import through from 'through2'
 import toDiffableHtml from 'diffable-html'
 import PluginError from 'plugin-error'
 import { createLogger } from '@ntnyq/logger'
-import type { TransformCallback } from 'through2'
 import type File from 'vinyl'
+import type { TransformCallback } from 'through2'
 
 export interface Options {
   sortAttributes?: (names: string[]) => string[]

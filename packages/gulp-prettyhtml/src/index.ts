@@ -3,8 +3,8 @@ import through from 'through2'
 import PluginError from 'plugin-error'
 import prettyHtml from '@starptech/prettyhtml'
 import { createLogger } from '@ntnyq/logger'
-import type { TransformCallback } from 'through2'
 import type File from 'vinyl'
+import type { TransformCallback } from 'through2'
 
 interface Prettier {
   tabWidth?: number

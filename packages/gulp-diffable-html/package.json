@@ -39,13 +39,13 @@
     "dist"
   ],
   "scripts": {
-    "dev": "DEV=1 tsup",
-    "build": "tsup && tsx ../../scripts/postbuild.mts"
+    "build": "tsup && tsx ../../scripts/postbuild.mts",
+    "dev": "DEV=1 tsup"
   },
   "dependencies": {
     "@ntnyq/logger": "^0.0.2",
     "diffable-html": "^5.0.0",
-    "plugin-error": "^2.0.0",
+    "plugin-error": "^2.0.1",
     "through2": "^4.0.2"
   },
   "engines": {

@@ -18,7 +18,12 @@ const logger = createLogger({
 
 type DiffableContents = Buffer | NodeJS.ReadableStream | null
 
-const GulpDiffableHtml = (options: Options = {}): Transform =>
+/**
+ * format HTML via `diffable-html`
+ * @param options format options `Options`
+ * @returns formatted HTML
+ */
+export const diffableHTML = (options: Options = {}): Transform =>
   through.obj((file: File, enc, next) => {
     if (file.isNull()) return next(null, file)
 
@@ -60,4 +65,4 @@ const GulpDiffableHtml = (options: Options = {}): Transform =>
     }
   })
 
-export default GulpDiffableHtml
+export default diffableHTML

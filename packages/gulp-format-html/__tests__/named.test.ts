@@ -4,7 +4,7 @@ import path from 'path'
 import through from 'through2'
 import File from 'vinyl'
 import { describe, expect, it } from 'vitest'
-import format from '..'
+import { formatHTML } from '..'
 
 const resolve = (...args: string[]): string => path.resolve(__dirname, ...args)
 
@@ -21,10 +21,11 @@ const fakeFile = new File({
   contents: fakeFileContent,
 })
 
-describe(`@ntnyq/gulp-prettyhtml`, () => {
+describe(`gulp-format-html`, () => {
   describe(`file-contents - buffer`, () => {
     it(`Should ignore empty file`, () => new Promise<void>((resolve, reject) => {
-      const stream = format()
+      const stream = formatHTML()
+
       stream.on(`error`, reject)
       stream.on(`data`, file => {
         expect(file.isNull()).toBeTruthy()
@@ -34,21 +35,21 @@ describe(`@ntnyq/gulp-prettyhtml`, () => {
     }))
 
     it(`Should format my HTML files as expected`, () => new Promise<void>((resolve, reject) => {
-      const stream = format()
+      const stream = formatHTML()
 
       stream.on(`error`, reject)
       stream.on(`data`, file => {
         expect(file).toBeDefined()
         expect(file.isBuffer()).toBeTruthy()
         expect(file.contents.toString().trim()).toMatchInlineSnapshot(`
-          "<!doctype html>
-          <!--[if IE 9]>.... some HTML here ....<![endif]-->
-
+          "<!DOCTYPE html>
           <html lang=\\"en\\">
+
           <head>
-            <meta charset=\\"UTF-8\\" />
-            <title>@ntnyq/gulp-prettyhtml</title>
+            <meta charset=\\"UTF-8\\">
+            <title>gulp-format-html</title>
           </head>
+
           <body>
             <header>
               <h1>
@@ -57,24 +58,19 @@ describe(`@ntnyq/gulp-prettyhtml`, () => {
             </header>
             <main>
               <p>
-                <!---->
-                <span></span>
+                <span>span</span>
                 <b>b</b>
                 <strong>strong</strong>
-                <em>&copy;</em>
-                <!-- This comment should be removed -->
+                <em>em</em>
               </p>
             </main>
             <footer>
               <p>
-                <a
-                  href=\\"https://github.com/ntnyq/gulp-plugins/tree/main/packages/@ntnyq/gulp-prettyhtml\\"
-                  target=\\"_blank\\"
-                  rel=\\"noopener\\"
-                >gulp-prettyhtml</a>
+                <a href=\\"https://github.com/ntnyq/gulp-format-html\\">gulp-format-html</a>
               </p>
             </footer>
           </body>
+
           </html>"
         `)
         resolve()
@@ -83,22 +79,21 @@ describe(`@ntnyq/gulp-prettyhtml`, () => {
     }))
 
     it(`Should works well when option verbose set`, () => new Promise<void>((resolve, reject) => {
-      const stream = format({ verbose: true })
+      const stream = formatHTML({ verbose: true })
 
       stream.on(`error`, reject)
       stream.on(`data`, file => {
         expect(file).toBeDefined()
         expect(file.isBuffer()).toBeTruthy()
         expect(file.contents.toString().trim()).toMatchInlineSnapshot(`
-          "<!doctype html>
-          <!--[if IE 9]>.... some HTML here ....<![endif]-->
-
-
+          "<!DOCTYPE html>
           <html lang=\\"en\\">
+
           <head>
-            <meta charset=\\"UTF-8\\" />
-            <title>@ntnyq/gulp-prettyhtml</title>
+            <meta charset=\\"UTF-8\\">
+            <title>gulp-format-html</title>
           </head>
+
           <body>
             <header>
               <h1>
@@ -107,24 +102,19 @@ describe(`@ntnyq/gulp-prettyhtml`, () => {
             </header>
             <main>
               <p>
-                <!---->
-                <span></span>
+                <span>span</span>
                 <b>b</b>
                 <strong>strong</strong>
-                <em>&copy;</em>
-                <!-- This comment should be removed -->
+                <em>em</em>
               </p>
             </main>
             <footer>
               <p>
-                <a
-                  href=\\"https://github.com/ntnyq/gulp-plugins/tree/main/packages/@ntnyq/gulp-prettyhtml\\"
-                  target=\\"_blank\\"
-                  rel=\\"noopener\\"
-                >gulp-prettyhtml</a>
+                <a href=\\"https://github.com/ntnyq/gulp-format-html\\">gulp-format-html</a>
               </p>
             </footer>
           </body>
+
           </html>"
         `)
         resolve()
@@ -136,22 +126,23 @@ describe(`@ntnyq/gulp-prettyhtml`, () => {
   describe(`file-contents - stream`, () => {
     it(`Should format my HTML files`, () => new Promise<void>((resolve, reject) => {
       const fixture = new File({ contents: toStream(fakeFileContent) })
-      const stream = format()
+      const stream = formatHTML()
 
       stream.on(`error`, reject)
       stream.on(`data`, file => {
         expect(file).toBeDefined()
         expect(file.isStream()).toBeTruthy()
+
         file.contents.on(`data`, data => {
           expect(data.toString().trim()).toMatchInlineSnapshot(`
-            "<!doctype html>
-            <!--[if IE 9]>.... some HTML here ....<![endif]-->
-
+            "<!DOCTYPE html>
             <html lang=\\"en\\">
+
             <head>
-              <meta charset=\\"UTF-8\\" />
-              <title>@ntnyq/gulp-prettyhtml</title>
+              <meta charset=\\"UTF-8\\">
+              <title>gulp-format-html</title>
             </head>
+
             <body>
               <header>
                 <h1>
@@ -160,24 +151,19 @@ describe(`@ntnyq/gulp-prettyhtml`, () => {
               </header>
               <main>
                 <p>
-                  <!---->
-                  <span></span>
+                  <span>span</span>
                   <b>b</b>
                   <strong>strong</strong>
-                  <em>&copy;</em>
-                  <!-- This comment should be removed -->
+                  <em>em</em>
                 </p>
               </main>
               <footer>
                 <p>
-                  <a
-                    href=\\"https://github.com/ntnyq/gulp-plugins/tree/main/packages/@ntnyq/gulp-prettyhtml\\"
-                    target=\\"_blank\\"
-                    rel=\\"noopener\\"
-                  >gulp-prettyhtml</a>
+                  <a href=\\"https://github.com/ntnyq/gulp-format-html\\">gulp-format-html</a>
                 </p>
               </footer>
             </body>
+
             </html>"
           `)
           resolve()

@@ -21,7 +21,7 @@ const fakeFile = new File({
   contents: fakeFileContent,
 })
 
-describe(`gulp-diffable-html`, () => {
+describe(`gulp-diffable-html - default export`, () => {
   describe(`file-contents - buffer`, () => {
     it(`Should ignore empty file`, () => new Promise<void>((resolve, reject) => {
       const stream = format()

@@ -15,10 +15,12 @@ $ yarn add @ntnyq/gulp-prettyhtml -D
 
 ```js
 const gulp = require(`gulp`)
-const prettyHtml = require(`@ntnyq/gulp-prettyhtml`)
+const prettyHTML = require(`@ntnyq/gulp-prettyhtml`)
+// or
+// const { prettyHTML } = require(`@ntnyq/gulp-prettyhtml`)
 
 function views () {
-  return gulp.src(`views/**/*.html`).pipe(prettyHtml()).pipe(gulp.dest(`dist`))
+  return gulp.src(`views/**/*.html`).pipe(prettyHTML()).pipe(gulp.dest(`dist`))
 }
 
 exports.dev = gulp.series(views)
@@ -26,10 +28,12 @@ exports.dev = gulp.series(views)
 
 ```ts
 import gulp from 'gulp'
-import prettyHtml from '@ntnyq/gulp-prettyhtml'
+import prettyHTML from '@ntnyq/gulp-prettyhtml'
+// or
+// import { prettyHTML } from '@ntnyq/gulp-prettyhtml'
 
 function views () {
-  return gulp.src(`views/**/*.html`).pipe(prettyHtml()).pipe(gulp.dest(`dist`))
+  return gulp.src(`views/**/*.html`).pipe(prettyHTML()).pipe(gulp.dest(`dist`))
 }
 
 export const dev = gulp.series(views)
@@ -41,7 +45,8 @@ Input:
 
 <!-- prettier-ignore-start -->
 ```html
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>@ntnyq/gulp-prettyhtml</title></head><body><header><h1><span>I am h1 in header</span></h1></header><main><p><span>span</span><b>b</b><strong>strong</strong><em>em</em></p></main><footer><p><a href="https://github.com/ntnyq/gulp-plugins/tree/main/packages/gulp-prettyhtml">@ntnyq/gulp-prettyhtml</a></p></footer></body></html>
+<!DOCTYPE html><!--[if IE 9]>.... some HTML here ....<![endif]--><html lang="en"><head><meta charset="UTF-8"><title>@ntnyq/gulp-prettyhtml</title></head><body><header><h1><span>I am h1 in header</span></h1></header><main><p><!----><span></span><b>b</b><strong>strong</strong><em>&copy;</em></p></main><footer><p><a href="https://github.com/ntnyq/gulp-plugins/tree/main/packages/@ntnyq/gulp-prettyhtml" target="_blank" rel="noopener" >gulp-prettyhtml</a></p></footer></body></html>
+
 ```
 <!-- prettier-ignore-end -->
 
@@ -70,7 +75,6 @@ Output:
       <b>b</b>
       <strong>strong</strong>
       <em>&copy;</em>
-      <!-- This comment should be removed -->
     </p>
   </main>
   <footer>

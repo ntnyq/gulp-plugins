@@ -37,7 +37,12 @@ const logger = createLogger({
   time: `HH:mm:ss`,
 })
 
-const GulpPrettyHtml = (options: Options = {}): Transform => {
+/**
+ * format HTML via `@starptech/prettyhtml`
+ * @param options format options `Options`
+ * @returns formatted HTML
+ */
+export const prettyHTML = (options: Options = {}): Transform => {
   return through.obj((file: File, enc, next) => {
     if (file.isNull()) return next(null, file)
 
@@ -76,4 +81,4 @@ const GulpPrettyHtml = (options: Options = {}): Transform => {
   })
 }
 
-export default GulpPrettyHtml
+export default prettyHTML

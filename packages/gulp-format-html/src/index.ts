@@ -28,7 +28,12 @@ const logger = createLogger({
 // Fix import html in esm
 const beautifyHtml = jsBeautify.html
 
-const GulpFormatHtml = (options: Options = {}): Transform => {
+/**
+ * format HTML via `js-beautify`
+ * @param options format options `Options`
+ * @returns formatted HTML
+ */
+export const formatHTML = (options: Options = {}): Transform => {
   options = Object.assign({}, DEFAULT_OPTIONS, options)
 
   return through.obj((file: File, enc, next) => {
@@ -69,4 +74,4 @@ const GulpFormatHtml = (options: Options = {}): Transform => {
   })
 }
 
-export default GulpFormatHtml
+export default formatHTML

@@ -1,5 +1,11 @@
 # gulp-format-html
 
+## 1.5.0
+
+### Minor Changes
+
+- [`c0a642e`](https://github.com/ntnyq/gulp-plugins/commit/c0a642ec0e680e0b38e1d3bde7426c7c33b3b335) Thanks [@ntnyq](https://github.com/ntnyq)! - feat: support named export
+
 ## 1.4.1
 
 ### Patch Changes

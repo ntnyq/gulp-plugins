@@ -40,7 +40,7 @@
   ],
   "scripts": {
     "build": "tsup && tsx ../../scripts/postbuild.mts",
-    "dev": "DEV=1 tsup"
+    "dev": "DEV=true tsup"
   },
   "dependencies": {
     "@ntnyq/logger": "^0.0.2",

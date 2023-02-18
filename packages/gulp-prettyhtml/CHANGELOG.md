@@ -1,5 +1,11 @@
 # @ntnyq/gulp-prettyhtml
 
+## 1.3.1
+
+### Patch Changes
+
+- [`afbf29a`](https://github.com/ntnyq/gulp-plugins/commit/afbf29ab394dc763f3c218de8b5fae276e47b6b2) Thanks [@ntnyq](https://github.com/ntnyq)! - fix dep type
+
 ## 1.3.0
 
 ### Minor Changes

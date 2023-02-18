@@ -1,6 +1,6 @@
 {
   "name": "gulp-format-html",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "gulp plugin formatting html via js-beautify",
   "keywords": [
     "beauty",

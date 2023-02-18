@@ -8,36 +8,36 @@ import format from '..'
 
 const resolve = (...args: string[]): string => path.resolve(__dirname, ...args)
 
-function toStream (contents: Buffer): Transform {
+function toStream(contents: Buffer): Transform {
   const stream = through()
   stream.write(contents)
   return stream
 }
 
-const fakeFilePath = resolve(`fixtures/index.html`)
+const fakeFilePath = resolve('fixtures/index.html')
 const fakeFileContent = fs.readFileSync(fakeFilePath)
 const fakeFile = new File({
   path: fakeFilePath,
   contents: fakeFileContent,
 })
 
-describe(`gulp-diffable-html - default export`, () => {
-  describe(`file-contents - buffer`, () => {
-    it(`Should ignore empty file`, () => new Promise<void>((resolve, reject) => {
+describe('gulp-diffable-html - default export', () => {
+  describe('file-contents - buffer', () => {
+    it('Should ignore empty file', () => new Promise<void>((resolve, reject) => {
       const stream = format()
-      stream.on(`error`, reject)
-      stream.on(`data`, file => {
+      stream.on('error', reject)
+      stream.on('data', file => {
         expect(file.isNull()).toBeTruthy()
         resolve()
       })
       stream.write(new File({}))
     }))
 
-    it(`Should format my HTML files as expected`, () => new Promise<void>((resolve, reject) => {
+    it('Should format my HTML files as expected', () => new Promise<void>((resolve, reject) => {
       const stream = format()
 
-      stream.on(`error`, reject)
-      stream.on(`data`, file => {
+      stream.on('error', reject)
+      stream.on('data', file => {
         expect(file).toBeDefined()
         expect(file.isBuffer()).toBeTruthy()
         expect(file.contents.toString().trim()).toMatchInlineSnapshot(`
@@ -92,11 +92,11 @@ describe(`gulp-diffable-html - default export`, () => {
       stream.write(fakeFile)
     }))
 
-    it(`Should works well when option verbose set`, () => new Promise<void>((resolve, reject) => {
+    it('Should works well when option verbose set', () => new Promise<void>((resolve, reject) => {
       const stream = format({ verbose: true })
 
-      stream.on(`error`, reject)
-      stream.on(`data`, file => {
+      stream.on('error', reject)
+      stream.on('data', file => {
         expect(file).toBeDefined()
         expect(file.isBuffer()).toBeTruthy()
         expect(file.contents.toString().trim()).toMatchInlineSnapshot(`
@@ -151,11 +151,11 @@ describe(`gulp-diffable-html - default export`, () => {
       stream.write(fakeFile)
     }))
 
-    it(`Should sort attributes as expected`, () => new Promise<void>((resolve, reject) => {
+    it('Should sort attributes as expected', () => new Promise<void>((resolve, reject) => {
       const stream = format({ sortAttributes: (names: string[]) => names.sort() })
 
-      stream.on(`error`, reject)
-      stream.on(`data`, file => {
+      stream.on('error', reject)
+      stream.on('data', file => {
         expect(file).toBeDefined()
         expect(file.isBuffer()).toBeTruthy()
         expect(file.contents.toString().trim()).toMatchInlineSnapshot(`
@@ -211,16 +211,16 @@ describe(`gulp-diffable-html - default export`, () => {
     }))
   })
 
-  describe(`file-contents - stream`, () => {
-    it(`Should format my HTML files`, () => new Promise<void>((resolve, reject) => {
+  describe('file-contents - stream', () => {
+    it('Should format my HTML files', () => new Promise<void>((resolve, reject) => {
       const fixture = new File({ contents: toStream(fakeFileContent) })
       const stream = format()
 
-      stream.on(`error`, reject)
-      stream.on(`data`, file => {
+      stream.on('error', reject)
+      stream.on('data', file => {
         expect(file).toBeDefined()
         expect(file.isStream()).toBeTruthy()
-        file.contents.on(`data`, data => {
+        file.contents.on('data', data => {
           expect(data.toString().trim()).toMatchInlineSnapshot(`
             "<!DOCTYPE html>
             <!--[if IE 9]>.... some HTML here ....<![endif]-->

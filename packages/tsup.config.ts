@@ -2,17 +2,17 @@ import { defineConfig } from 'tsup'
 
 export default defineConfig({
   entry: [
-    `./src/*.ts`,
+    './src/*.ts',
   ],
   format: [
-    `cjs`, `esm`,
+    'cjs', 'esm',
   ],
-  target: `node14`,
+  target: 'node14',
   clean: true,
   shims: true,
   splitting: true,
   watch: !!process.env.DEV,
-  tsconfig: `../../tsconfig.lib.json`,
+  tsconfig: '../../tsconfig.lib.json',
   dts: process.env.DEV
     ? false
     : {

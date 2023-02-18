@@ -11,14 +11,14 @@
     "html",
     "pretty"
   ],
-  "homepage": "https://github.com/ntnyq/gulp-plugins",
-  "bugs": {
-    "url": "https://github.com/ntnyq/gulp-plugins/issues"
-  },
   "license": "MIT",
   "author": {
     "name": "ntnyq",
     "email": "ntnyq13@gmail.com"
+  },
+  "homepage": "https://github.com/ntnyq/gulp-plugins",
+  "bugs": {
+    "url": "https://github.com/ntnyq/gulp-plugins/issues"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "require": "./dist/index.js",
       "import": "./dist/index.mjs"
     },

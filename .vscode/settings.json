@@ -2,16 +2,17 @@
   "prettier.enable": false,
   "editor.formatOnSave": false,
   "eslint.validate": [
-    "javascript",
-    "typescript",
-    "javascriptreact",
-    "typescriptreact",
     "vue",
     "html",
     "markdown",
     "json",
     "jsonc",
-    "json5"
+    "yaml",
+    "json5",
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
   ],
   "[html]": {
     "editor.formatOnSave": false
@@ -23,7 +24,6 @@
     "editor.formatOnSave": false
   },
   "cSpell.words": [
-    "fcall",
     "noopener",
     "pnpm",
     "starptech",

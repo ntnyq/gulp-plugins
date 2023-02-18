@@ -16,15 +16,13 @@ export interface Options extends HTMLBeautifyOptions {
 
 type FormatableContents = Buffer | NodeJS.ReadableStream | null
 
-const PLUGIN_NAME = `gulp-format-html`
+const PLUGIN_NAME = 'gulp-format-html'
 const DEFAULT_OPTIONS = {
   indent_size: 2,
   inline: [],
-  content_unformatted: [`pre`, `textarea`, `script`],
+  content_unformatted: ['pre', 'textarea', 'script'],
 }
-const logger = createLogger({
-  time: `HH:mm:ss`,
-})
+const logger = createLogger({ time: 'HH:mm:ss' })
 // Fix import html in esm
 const beautifyHtml = jsBeautify.html
 
@@ -41,7 +39,7 @@ export const formatHTML = (options: Options = {}): Transform => {
 
     const beautify = (buf: FormatableContents, _: unknown, cb: TransformCallback): void => {
       try {
-        const contents = Buffer.from(beautifyHtml(buf?.toString() ?? ``, options))
+        const contents = Buffer.from(beautifyHtml(buf?.toString() ?? '', options))
 
         if (next === cb) {
           file.contents = contents

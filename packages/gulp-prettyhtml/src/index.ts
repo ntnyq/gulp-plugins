@@ -32,10 +32,8 @@ export interface Options {
 
 type FormatableContents = Buffer | NodeJS.ReadableStream | null
 
-const PLUGIN_NAME = `gulp-prettyhtml`
-const logger = createLogger({
-  time: `HH:mm:ss`,
-})
+const PLUGIN_NAME = 'gulp-prettyhtml'
+const logger = createLogger({ time: 'HH:mm:ss' })
 
 /**
  * format HTML via `@starptech/prettyhtml`
@@ -48,7 +46,7 @@ export const prettyHTML = (options: Options = {}): Transform => {
 
     const pretty = (buf: FormatableContents, _: unknown, cb: TransformCallback): void => {
       try {
-        const contents = Buffer.from(prettyHtml(buf?.toString() ?? ``, options).contents)
+        const contents = Buffer.from(prettyHtml(buf?.toString() ?? '', options).contents)
 
         if (next === cb) {
           file.contents = contents

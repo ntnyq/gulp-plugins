@@ -14,13 +14,13 @@ $ yarn add gulp-format-html -D
 ## Setup
 
 ```js
-const gulp = require(`gulp`)
-const formatHTML = require(`gulp-format-html`)
+const gulp = require('gulp')
+const formatHTML = require('gulp-format-html')
 // or
 // const { formatHTML } = require(`gulp-format-html`)
 
-function views () {
-  return gulp.src(`views/**/*.html`).pipe(formatHTML()).pipe(gulp.dest(`dist`))
+function views() {
+  return gulp.src('views/**/*.html').pipe(formatHTML()).pipe(gulp.dest('dist'))
 }
 
 exports.dev = gulp.series(views)
@@ -32,8 +32,8 @@ import formatHTML from 'gulp-format-html'
 // or
 // import { formatHTML } from 'gulp-format-html'
 
-function views () {
-  return gulp.src(`views/**/*.html`).pipe(formatHTML()).pipe(gulp.dest(`dist`))
+function views() {
+  return gulp.src('views/**/*.html').pipe(formatHTML()).pipe(gulp.dest('dist'))
 }
 
 export const dev = gulp.series(views)

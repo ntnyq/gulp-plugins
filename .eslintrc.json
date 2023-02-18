@@ -1,13 +1,6 @@
 {
-  "extends": "@ntnyq/typescript",
   "root": true,
-  "rules": {
-    "@typescript-eslint/quotes": [
-      "error",
-      "backtick"
-    ]
-  },
-  "ignorePatterns": [
-    "lib"
+  "extends": [
+    "@ntnyq"
   ]
 }

@@ -11,10 +11,8 @@ export interface Options {
   verbose?: boolean
 }
 
-const PLUGIN_NAME = `gulp-diffable-html`
-const logger = createLogger({
-  time: `HH:mm:ss`,
-})
+const PLUGIN_NAME = 'gulp-diffable-html'
+const logger = createLogger({ time: 'HH:mm:ss' })
 
 type DiffableContents = Buffer | NodeJS.ReadableStream | null
 

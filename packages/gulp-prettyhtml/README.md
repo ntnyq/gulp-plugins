@@ -14,13 +14,13 @@ $ yarn add @ntnyq/gulp-prettyhtml -D
 ## Setup
 
 ```js
-const gulp = require(`gulp`)
-const prettyHTML = require(`@ntnyq/gulp-prettyhtml`)
+const gulp = require('gulp')
+const prettyHTML = require('@ntnyq/gulp-prettyhtml')
 // or
 // const { prettyHTML } = require(`@ntnyq/gulp-prettyhtml`)
 
-function views () {
-  return gulp.src(`views/**/*.html`).pipe(prettyHTML()).pipe(gulp.dest(`dist`))
+function views() {
+  return gulp.src('views/**/*.html').pipe(prettyHTML()).pipe(gulp.dest('dist'))
 }
 
 exports.dev = gulp.series(views)
@@ -32,8 +32,8 @@ import prettyHTML from '@ntnyq/gulp-prettyhtml'
 // or
 // import { prettyHTML } from '@ntnyq/gulp-prettyhtml'
 
-function views () {
-  return gulp.src(`views/**/*.html`).pipe(prettyHTML()).pipe(gulp.dest(`dist`))
+function views() {
+  return gulp.src('views/**/*.html').pipe(prettyHTML()).pipe(gulp.dest('dist'))
 }
 
 export const dev = gulp.series(views)

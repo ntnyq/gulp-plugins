@@ -45,6 +45,7 @@
   "dependencies": {
     "@ntnyq/logger": "^0.0.2",
     "@starptech/prettyhtml": "^0.10.0",
+    "@types/through2": "^2.0.38",
     "plugin-error": "^2.0.1",
     "through2": "^4.0.2"
   },

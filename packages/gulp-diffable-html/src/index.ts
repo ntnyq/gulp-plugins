@@ -7,6 +7,10 @@ import type File from 'vinyl'
 import type { TransformCallback } from 'through2'
 
 export interface Options {
+  /**
+   * custom sort attributes
+   * @default `names => names`
+   */
   sortAttributes?: (names: string[]) => string[]
   verbose?: boolean
 }

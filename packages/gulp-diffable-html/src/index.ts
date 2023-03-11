@@ -1,4 +1,4 @@
-import type { Transform } from 'stream'
+import type { Transform } from 'node:stream'
 import through from 'through2'
 import toDiffableHtml from 'diffable-html'
 import PluginError from 'plugin-error'

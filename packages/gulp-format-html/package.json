@@ -24,9 +24,6 @@
     "url": "https://github.com/ntnyq/gulp-plugins.git",
     "directory": "packages/gulp-format-html"
   },
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -35,6 +32,9 @@
     },
     "./*": "./*"
   },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],

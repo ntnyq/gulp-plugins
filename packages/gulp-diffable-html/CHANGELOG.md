@@ -1,5 +1,11 @@
 # gulp-diffable-html
 
+## 1.4.2
+
+### Patch Changes
+
+- [`7616dd2`](https://github.com/ntnyq/gulp-plugins/commit/7616dd232642329b05b81317a7bab241977bdf4f) Thanks [@ntnyq](https://github.com/ntnyq)! - fix type defination export
+
 ## 1.4.1
 
 ### Patch Changes

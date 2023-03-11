@@ -1,6 +1,6 @@
 {
   "name": "gulp-diffable-html",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "gulp plugin formatting html via diffable-html",
   "keywords": [
     "beauty",

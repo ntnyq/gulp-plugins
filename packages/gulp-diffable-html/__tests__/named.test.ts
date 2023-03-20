@@ -1,10 +1,10 @@
-import type { Transform } from 'node:stream'
 import fs from 'node:fs'
 import path from 'node:path'
 import through from 'through2'
 import File from 'vinyl'
 import { describe, expect, it } from 'vitest'
-import { diffableHTML } from '..'
+import { diffableHTML } from '../src'
+import type { Transform } from 'node:stream'
 
 const resolve = (...args: string[]): string => path.resolve(__dirname, ...args)
 
@@ -23,24 +23,26 @@ const fakeFile = new File({
 
 describe('gulp-diffable-html - named export', () => {
   describe('file-contents - buffer', () => {
-    it('Should ignore empty file', () => new Promise<void>((resolve, reject) => {
-      const stream = diffableHTML()
-      stream.on('error', reject)
-      stream.on('data', file => {
-        expect(file.isNull()).toBeTruthy()
-        resolve()
-      })
-      stream.write(new File({}))
-    }))
+    it('Should ignore empty file', () =>
+      new Promise<void>((resolve, reject) => {
+        const stream = diffableHTML()
+        stream.on('error', reject)
+        stream.on('data', file => {
+          expect(file.isNull()).toBeTruthy()
+          resolve()
+        })
+        stream.write(new File({}))
+      }))
 
-    it('Should format my HTML files as expected', () => new Promise<void>((resolve, reject) => {
-      const stream = diffableHTML()
+    it('Should format my HTML files as expected', () =>
+      new Promise<void>((resolve, reject) => {
+        const stream = diffableHTML()
 
-      stream.on('error', reject)
-      stream.on('data', file => {
-        expect(file).toBeDefined()
-        expect(file.isBuffer()).toBeTruthy()
-        expect(file.contents.toString().trim()).toMatchInlineSnapshot(`
+        stream.on('error', reject)
+        stream.on('data', file => {
+          expect(file).toBeDefined()
+          expect(file.isBuffer()).toBeTruthy()
+          expect(file.contents.toString().trim()).toMatchInlineSnapshot(`
           "<!DOCTYPE html>
           <!--[if IE 9]>.... some HTML here ....<![endif]-->
           <html lang=\\"en\\">
@@ -87,19 +89,20 @@ describe('gulp-diffable-html - named export', () => {
             </body>
           </html>"
         `)
-        resolve()
-      })
-      stream.write(fakeFile)
-    }))
+          resolve()
+        })
+        stream.write(fakeFile)
+      }))
 
-    it('Should works well when option verbose set', () => new Promise<void>((resolve, reject) => {
-      const stream = diffableHTML({ verbose: true })
+    it('Should works well when option verbose set', () =>
+      new Promise<void>((resolve, reject) => {
+        const stream = diffableHTML({ verbose: true })
 
-      stream.on('error', reject)
-      stream.on('data', file => {
-        expect(file).toBeDefined()
-        expect(file.isBuffer()).toBeTruthy()
-        expect(file.contents.toString().trim()).toMatchInlineSnapshot(`
+        stream.on('error', reject)
+        stream.on('data', file => {
+          expect(file).toBeDefined()
+          expect(file.isBuffer()).toBeTruthy()
+          expect(file.contents.toString().trim()).toMatchInlineSnapshot(`
           "<!DOCTYPE html>
           <!--[if IE 9]>.... some HTML here ....<![endif]-->
           <html lang=\\"en\\">
@@ -146,19 +149,20 @@ describe('gulp-diffable-html - named export', () => {
             </body>
           </html>"
         `)
-        resolve()
-      })
-      stream.write(fakeFile)
-    }))
+          resolve()
+        })
+        stream.write(fakeFile)
+      }))
 
-    it('Should sort attributes as expected', () => new Promise<void>((resolve, reject) => {
-      const stream = diffableHTML({ sortAttributes: (names: string[]) => names.sort() })
+    it('Should sort attributes as expected', () =>
+      new Promise<void>((resolve, reject) => {
+        const stream = diffableHTML({ sortAttributes: (names: string[]) => names.sort() })
 
-      stream.on('error', reject)
-      stream.on('data', file => {
-        expect(file).toBeDefined()
-        expect(file.isBuffer()).toBeTruthy()
-        expect(file.contents.toString().trim()).toMatchInlineSnapshot(`
+        stream.on('error', reject)
+        stream.on('data', file => {
+          expect(file).toBeDefined()
+          expect(file.isBuffer()).toBeTruthy()
+          expect(file.contents.toString().trim()).toMatchInlineSnapshot(`
           "<!DOCTYPE html>
           <!--[if IE 9]>.... some HTML here ....<![endif]-->
           <html lang=\\"en\\">
@@ -205,23 +209,24 @@ describe('gulp-diffable-html - named export', () => {
             </body>
           </html>"
         `)
-        resolve()
-      })
-      stream.write(fakeFile)
-    }))
+          resolve()
+        })
+        stream.write(fakeFile)
+      }))
   })
 
   describe('file-contents - stream', () => {
-    it('Should format my HTML files', () => new Promise<void>((resolve, reject) => {
-      const fixture = new File({ contents: toStream(fakeFileContent) })
-      const stream = diffableHTML()
+    it('Should format my HTML files', () =>
+      new Promise<void>((resolve, reject) => {
+        const fixture = new File({ contents: toStream(fakeFileContent) })
+        const stream = diffableHTML()
 
-      stream.on('error', reject)
-      stream.on('data', file => {
-        expect(file).toBeDefined()
-        expect(file.isStream()).toBeTruthy()
-        file.contents.on('data', data => {
-          expect(data.toString().trim()).toMatchInlineSnapshot(`
+        stream.on('error', reject)
+        stream.on('data', file => {
+          expect(file).toBeDefined()
+          expect(file.isStream()).toBeTruthy()
+          file.contents.on('data', data => {
+            expect(data.toString().trim()).toMatchInlineSnapshot(`
             "<!DOCTYPE html>
             <!--[if IE 9]>.... some HTML here ....<![endif]-->
             <html lang=\\"en\\">
@@ -268,10 +273,10 @@ describe('gulp-diffable-html - named export', () => {
               </body>
             </html>"
           `)
-          resolve()
+            resolve()
+          })
         })
-      })
-      stream.write(fixture)
-    }))
+        stream.write(fixture)
+      }))
   })
 })

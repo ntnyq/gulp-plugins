@@ -1,8 +1,8 @@
-import type { Transform } from 'node:stream'
 import through from 'through2'
 import toDiffableHtml from 'diffable-html'
 import PluginError from 'plugin-error'
 import { createLogger } from '@ntnyq/logger'
+import type { Transform } from 'node:stream'
 import type File from 'vinyl'
 import type { TransformCallback } from 'through2'
 
@@ -29,11 +29,7 @@ export const diffableHTML = (options: Options = {}): Transform =>
   through.obj((file: File, enc, next) => {
     if (file.isNull()) return next(null, file)
 
-    const diffable = (
-      buf: DiffableContents,
-      _: unknown,
-      cb: TransformCallback,
-    ): void => {
+    const diffable = (buf: DiffableContents, _: unknown, cb: TransformCallback): void => {
       try {
         const contents = Buffer.from(toDiffableHtml(buf?.toString(), options))
 

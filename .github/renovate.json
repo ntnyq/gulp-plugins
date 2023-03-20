@@ -1,35 +1,21 @@
 {
-  "extends": [
-    "config:base",
-    "schedule:weekly",
-    "group:allNonMajor"
-  ],
-  "labels": [
-    "dependencies"
-  ],
-  "ignorePaths": [
-    "**/__tests__/**"
-  ],
+  "extends": ["config:base", "schedule:weekly", "group:allNonMajor"],
+  "labels": ["dependencies"],
+  "ignorePaths": ["**/__tests__/**"],
   "pin": false,
   "rangeStrategy": "bump",
   "node": false,
   "packageRules": [
     {
-      "depTypeList": [
-        "peerDependencies"
-      ],
+      "depTypeList": ["peerDependencies"],
       "enabled": false
     },
     {
-      "packageNames": [
-        "node"
-      ],
+      "packageNames": ["node"],
       "enabled": false
     },
     {
-      "matchUpdateTypes": [
-        "major"
-      ],
+      "matchUpdateTypes": ["major"],
       "matchPackageNames": [],
       "enabled": false
     }

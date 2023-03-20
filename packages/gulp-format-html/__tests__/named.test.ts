@@ -1,10 +1,10 @@
-import type { Transform } from 'node:stream'
 import fs from 'node:fs'
 import path from 'node:path'
 import through from 'through2'
 import File from 'vinyl'
 import { describe, expect, it } from 'vitest'
-import { formatHTML } from '..'
+import { formatHTML } from '../src'
+import type { Transform } from 'node:stream'
 
 const resolve = (...args: string[]): string => path.resolve(__dirname, ...args)
 
@@ -23,25 +23,27 @@ const fakeFile = new File({
 
 describe('gulp-format-html', () => {
   describe('file-contents - buffer', () => {
-    it('Should ignore empty file', () => new Promise<void>((resolve, reject) => {
-      const stream = formatHTML()
+    it('Should ignore empty file', () =>
+      new Promise<void>((resolve, reject) => {
+        const stream = formatHTML()
 
-      stream.on('error', reject)
-      stream.on('data', file => {
-        expect(file.isNull()).toBeTruthy()
-        resolve()
-      })
-      stream.write(new File({}))
-    }))
+        stream.on('error', reject)
+        stream.on('data', file => {
+          expect(file.isNull()).toBeTruthy()
+          resolve()
+        })
+        stream.write(new File({}))
+      }))
 
-    it('Should format my HTML files as expected', () => new Promise<void>((resolve, reject) => {
-      const stream = formatHTML()
+    it('Should format my HTML files as expected', () =>
+      new Promise<void>((resolve, reject) => {
+        const stream = formatHTML()
 
-      stream.on('error', reject)
-      stream.on('data', file => {
-        expect(file).toBeDefined()
-        expect(file.isBuffer()).toBeTruthy()
-        expect(file.contents.toString().trim()).toMatchInlineSnapshot(`
+        stream.on('error', reject)
+        stream.on('data', file => {
+          expect(file).toBeDefined()
+          expect(file.isBuffer()).toBeTruthy()
+          expect(file.contents.toString().trim()).toMatchInlineSnapshot(`
           "<!DOCTYPE html>
           <html lang=\\"en\\">
 
@@ -73,19 +75,20 @@ describe('gulp-format-html', () => {
 
           </html>"
         `)
-        resolve()
-      })
-      stream.write(fakeFile)
-    }))
+          resolve()
+        })
+        stream.write(fakeFile)
+      }))
 
-    it('Should works well when option verbose set', () => new Promise<void>((resolve, reject) => {
-      const stream = formatHTML({ verbose: true })
+    it('Should works well when option verbose set', () =>
+      new Promise<void>((resolve, reject) => {
+        const stream = formatHTML({ verbose: true })
 
-      stream.on('error', reject)
-      stream.on('data', file => {
-        expect(file).toBeDefined()
-        expect(file.isBuffer()).toBeTruthy()
-        expect(file.contents.toString().trim()).toMatchInlineSnapshot(`
+        stream.on('error', reject)
+        stream.on('data', file => {
+          expect(file).toBeDefined()
+          expect(file.isBuffer()).toBeTruthy()
+          expect(file.contents.toString().trim()).toMatchInlineSnapshot(`
           "<!DOCTYPE html>
           <html lang=\\"en\\">
 
@@ -117,24 +120,25 @@ describe('gulp-format-html', () => {
 
           </html>"
         `)
-        resolve()
-      })
-      stream.write(fakeFile)
-    }))
+          resolve()
+        })
+        stream.write(fakeFile)
+      }))
   })
 
   describe('file-contents - stream', () => {
-    it('Should format my HTML files', () => new Promise<void>((resolve, reject) => {
-      const fixture = new File({ contents: toStream(fakeFileContent) })
-      const stream = formatHTML()
+    it('Should format my HTML files', () =>
+      new Promise<void>((resolve, reject) => {
+        const fixture = new File({ contents: toStream(fakeFileContent) })
+        const stream = formatHTML()
 
-      stream.on('error', reject)
-      stream.on('data', file => {
-        expect(file).toBeDefined()
-        expect(file.isStream()).toBeTruthy()
+        stream.on('error', reject)
+        stream.on('data', file => {
+          expect(file).toBeDefined()
+          expect(file.isStream()).toBeTruthy()
 
-        file.contents.on('data', data => {
-          expect(data.toString().trim()).toMatchInlineSnapshot(`
+          file.contents.on('data', data => {
+            expect(data.toString().trim()).toMatchInlineSnapshot(`
             "<!DOCTYPE html>
             <html lang=\\"en\\">
 
@@ -166,10 +170,10 @@ describe('gulp-format-html', () => {
 
             </html>"
           `)
-          resolve()
+            resolve()
+          })
         })
-      })
-      stream.write(fixture)
-    }))
+        stream.write(fixture)
+      }))
   })
 })

@@ -1,14 +1,20 @@
 # @ntnyq/gulp-prettyhtml
 
-[![NPM VERSION](https://img.shields.io/npm/v/@ntnyq/gulp-prettyhtml.svg)](https://www.npmjs.com/package/@ntnyq/gulp-prettyhtml)
-[![NPM DOWNLOADS](https://img.shields.io/npm/dm/@ntnyq/gulp-prettyhtml.svg)](https://www.npmjs.com/package/@ntnyq/gulp-prettyhtml)
+[![NPM VERSION](https://img.shields.io/npm/v/@ntnyq/gulp-prettyhtml?logo=npm)](https://www.npmjs.com/package/@ntnyq/gulp-prettyhtml)
+[![NPM DOWNLOADS](https://img.shields.io/npm/dm/@ntnyq/gulp-prettyhtml?logo=npm)](https://www.npmjs.com/package/@ntnyq/gulp-prettyhtml)
 
 ## Install
 
 ```bash
-$ npm install @ntnyq/gulp-prettyhtml --save-dev
-# OR
-$ yarn add @ntnyq/gulp-prettyhtml -D
+npm install @ntnyq/gulp-prettyhtml -D
+```
+
+```bash
+yarn add @ntnyq/gulp-prettyhtml -D
+```
+
+```bash
+pnpm add @ntnyq/gulp-prettyhtml -D
 ```
 
 ## Setup
@@ -97,11 +103,11 @@ Output:
 
 ### verbose
 
--   **type** `boolean`
--   **default** `false`
+- **type** `boolean`
+- **default** `false`
 
 Display name of file from stream that is being formatting
 
 ## Related
 
--   [gulp-diffable-html](https://github.com/ntnyq/gulp-diffable-html) Zero config HTML formatter to make HTML more readable and to indent HTML tag text in a single newline.
+- [gulp-diffable-html](https://github.com/ntnyq/gulp-diffable-html) Zero config HTML formatter to make HTML more readable and to indent HTML tag text in a single newline.

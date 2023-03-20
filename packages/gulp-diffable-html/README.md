@@ -2,15 +2,21 @@
 
 :beer: gulp plugin formatting html via diffable-html
 
-[![NPM VERSION](https://img.shields.io/npm/v/gulp-diffable-html.svg)](https://www.npmjs.com/package/gulp-diffable-html)
-[![NPM DOWNLOADS](https://img.shields.io/npm/dm/gulp-diffable-html.svg)](https://www.npmjs.com/package/gulp-diffable-html)
+[![NPM VERSION](https://img.shields.io/npm/v/gulp-diffable-html?logo=npm)](https://www.npmjs.com/package/gulp-diffable-html)
+[![NPM DOWNLOADS](https://img.shields.io/npm/dm/gulp-diffable-html?logo=npm)](https://www.npmjs.com/package/gulp-diffable-html)
 
 ## Install
 
 ```bash
-$ npm install gulp-diffable-html --save-dev
-# OR
-$ yarn add gulp-diffable-html -D
+npm install gulp-diffable-html -D
+```
+
+```bash
+yarn add gulp-diffable-html -D
+```
+
+```bash
+pnpm add gulp-diffable-html -D
 ```
 
 ## Setup
@@ -43,11 +49,11 @@ export const dev = gulp.series(views)
 
 ## Features
 
--   zero-config
--   indenting every level with 2 spaces
--   align attributes
--   put every opening and closing tag on its own line
--   trimming text nodes
+- zero-config
+- indenting every level with 2 spaces
+- align attributes
+- put every opening and closing tag on its own line
+- trimming text nodes
 
 ## Example
 
@@ -116,14 +122,14 @@ Output:
 
 ### sortAttributes
 
--   **type** `function`
--   **default** `(names) => names`
+- **type** `function`
+- **default** `(names) => names`
 
 Customize the order of attributes on HTML tag.
 
 ### verbose
 
--   **type** `boolean`
--   **default** `false`
+- **type** `boolean`
+- **default** `false`
 
 Display name of file from stream that is being formatting

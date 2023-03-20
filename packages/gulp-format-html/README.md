@@ -1,14 +1,20 @@
 # gulp-format-html
 
-[![NPM VERSION](https://img.shields.io/npm/v/gulp-format-html.svg)](https://www.npmjs.com/package/gulp-format-html)
-[![NPM DOWNLOADS](https://img.shields.io/npm/dm/gulp-format-html.svg)](https://www.npmjs.com/package/gulp-format-html)
+[![NPM VERSION](https://img.shields.io/npm/v/gulp-format-html?logo=npm)](https://www.npmjs.com/package/gulp-format-html)
+[![NPM DOWNLOADS](https://img.shields.io/npm/dm/gulp-format-html?logo=npm)](https://www.npmjs.com/package/gulp-format-html)
 
 ## Install
 
 ```bash
-$ npm install gulp-format-html --save-dev
-# OR
-$ yarn add gulp-format-html -D
+npm install gulp-format-html -D
+```
+
+```bash
+yarn add gulp-format-html -D
+```
+
+```bash
+pnpm add gulp-format-html -D
 ```
 
 ## Setup
@@ -90,11 +96,11 @@ Output:
 
 ### verbose
 
--   **type** `boolean`
--   **default** `false`
+- **type** `boolean`
+- **default** `false`
 
 Display name of file from stream that is being formatting
 
 ## Related
 
--   [gulp-diffable-html](https://github.com/ntnyq/gulp-diffable-html) Zero config HTML formatter to make HTML more readable and to indent HTML tag text in a single newline.
+- [gulp-diffable-html](https://github.com/ntnyq/gulp-diffable-html) Zero config HTML formatter to make HTML more readable and to indent HTML tag text in a single newline.

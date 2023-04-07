@@ -21,6 +21,6 @@
     "strict": true,
     "strictNullChecks": true
   },
-  "include": ["packages", "scripts"],
+  "include": ["./packages/**/*.ts", "./scripts/*.ts"],
   "exclude": ["**/dist", "**/tests"]
 }

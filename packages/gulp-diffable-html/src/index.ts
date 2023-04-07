@@ -12,6 +12,12 @@ export interface Options {
    * @default `names => names`
    */
   sortAttributes?: (names: string[]) => string[]
+
+  /**
+   * Display name of file from stream that is being formatting
+   *
+   * @default false
+   */
   verbose?: boolean
 }
 

@@ -137,7 +137,7 @@ describe('gulp-format-html', () => {
           expect(file).toBeDefined()
           expect(file.isStream()).toBeTruthy()
 
-          file.contents.on('data', data => {
+          file.contents.on('data', (data: Buffer) => {
             expect(data.toString().trim()).toMatchInlineSnapshot(`
             "<!DOCTYPE html>
             <html lang=\\"en\\">

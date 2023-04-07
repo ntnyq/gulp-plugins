@@ -225,7 +225,7 @@ describe('gulp-diffable-html - default export', () => {
         stream.on('data', file => {
           expect(file).toBeDefined()
           expect(file.isStream()).toBeTruthy()
-          file.contents.on('data', data => {
+          file.contents.on('data', (data: Buffer) => {
             expect(data.toString().trim()).toMatchInlineSnapshot(`
             "<!DOCTYPE html>
             <!--[if IE 9]>.... some HTML here ....<![endif]-->

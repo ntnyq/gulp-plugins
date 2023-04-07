@@ -1,4 +1,5 @@
 import through from 'through2'
+// @ts-expect-error no-types`
 import toDiffableHtml from 'diffable-html'
 import PluginError from 'plugin-error'
 import { createLogger } from '@ntnyq/logger'
@@ -37,7 +38,7 @@ export const diffableHTML = (options: Options = {}): Transform =>
 
     const diffable = (buf: DiffableContents, _: unknown, cb: TransformCallback): void => {
       try {
-        const contents = Buffer.from(toDiffableHtml(buf?.toString(), options))
+        const contents = Buffer.from(toDiffableHtml(buf?.toString() ?? '', options))
 
         if (next === cb) {
           file.contents = contents

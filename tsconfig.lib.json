@@ -12,7 +12,7 @@
     "moduleResolution": "node",
     "newLine": "lf",
     "noEmitOnError": true,
-    "noImplicitAny": false,
+    "noImplicitAny": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,

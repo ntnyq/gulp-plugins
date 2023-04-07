@@ -1,0 +1,199 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`default export > file-contents - buffer > Should format my HTML files as expected 1`] = `
+"<!DOCTYPE html>
+<html lang=\\"en\\">
+
+<head>
+  <meta charset=\\"UTF-8\\">
+  <title>gulp-format-html</title>
+</head>
+
+<body>
+  <header>
+    <h1>
+      <span>I am h1 in header</span>
+    </h1>
+  </header>
+  <main>
+    <p>
+      <span>span</span>
+      <b>b</b>
+      <strong>strong</strong>
+      <em>em</em>
+    </p>
+  </main>
+  <footer>
+    <p>
+      <a href=\\"https://github.com/ntnyq/gulp-format-html\\">gulp-format-html</a>
+    </p>
+  </footer>
+</body>
+
+</html>"
+`;
+
+exports[`default export > file-contents - buffer > Should works well when option verbose set 1`] = `
+"<!DOCTYPE html>
+<html lang=\\"en\\">
+
+<head>
+  <meta charset=\\"UTF-8\\">
+  <title>gulp-format-html</title>
+</head>
+
+<body>
+  <header>
+    <h1>
+      <span>I am h1 in header</span>
+    </h1>
+  </header>
+  <main>
+    <p>
+      <span>span</span>
+      <b>b</b>
+      <strong>strong</strong>
+      <em>em</em>
+    </p>
+  </main>
+  <footer>
+    <p>
+      <a href=\\"https://github.com/ntnyq/gulp-format-html\\">gulp-format-html</a>
+    </p>
+  </footer>
+</body>
+
+</html>"
+`;
+
+exports[`default export > file-contents - stream > Should format my HTML files 1`] = `
+"<!DOCTYPE html>
+<html lang=\\"en\\">
+
+<head>
+  <meta charset=\\"UTF-8\\">
+  <title>gulp-format-html</title>
+</head>
+
+<body>
+  <header>
+    <h1>
+      <span>I am h1 in header</span>
+    </h1>
+  </header>
+  <main>
+    <p>
+      <span>span</span>
+      <b>b</b>
+      <strong>strong</strong>
+      <em>em</em>
+    </p>
+  </main>
+  <footer>
+    <p>
+      <a href=\\"https://github.com/ntnyq/gulp-format-html\\">gulp-format-html</a>
+    </p>
+  </footer>
+</body>
+
+</html>"
+`;
+
+exports[`named export > file-contents - buffer > Should format my HTML files as expected 1`] = `
+"<!DOCTYPE html>
+<html lang=\\"en\\">
+
+<head>
+  <meta charset=\\"UTF-8\\">
+  <title>gulp-format-html</title>
+</head>
+
+<body>
+  <header>
+    <h1>
+      <span>I am h1 in header</span>
+    </h1>
+  </header>
+  <main>
+    <p>
+      <span>span</span>
+      <b>b</b>
+      <strong>strong</strong>
+      <em>em</em>
+    </p>
+  </main>
+  <footer>
+    <p>
+      <a href=\\"https://github.com/ntnyq/gulp-format-html\\">gulp-format-html</a>
+    </p>
+  </footer>
+</body>
+
+</html>"
+`;
+
+exports[`named export > file-contents - buffer > Should works well when option verbose set 1`] = `
+"<!DOCTYPE html>
+<html lang=\\"en\\">
+
+<head>
+  <meta charset=\\"UTF-8\\">
+  <title>gulp-format-html</title>
+</head>
+
+<body>
+  <header>
+    <h1>
+      <span>I am h1 in header</span>
+    </h1>
+  </header>
+  <main>
+    <p>
+      <span>span</span>
+      <b>b</b>
+      <strong>strong</strong>
+      <em>em</em>
+    </p>
+  </main>
+  <footer>
+    <p>
+      <a href=\\"https://github.com/ntnyq/gulp-format-html\\">gulp-format-html</a>
+    </p>
+  </footer>
+</body>
+
+</html>"
+`;
+
+exports[`named export > file-contents - stream > Should format my HTML files 1`] = `
+"<!DOCTYPE html>
+<html lang=\\"en\\">
+
+<head>
+  <meta charset=\\"UTF-8\\">
+  <title>gulp-format-html</title>
+</head>
+
+<body>
+  <header>
+    <h1>
+      <span>I am h1 in header</span>
+    </h1>
+  </header>
+  <main>
+    <p>
+      <span>span</span>
+      <b>b</b>
+      <strong>strong</strong>
+      <em>em</em>
+    </p>
+  </main>
+  <footer>
+    <p>
+      <a href=\\"https://github.com/ntnyq/gulp-format-html\\">gulp-format-html</a>
+    </p>
+  </footer>
+</body>
+
+</html>"
+`;

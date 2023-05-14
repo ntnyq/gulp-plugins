@@ -1,3 +1,4 @@
+import { Buffer } from 'node:buffer'
 import through from 'through2'
 // @ts-expect-error no-types`
 import toDiffableHtml from 'diffable-html'

@@ -1,3 +1,4 @@
+import { Buffer } from 'node:buffer'
 import through from 'through2'
 import PluginError from 'plugin-error'
 import prettyHtml from '@starptech/prettyhtml'

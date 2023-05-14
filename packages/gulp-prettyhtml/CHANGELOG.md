@@ -1,5 +1,15 @@
 # @ntnyq/gulp-prettyhtml
 
+## 2.0.0
+
+### Major Changes
+
+- [`9e8c64d`](https://github.com/ntnyq/gulp-plugins/commit/9e8c64d226e638b7219ea9f47e449d16968547d5) Thanks [@ntnyq](https://github.com/ntnyq)! - feat: drop node v14 support
+
+### Patch Changes
+
+- [`1646a14`](https://github.com/ntnyq/gulp-plugins/commit/1646a14c3e1a46536cdcd77d993b0f4655c9cc37) Thanks [@ntnyq](https://github.com/ntnyq)! - fix: use module `buffer`
+
 ## 1.3.2
 
 ### Patch Changes

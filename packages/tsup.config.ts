@@ -3,7 +3,7 @@ import { defineConfig } from 'tsup'
 export default defineConfig({
   entry: ['./src/*.ts'],
   format: ['cjs', 'esm'],
-  target: 'node14',
+  target: 'node16',
   clean: true,
   shims: true,
   splitting: true,

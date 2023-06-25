@@ -14,5 +14,14 @@
     "javascriptreact",
     "typescriptreact"
   ],
-  "cSpell.words": ["noopener", "pnpm", "starptech", "tsbuildinfo", "tsup", "vitest"]
+  "cSpell.words": [
+    "codecov",
+    "lcov",
+    "noopener",
+    "pnpm",
+    "starptech",
+    "tsbuildinfo",
+    "tsup",
+    "vitest"
+  ]
 }

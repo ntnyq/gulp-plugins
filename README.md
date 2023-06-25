@@ -2,7 +2,7 @@
 
 some gulp plugins
 
-[![Test](https://github.com/ntnyq/gulp-plugins/actions/workflows/test.yml/badge.svg)](https://github.com/ntnyq/gulp-plugins/actions/workflows/test.yml)
+[![CI](https://github.com/ntnyq/gulp-plugins/actions/workflows/ci.yml/badge.svg)](https://github.com/ntnyq/gulp-plugins/actions/workflows/ci.yml)
 [![LICENSE](https://img.shields.io/github/license/ntnyq/gulp-plugins?logo=github)](https://github.com/ntnyq/gulp-plugins/blob/master/LICENSE)
 
 ## packages

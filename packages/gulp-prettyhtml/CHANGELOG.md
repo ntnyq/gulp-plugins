@@ -1,5 +1,11 @@
 # @ntnyq/gulp-prettyhtml
 
+## 2.1.0
+
+### Minor Changes
+
+- [`ba37f6e`](https://github.com/ntnyq/gulp-plugins/commit/ba37f6eb5b4ccc7faf7709296d9601d18e96db04) Thanks [@ntnyq](https://github.com/ntnyq)! - feat: fancy verbose log
+
 ## 2.0.0
 
 ### Major Changes

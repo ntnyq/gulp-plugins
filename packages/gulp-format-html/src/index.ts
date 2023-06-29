@@ -1,8 +1,10 @@
+import process from 'node:process'
+import { relative } from 'node:path'
 import { Buffer } from 'node:buffer'
 import through from 'through2'
 import PluginError from 'plugin-error'
 import jsBeautify from 'js-beautify'
-import { createLogger } from '@ntnyq/logger'
+import { c, createLogger } from '@ntnyq/logger'
 import type { Transform } from 'node:stream'
 import type File from 'vinyl'
 import type { TransformCallback } from 'through2'
@@ -17,6 +19,7 @@ export interface Options extends HTMLBeautifyOptions {
 
 type FormatableContents = Buffer | NodeJS.ReadableStream | null
 
+const rootDir = process.cwd()
 const PLUGIN_NAME = 'gulp-format-html'
 const DEFAULT_OPTIONS = {
   indent_size: 2,
@@ -65,7 +68,7 @@ export const formatHTML = (options: Options = {}): Transform => {
       file.contents = file.contents.pipe(through(beautify))
     } else {
       if (options.verbose) {
-        logger.info(`${PLUGIN_NAME} is formatting file: ${file.path}`)
+        logger.info(`${c.yellow(PLUGIN_NAME)}: ${c.green(relative(rootDir, file.path))}`)
       }
 
       beautify(file.contents, null, next)

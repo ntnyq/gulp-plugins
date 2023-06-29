@@ -1,9 +1,11 @@
+import process from 'node:process'
+import { relative } from 'node:path'
 import { Buffer } from 'node:buffer'
 import through from 'through2'
 // @ts-expect-error no-types`
 import toDiffableHtml from 'diffable-html'
 import PluginError from 'plugin-error'
-import { createLogger } from '@ntnyq/logger'
+import { c, createLogger } from '@ntnyq/logger'
 import type { Transform } from 'node:stream'
 import type File from 'vinyl'
 import type { TransformCallback } from 'through2'
@@ -23,6 +25,7 @@ export interface Options {
   verbose?: boolean
 }
 
+const rootDir = process.cwd()
 const PLUGIN_NAME = 'gulp-diffable-html'
 const logger = createLogger({ time: 'HH:mm:ss' })
 
@@ -64,7 +67,7 @@ export const diffableHTML = (options: Options = {}): Transform =>
       file.contents = file.contents.pipe(through(diffable))
     } else {
       if (options.verbose) {
-        logger.info(`${PLUGIN_NAME} is formmating file: ${file.path}`)
+        logger.info(`${c.yellow(PLUGIN_NAME)}: ${c.green(relative(rootDir, file.path))}`)
       }
 
       diffable(file.contents, null, next)

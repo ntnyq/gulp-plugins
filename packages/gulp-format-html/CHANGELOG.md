@@ -1,5 +1,11 @@
 # gulp-format-html
 
+## 2.2.0
+
+### Minor Changes
+
+- [`6016d64`](https://github.com/ntnyq/gulp-plugins/commit/6016d6479dbc5122cc19172b41b15aeac5902ef8) Thanks [@ntnyq](https://github.com/ntnyq)! - feat(deps): bump js-beautify
+
 ## 2.1.0
 
 ### Minor Changes

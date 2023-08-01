@@ -90,13 +90,13 @@ importers:
         specifier: ^0.0.2
         version: 0.0.2
       '@types/js-beautify':
-        specifier: ^1.13.3
+        specifier: ^1.14.0
         version: 1.14.0
       '@types/through2':
         specifier: ^2.0.38
         version: 2.0.38
       js-beautify:
-        specifier: ^1.14.8
+        specifier: ^1.14.9
         version: 1.14.9
       plugin-error:
         specifier: ^2.0.1

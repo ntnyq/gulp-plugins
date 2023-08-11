@@ -43,7 +43,7 @@
     "dev": "DEV=true tsup"
   },
   "dependencies": {
-    "@ntnyq/logger": "^0.0.2",
+    "@ntnyq/logger": "^0.0.3",
     "@types/js-beautify": "^1.14.0",
     "@types/through2": "^2.0.38",
     "js-beautify": "^1.14.9",

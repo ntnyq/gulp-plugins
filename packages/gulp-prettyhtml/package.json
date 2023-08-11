@@ -43,7 +43,7 @@
     "dev": "DEV=true tsup"
   },
   "dependencies": {
-    "@ntnyq/logger": "^0.0.2",
+    "@ntnyq/logger": "^0.0.3",
     "@starptech/prettyhtml": "^0.10.0",
     "@types/through2": "^2.0.38",
     "plugin-error": "^2.0.1",

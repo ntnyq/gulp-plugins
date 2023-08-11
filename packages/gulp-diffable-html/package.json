@@ -44,7 +44,7 @@
     "dev": "DEV=true tsup"
   },
   "dependencies": {
-    "@ntnyq/logger": "^0.0.2",
+    "@ntnyq/logger": "^0.0.3",
     "@types/through2": "^2.0.38",
     "diffable-html": "^5.0.0",
     "plugin-error": "^2.0.1",

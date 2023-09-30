@@ -25,12 +25,17 @@
     "directory": "packages/gulp-format-html"
   },
   "exports": {
+    "./package.json": "./package.json",
     ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
-    },
-    "./*": "./*"
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
   },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -44,8 +49,8 @@
   },
   "dependencies": {
     "@ntnyq/logger": "^0.0.3",
-    "@types/js-beautify": "^1.14.0",
-    "@types/through2": "^2.0.38",
+    "@types/js-beautify": "^1.14.1",
+    "@types/through2": "^2.0.39",
     "js-beautify": "^1.14.9",
     "plugin-error": "^2.0.1",
     "through2": "^4.0.2"

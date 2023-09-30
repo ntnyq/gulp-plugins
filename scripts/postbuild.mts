@@ -1,3 +1,4 @@
+import process from 'node:process'
 import { basename, resolve } from 'node:path'
 import { readFile, writeFile } from 'node:fs/promises'
 import fg from 'fast-glob'

@@ -1,5 +1,11 @@
 # @ntnyq/gulp-prettyhtml
 
+## 2.2.0
+
+### Minor Changes
+
+- [`81e8898`](https://github.com/ntnyq/gulp-plugins/commit/81e8898278eb55ab31dfbd1629daad4e14e08398) Thanks [@ntnyq](https://github.com/ntnyq)! - feat: support mts dts file
+
 ## 2.1.0
 
 ### Minor Changes

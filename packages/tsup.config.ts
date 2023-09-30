@@ -7,6 +7,7 @@ export default defineConfig({
   target: 'node16',
   clean: true,
   shims: true,
+  cjsInterop: true,
   splitting: true,
   watch: !!process.env.DEV,
   tsconfig: '../../tsconfig.lib.json',

@@ -2,7 +2,7 @@ import process from 'node:process'
 import { relative } from 'node:path'
 import { Buffer } from 'node:buffer'
 import through from 'through2'
-// @ts-expect-error no-types`
+// @ts-expect-error: no types
 import toDiffableHtml from 'diffable-html'
 import PluginError from 'plugin-error'
 import { c, createLogger } from '@ntnyq/logger'

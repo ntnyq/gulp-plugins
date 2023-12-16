@@ -50,7 +50,7 @@
   },
   "dependencies": {
     "@ntnyq/logger": "^0.0.4",
-    "@types/through2": "^2.0.40",
+    "@types/through2": "^2.0.41",
     "diffable-html": "^5.0.0",
     "plugin-error": "^2.0.1",
     "through2": "^4.0.2"

@@ -49,9 +49,9 @@
   },
   "dependencies": {
     "@ntnyq/logger": "^0.0.4",
-    "@types/js-beautify": "^1.14.2",
-    "@types/through2": "^2.0.40",
-    "js-beautify": "^1.14.9",
+    "@types/js-beautify": "^1.14.3",
+    "@types/through2": "^2.0.41",
+    "js-beautify": "^1.14.11",
     "plugin-error": "^2.0.1",
     "through2": "^4.0.2"
   },

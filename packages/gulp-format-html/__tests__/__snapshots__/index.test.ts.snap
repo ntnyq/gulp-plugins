@@ -2,10 +2,10 @@
 
 exports[`default export > file-contents - buffer > Should format my HTML files as expected 1`] = `
 "<!DOCTYPE html>
-<html lang=\\"en\\">
+<html lang="en">
 
 <head>
-  <meta charset=\\"UTF-8\\">
+  <meta charset="UTF-8">
   <title>gulp-format-html</title>
 </head>
 
@@ -25,7 +25,7 @@ exports[`default export > file-contents - buffer > Should format my HTML files a
   </main>
   <footer>
     <p>
-      <a href=\\"https://github.com/ntnyq/gulp-format-html\\">gulp-format-html</a>
+      <a href="https://github.com/ntnyq/gulp-format-html">gulp-format-html</a>
     </p>
   </footer>
 </body>
@@ -35,10 +35,10 @@ exports[`default export > file-contents - buffer > Should format my HTML files a
 
 exports[`default export > file-contents - buffer > Should works well when option verbose set 1`] = `
 "<!DOCTYPE html>
-<html lang=\\"en\\">
+<html lang="en">
 
 <head>
-  <meta charset=\\"UTF-8\\">
+  <meta charset="UTF-8">
   <title>gulp-format-html</title>
 </head>
 
@@ -58,7 +58,7 @@ exports[`default export > file-contents - buffer > Should works well when option
   </main>
   <footer>
     <p>
-      <a href=\\"https://github.com/ntnyq/gulp-format-html\\">gulp-format-html</a>
+      <a href="https://github.com/ntnyq/gulp-format-html">gulp-format-html</a>
     </p>
   </footer>
 </body>
@@ -68,10 +68,10 @@ exports[`default export > file-contents - buffer > Should works well when option
 
 exports[`default export > file-contents - stream > Should format my HTML files 1`] = `
 "<!DOCTYPE html>
-<html lang=\\"en\\">
+<html lang="en">
 
 <head>
-  <meta charset=\\"UTF-8\\">
+  <meta charset="UTF-8">
   <title>gulp-format-html</title>
 </head>
 
@@ -91,7 +91,7 @@ exports[`default export > file-contents - stream > Should format my HTML files 1
   </main>
   <footer>
     <p>
-      <a href=\\"https://github.com/ntnyq/gulp-format-html\\">gulp-format-html</a>
+      <a href="https://github.com/ntnyq/gulp-format-html">gulp-format-html</a>
     </p>
   </footer>
 </body>
@@ -101,10 +101,10 @@ exports[`default export > file-contents - stream > Should format my HTML files 1
 
 exports[`named export > file-contents - buffer > Should format my HTML files as expected 1`] = `
 "<!DOCTYPE html>
-<html lang=\\"en\\">
+<html lang="en">
 
 <head>
-  <meta charset=\\"UTF-8\\">
+  <meta charset="UTF-8">
   <title>gulp-format-html</title>
 </head>
 
@@ -124,7 +124,7 @@ exports[`named export > file-contents - buffer > Should format my HTML files as 
   </main>
   <footer>
     <p>
-      <a href=\\"https://github.com/ntnyq/gulp-format-html\\">gulp-format-html</a>
+      <a href="https://github.com/ntnyq/gulp-format-html">gulp-format-html</a>
     </p>
   </footer>
 </body>
@@ -134,10 +134,10 @@ exports[`named export > file-contents - buffer > Should format my HTML files as 
 
 exports[`named export > file-contents - buffer > Should works well when option verbose set 1`] = `
 "<!DOCTYPE html>
-<html lang=\\"en\\">
+<html lang="en">
 
 <head>
-  <meta charset=\\"UTF-8\\">
+  <meta charset="UTF-8">
   <title>gulp-format-html</title>
 </head>
 
@@ -157,7 +157,7 @@ exports[`named export > file-contents - buffer > Should works well when option v
   </main>
   <footer>
     <p>
-      <a href=\\"https://github.com/ntnyq/gulp-format-html\\">gulp-format-html</a>
+      <a href="https://github.com/ntnyq/gulp-format-html">gulp-format-html</a>
     </p>
   </footer>
 </body>
@@ -167,10 +167,10 @@ exports[`named export > file-contents - buffer > Should works well when option v
 
 exports[`named export > file-contents - stream > Should format my HTML files 1`] = `
 "<!DOCTYPE html>
-<html lang=\\"en\\">
+<html lang="en">
 
 <head>
-  <meta charset=\\"UTF-8\\">
+  <meta charset="UTF-8">
   <title>gulp-format-html</title>
 </head>
 
@@ -190,7 +190,7 @@ exports[`named export > file-contents - stream > Should format my HTML files 1`]
   </main>
   <footer>
     <p>
-      <a href=\\"https://github.com/ntnyq/gulp-format-html\\">gulp-format-html</a>
+      <a href="https://github.com/ntnyq/gulp-format-html">gulp-format-html</a>
     </p>
   </footer>
 </body>

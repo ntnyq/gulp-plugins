@@ -5,9 +5,9 @@ exports[`default export > file-contents - buffer > Should format my HTML files a
 <!--[if IE 9]>.... some HTML here ....<![endif]-->
 
 
-<html lang=\\"en\\">
+<html lang="en">
 <head>
-  <meta charset=\\"UTF-8\\" />
+  <meta charset="UTF-8" />
   <title>@ntnyq/gulp-prettyhtml</title>
 </head>
 <body>
@@ -28,9 +28,9 @@ exports[`default export > file-contents - buffer > Should format my HTML files a
   <footer>
     <p>
       <a
-        href=\\"https://github.com/ntnyq/gulp-plugins/tree/main/packages/@ntnyq/gulp-prettyhtml\\"
-        target=\\"_blank\\"
-        rel=\\"noopener\\"
+        href="https://github.com/ntnyq/gulp-plugins/tree/main/packages/@ntnyq/gulp-prettyhtml"
+        target="_blank"
+        rel="noopener"
       >gulp-prettyhtml</a>
     </p>
   </footer>
@@ -43,9 +43,9 @@ exports[`default export > file-contents - buffer > Should works well when option
 <!--[if IE 9]>.... some HTML here ....<![endif]-->
 
 
-<html lang=\\"en\\">
+<html lang="en">
 <head>
-  <meta charset=\\"UTF-8\\" />
+  <meta charset="UTF-8" />
   <title>@ntnyq/gulp-prettyhtml</title>
 </head>
 <body>
@@ -66,9 +66,9 @@ exports[`default export > file-contents - buffer > Should works well when option
   <footer>
     <p>
       <a
-        href=\\"https://github.com/ntnyq/gulp-plugins/tree/main/packages/@ntnyq/gulp-prettyhtml\\"
-        target=\\"_blank\\"
-        rel=\\"noopener\\"
+        href="https://github.com/ntnyq/gulp-plugins/tree/main/packages/@ntnyq/gulp-prettyhtml"
+        target="_blank"
+        rel="noopener"
       >gulp-prettyhtml</a>
     </p>
   </footer>
@@ -80,9 +80,9 @@ exports[`default export > file-contents - stream > Should format my HTML files 1
 "<!doctype html>
 <!--[if IE 9]>.... some HTML here ....<![endif]-->
 
-<html lang=\\"en\\">
+<html lang="en">
 <head>
-  <meta charset=\\"UTF-8\\" />
+  <meta charset="UTF-8" />
   <title>@ntnyq/gulp-prettyhtml</title>
 </head>
 <body>
@@ -103,9 +103,9 @@ exports[`default export > file-contents - stream > Should format my HTML files 1
   <footer>
     <p>
       <a
-        href=\\"https://github.com/ntnyq/gulp-plugins/tree/main/packages/@ntnyq/gulp-prettyhtml\\"
-        target=\\"_blank\\"
-        rel=\\"noopener\\"
+        href="https://github.com/ntnyq/gulp-plugins/tree/main/packages/@ntnyq/gulp-prettyhtml"
+        target="_blank"
+        rel="noopener"
       >gulp-prettyhtml</a>
     </p>
   </footer>
@@ -117,9 +117,9 @@ exports[`named export > file-contents - buffer > Should format my HTML files as 
 "<!doctype html>
 <!--[if IE 9]>.... some HTML here ....<![endif]-->
 
-<html lang=\\"en\\">
+<html lang="en">
 <head>
-  <meta charset=\\"UTF-8\\" />
+  <meta charset="UTF-8" />
   <title>@ntnyq/gulp-prettyhtml</title>
 </head>
 <body>
@@ -140,9 +140,9 @@ exports[`named export > file-contents - buffer > Should format my HTML files as 
   <footer>
     <p>
       <a
-        href=\\"https://github.com/ntnyq/gulp-plugins/tree/main/packages/@ntnyq/gulp-prettyhtml\\"
-        target=\\"_blank\\"
-        rel=\\"noopener\\"
+        href="https://github.com/ntnyq/gulp-plugins/tree/main/packages/@ntnyq/gulp-prettyhtml"
+        target="_blank"
+        rel="noopener"
       >gulp-prettyhtml</a>
     </p>
   </footer>
@@ -155,9 +155,9 @@ exports[`named export > file-contents - buffer > Should works well when option v
 <!--[if IE 9]>.... some HTML here ....<![endif]-->
 
 
-<html lang=\\"en\\">
+<html lang="en">
 <head>
-  <meta charset=\\"UTF-8\\" />
+  <meta charset="UTF-8" />
   <title>@ntnyq/gulp-prettyhtml</title>
 </head>
 <body>
@@ -178,9 +178,9 @@ exports[`named export > file-contents - buffer > Should works well when option v
   <footer>
     <p>
       <a
-        href=\\"https://github.com/ntnyq/gulp-plugins/tree/main/packages/@ntnyq/gulp-prettyhtml\\"
-        target=\\"_blank\\"
-        rel=\\"noopener\\"
+        href="https://github.com/ntnyq/gulp-plugins/tree/main/packages/@ntnyq/gulp-prettyhtml"
+        target="_blank"
+        rel="noopener"
       >gulp-prettyhtml</a>
     </p>
   </footer>
@@ -192,9 +192,9 @@ exports[`named export > file-contents - stream > Should format my HTML files 1`]
 "<!doctype html>
 <!--[if IE 9]>.... some HTML here ....<![endif]-->
 
-<html lang=\\"en\\">
+<html lang="en">
 <head>
-  <meta charset=\\"UTF-8\\" />
+  <meta charset="UTF-8" />
   <title>@ntnyq/gulp-prettyhtml</title>
 </head>
 <body>
@@ -215,9 +215,9 @@ exports[`named export > file-contents - stream > Should format my HTML files 1`]
   <footer>
     <p>
       <a
-        href=\\"https://github.com/ntnyq/gulp-plugins/tree/main/packages/@ntnyq/gulp-prettyhtml\\"
-        target=\\"_blank\\"
-        rel=\\"noopener\\"
+        href="https://github.com/ntnyq/gulp-plugins/tree/main/packages/@ntnyq/gulp-prettyhtml"
+        target="_blank"
+        rel="noopener"
       >gulp-prettyhtml</a>
     </p>
   </footer>

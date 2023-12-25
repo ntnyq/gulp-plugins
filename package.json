@@ -20,7 +20,7 @@
     "@ntnyq/eslint-config": "^1.20.0",
     "@ntnyq/prettier-config": "^1.20.0",
     "@types/vinyl": "^2.0.11",
-    "@vitest/coverage-v8": "^1.0.4",
+    "@vitest/coverage-v8": "^1.1.0",
     "eslint": "^8.56.0",
     "husky": "8.0.3",
     "nano-staged": "^0.8.0",
@@ -31,7 +31,7 @@
     "turbo": "^1.11.2",
     "typescript": "^5.3.3",
     "vinyl": "^3.0.0",
-    "vitest": "^1.0.4"
+    "vitest": "^1.1.0"
   },
   "prettier": "@ntnyq/prettier-config",
   "nano-staged": {

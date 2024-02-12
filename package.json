@@ -22,7 +22,7 @@
     "@types/vinyl": "^2.0.11",
     "@vitest/coverage-v8": "^1.2.2",
     "eslint": "^8.56.0",
-    "husky": "8.0.3",
+    "husky": "9.0.10",
     "nano-staged": "^0.8.0",
     "pnpm": "^8.15.1",
     "prettier": "^3.2.5",

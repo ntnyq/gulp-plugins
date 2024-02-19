@@ -51,7 +51,7 @@
     "@ntnyq/logger": "^0.0.4",
     "@types/js-beautify": "^1.14.3",
     "@types/through2": "^2.0.41",
-    "js-beautify": "^1.14.11",
+    "js-beautify": "^1.15.1",
     "plugin-error": "^2.0.1",
     "through2": "^4.0.2"
   },

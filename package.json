@@ -2,7 +2,7 @@
   "name": "gulp-plugins",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@8.15.6",
+  "packageManager": "pnpm@8.15.7",
   "scripts": {
     "build": "turbo run --filter=\"./packages/*\" --parallel build",
     "clean": "rimraf packages/*/dist packages/*/*.tsbuildinfo",
@@ -20,18 +20,18 @@
     "@ntnyq/eslint-config": "^1.21.2",
     "@ntnyq/prettier-config": "^1.21.2",
     "@types/vinyl": "^2.0.11",
-    "@vitest/coverage-v8": "^1.4.0",
+    "@vitest/coverage-v8": "^1.5.0",
     "eslint": "^8.57.0",
     "husky": "9.0.11",
     "nano-staged": "^0.8.0",
-    "pnpm": "^8.15.6",
+    "pnpm": "^8.15.7",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
     "tsup": "^8.0.2",
     "turbo": "^1.13.2",
-    "typescript": "^5.4.4",
+    "typescript": "^5.4.5",
     "vinyl": "^3.0.0",
-    "vitest": "^1.4.0"
+    "vitest": "^1.5.0"
   },
   "prettier": "@ntnyq/prettier-config",
   "nano-staged": {

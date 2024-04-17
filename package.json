@@ -2,7 +2,7 @@
   "name": "gulp-plugins",
   "type": "module",
   "private": true,
-  "packageManager": "pnpm@8.15.7",
+  "packageManager": "pnpm@9.0.1",
   "scripts": {
     "build": "turbo run --filter=\"./packages/*\" --parallel build",
     "clean": "rimraf packages/*/dist packages/*/*.tsbuildinfo",
@@ -24,7 +24,7 @@
     "eslint": "^8.57.0",
     "husky": "9.0.11",
     "nano-staged": "^0.8.0",
-    "pnpm": "^8.15.7",
+    "pnpm": "^9.0.1",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
     "tsup": "^8.0.2",

@@ -36,14 +36,14 @@ importers:
         specifier: ^0.8.0
         version: 0.8.0
       pnpm:
-        specifier: ^9.0.6
-        version: 9.0.6
+        specifier: ^9.1.1
+        version: 9.1.1
       prettier:
         specifier: ^3.2.5
         version: 3.2.5
       rimraf:
-        specifier: ^5.0.5
-        version: 5.0.5
+        specifier: ^5.0.7
+        version: 5.0.7
       tsup:
         specifier: ^8.0.2
         version: 8.0.2(postcss@8.4.32)(typescript@5.4.5)
@@ -2529,8 +2529,8 @@ packages:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
 
-  pnpm@9.0.6:
-    resolution: {integrity: sha512-9thjEwlzIHy3ozbWtDmiQqJqyAaAd99TDWqGBpQZhT3B/+ZAKexZSpxQWjpBDRlkPIcKumd2Mw9c/dzxCpwWFw==}
+  pnpm@9.1.1:
+    resolution: {integrity: sha512-FOkVdZwR936sB/q6TQGcGT7IY3Ip5i7Jnu+3zzw7dcZER4grfEhRQkUe46a0CAWc37e3+gNBuXXxLQ92KccRlQ==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -2742,9 +2742,9 @@ packages:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
     hasBin: true
 
-  rimraf@5.0.5:
-    resolution: {integrity: sha512-CqDakW+hMe/Bz202FPEymy68P+G50RfMQK+Qo5YUqc9SPipvbGjCGKd0RSKEelbsfQuw3g5NZDSrlZZAJurH1A==}
-    engines: {node: '>=14'}
+  rimraf@5.0.7:
+    resolution: {integrity: sha512-nV6YcJo5wbLW77m+8KjH8aB/7/rxQy9SZ0HY5shnwULfS+9nmTtVXAJET5NdZmCzA4fPI/Hm1wo/Po/4mopOdg==}
+    engines: {node: '>=14.18'}
     hasBin: true
 
   rollup@4.5.0:
@@ -6238,7 +6238,7 @@ snapshots:
 
   pluralize@8.0.0: {}
 
-  pnpm@9.0.6: {}
+  pnpm@9.1.1: {}
 
   postcss-load-config@4.0.1(postcss@8.4.32):
     dependencies:
@@ -6442,7 +6442,7 @@ snapshots:
     dependencies:
       glob: 7.2.3
 
-  rimraf@5.0.5:
+  rimraf@5.0.7:
     dependencies:
       glob: 10.3.10
 

@@ -2,7 +2,7 @@
   "prettier.enable": true,
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "always"
+    "source.fixAll.eslint": "explicit"
   },
   "eslint.validate": [
     "vue",

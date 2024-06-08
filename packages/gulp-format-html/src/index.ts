@@ -38,7 +38,7 @@ const beautifyHtml = jsBeautify.html
 export const formatHTML = (options: Options = {}): Transform => {
   options = Object.assign({}, DEFAULT_OPTIONS, options)
 
-  return through.obj((file: File, enc, next) => {
+  return through.obj((file: File, _enc, next) => {
     if (file.isNull()) return next(null, file)
 
     const beautify = (buf: FormatableContents, _: unknown, cb: TransformCallback): void => {

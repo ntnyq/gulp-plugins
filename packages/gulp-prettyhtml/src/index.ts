@@ -45,7 +45,7 @@ const logger = createLogger({ time: 'HH:mm:ss' })
  * @returns formatted HTML
  */
 export const prettyHTML = (options: Options = {}): Transform => {
-  return through.obj((file: File, enc, next) => {
+  return through.obj((file: File, _enc, next) => {
     if (file.isNull()) return next(null, file)
 
     const pretty = (buf: FormatableContents, _: unknown, cb: TransformCallback): void => {

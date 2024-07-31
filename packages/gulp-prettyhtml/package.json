@@ -48,11 +48,11 @@
     "dev": "DEV=true tsup"
   },
   "dependencies": {
-    "@ntnyq/logger": "^0.0.4",
+    "@ntnyq/logger": "catalog:",
     "@starptech/prettyhtml": "^0.10.0",
-    "@types/through2": "^2.0.41",
-    "plugin-error": "^2.0.1",
-    "through2": "^4.0.2"
+    "@types/through2": "catalog:",
+    "plugin-error": "catalog:",
+    "through2": "catalog:"
   },
   "engines": {
     "node": ">=18.18.0"

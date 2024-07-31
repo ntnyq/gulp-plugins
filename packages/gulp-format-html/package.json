@@ -48,12 +48,12 @@
     "dev": "DEV=true tsup"
   },
   "dependencies": {
-    "@ntnyq/logger": "^0.0.4",
+    "@ntnyq/logger": "catalog:",
     "@types/js-beautify": "^1.14.3",
-    "@types/through2": "^2.0.41",
+    "@types/through2": "catalog:",
     "js-beautify": "^1.15.1",
-    "plugin-error": "^2.0.1",
-    "through2": "^4.0.2"
+    "plugin-error": "catalog:",
+    "through2": "catalog:"
   },
   "engines": {
     "node": ">=18.18.0"

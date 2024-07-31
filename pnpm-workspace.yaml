@@ -1,2 +1,10 @@
+# eslint yml/sort-keys: error
+
+catalog:
+  '@ntnyq/logger': ^0.0.4
+  '@types/through2': ^2.0.41
+  plugin-error: ^2.0.1
+  through2: ^4.0.2
+
 packages:
   - packages/*

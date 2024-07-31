@@ -4,6 +4,21 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+catalogs:
+  default:
+    '@ntnyq/logger':
+      specifier: ^0.0.4
+      version: 0.0.4
+    '@types/through2':
+      specifier: ^2.0.41
+      version: 2.0.41
+    plugin-error:
+      specifier: ^2.0.1
+      version: 2.0.1
+    through2:
+      specifier: ^4.0.2
+      version: 4.0.2
+
 importers:
 
   .:
@@ -63,58 +78,58 @@ importers:
   packages/gulp-diffable-html:
     dependencies:
       '@ntnyq/logger':
-        specifier: ^0.0.4
+        specifier: 'catalog:'
         version: 0.0.4
       '@types/through2':
-        specifier: ^2.0.41
+        specifier: 'catalog:'
         version: 2.0.41
       diffable-html:
         specifier: ^5.0.0
         version: 5.0.0
       plugin-error:
-        specifier: ^2.0.1
+        specifier: 'catalog:'
         version: 2.0.1
       through2:
-        specifier: ^4.0.2
+        specifier: 'catalog:'
         version: 4.0.2
 
   packages/gulp-format-html:
     dependencies:
       '@ntnyq/logger':
-        specifier: ^0.0.4
+        specifier: 'catalog:'
         version: 0.0.4
       '@types/js-beautify':
         specifier: ^1.14.3
         version: 1.14.3
       '@types/through2':
-        specifier: ^2.0.41
+        specifier: 'catalog:'
         version: 2.0.41
       js-beautify:
         specifier: ^1.15.1
         version: 1.15.1
       plugin-error:
-        specifier: ^2.0.1
+        specifier: 'catalog:'
         version: 2.0.1
       through2:
-        specifier: ^4.0.2
+        specifier: 'catalog:'
         version: 4.0.2
 
   packages/gulp-prettyhtml:
     dependencies:
       '@ntnyq/logger':
-        specifier: ^0.0.4
+        specifier: 'catalog:'
         version: 0.0.4
       '@starptech/prettyhtml':
         specifier: ^0.10.0
         version: 0.10.0
       '@types/through2':
-        specifier: ^2.0.41
+        specifier: 'catalog:'
         version: 2.0.41
       plugin-error:
-        specifier: ^2.0.1
+        specifier: 'catalog:'
         version: 2.0.1
       through2:
-        specifier: ^4.0.2
+        specifier: 'catalog:'
         version: 4.0.2
 
 packages:
@@ -3940,7 +3955,7 @@ snapshots:
   '@ntnyq/logger@0.0.4':
     dependencies:
       dayjs: 1.11.10
-      picocolors: 1.0.0
+      picocolors: 1.0.1
 
   '@ntnyq/prettier-config@1.21.2': {}
 

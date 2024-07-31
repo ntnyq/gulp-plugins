@@ -1,5 +1,11 @@
 # @ntnyq/gulp-prettyhtml
 
+## 3.0.0
+
+### Major Changes
+
+- [`2ee4b3b`](https://github.com/ntnyq/gulp-plugins/commit/2ee4b3b0fbaefc994efc1f4fe6ff44584874f9a9) Thanks [@ntnyq](https://github.com/ntnyq)! - feat: drop node v16 support
+
 ## 2.2.0
 
 ### Minor Changes

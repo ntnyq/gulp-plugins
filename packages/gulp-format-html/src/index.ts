@@ -1,14 +1,14 @@
-import process from 'node:process'
-import { relative } from 'node:path'
 import { Buffer } from 'node:buffer'
-import through from 'through2'
-import PluginError from 'plugin-error'
-import jsBeautify from 'js-beautify'
+import { relative } from 'node:path'
+import process from 'node:process'
 import { c, createLogger } from '@ntnyq/logger'
+import jsBeautify from 'js-beautify'
+import PluginError from 'plugin-error'
+import through from 'through2'
 import type { Transform } from 'node:stream'
-import type File from 'vinyl'
-import type { TransformCallback } from 'through2'
 import type { HTMLBeautifyOptions } from 'js-beautify'
+import type { TransformCallback } from 'through2'
+import type File from 'vinyl'
 
 export interface Options extends HTMLBeautifyOptions {
   /**

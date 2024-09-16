@@ -4,9 +4,9 @@ import through from 'through2'
 import File from 'vinyl'
 import { describe, expect, it } from 'vitest'
 import format, { diffableHTML } from '../src'
-import type { Options } from '../src'
 import type { Buffer } from 'node:buffer'
 import type { Transform } from 'node:stream'
+import type { Options } from '../src'
 
 const resolve = (...args: string[]): string => path.resolve(__dirname, ...args)
 

@@ -20,8 +20,8 @@ pnpm add @ntnyq/gulp-prettyhtml -D
 ## Setup
 
 ```js
-const gulp = require('gulp')
 const prettyHTML = require('@ntnyq/gulp-prettyhtml')
+const gulp = require('gulp')
 // or
 // const { prettyHTML } = require(`@ntnyq/gulp-prettyhtml`)
 
@@ -33,8 +33,8 @@ exports.dev = gulp.series(views)
 ```
 
 ```ts
-import gulp from 'gulp'
 import prettyHTML from '@ntnyq/gulp-prettyhtml'
+import gulp from 'gulp'
 // or
 // import { prettyHTML } from '@ntnyq/gulp-prettyhtml'
 

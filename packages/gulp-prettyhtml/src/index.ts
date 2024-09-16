@@ -1,13 +1,13 @@
-import process from 'node:process'
-import { relative } from 'node:path'
 import { Buffer } from 'node:buffer'
-import through from 'through2'
-import PluginError from 'plugin-error'
-import prettyHtml from '@starptech/prettyhtml'
+import { relative } from 'node:path'
+import process from 'node:process'
 import { c, createLogger } from '@ntnyq/logger'
+import prettyHtml from '@starptech/prettyhtml'
+import PluginError from 'plugin-error'
+import through from 'through2'
 import type { Transform } from 'node:stream'
-import type File from 'vinyl'
 import type { TransformCallback } from 'through2'
+import type File from 'vinyl'
 
 interface Prettier {
   tabWidth?: number

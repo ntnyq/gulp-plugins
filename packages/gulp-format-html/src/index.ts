@@ -8,7 +8,7 @@ import through from 'through2'
 import type { Transform } from 'node:stream'
 import type { HTMLBeautifyOptions } from 'js-beautify'
 import type { TransformCallback } from 'through2'
-import type File from 'vinyl'
+import type Vinyl from 'vinyl'
 
 export interface Options extends HTMLBeautifyOptions {
   /**
@@ -38,7 +38,7 @@ const beautifyHtml = jsBeautify.html
 export const formatHTML = (options: Options = {}): Transform => {
   options = Object.assign({}, DEFAULT_OPTIONS, options)
 
-  return through.obj((file: File, _enc, next) => {
+  return through.obj((file: Vinyl, _enc, next) => {
     if (file.isNull()) return next(null, file)
 
     const beautify = (buf: FormatableContents, _: unknown, cb: TransformCallback): void => {

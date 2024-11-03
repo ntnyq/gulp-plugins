@@ -7,12 +7,11 @@ import PluginError from 'plugin-error'
 import through from 'through2'
 import type { Transform } from 'node:stream'
 import type { TransformCallback } from 'through2'
-import type File from 'vinyl'
+import type Vinyl from 'vinyl'
 
 export interface Options {
   /**
    * custom sort attributes
-   * @default `names => names`
    */
   sortAttributes?: (names: string[]) => string[]
 
@@ -36,7 +35,7 @@ type DiffableContents = Buffer | NodeJS.ReadableStream | null
  * @returns formatted HTML
  */
 export const diffableHTML = (options: Options = {}): Transform =>
-  through.obj((file: File, _enc, next) => {
+  through.obj((file: Vinyl, _enc, next) => {
     if (file.isNull()) return next(null, file)
 
     const diffable = (buf: DiffableContents, _: unknown, cb: TransformCallback): void => {

@@ -16,13 +16,13 @@
     "email": "ntnyq13@gmail.com"
   },
   "homepage": "https://github.com/ntnyq/gulp-plugins",
-  "bugs": {
-    "url": "https://github.com/ntnyq/gulp-plugins/issues"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ntnyq/gulp-plugins.git",
     "directory": "packages/gulp-format-html"
+  },
+  "bugs": {
+    "url": "https://github.com/ntnyq/gulp-plugins/issues"
   },
   "exports": {
     "./package.json": "./package.json",
@@ -45,7 +45,7 @@
   ],
   "scripts": {
     "build": "tsup",
-    "dev": "DEV=true tsup"
+    "dev": "tsup --watch src"
   },
   "dependencies": {
     "@ntnyq/logger": "catalog:",

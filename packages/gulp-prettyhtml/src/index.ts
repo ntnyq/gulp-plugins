@@ -7,7 +7,7 @@ import PluginError from 'plugin-error'
 import through from 'through2'
 import type { Transform } from 'node:stream'
 import type { TransformCallback } from 'through2'
-import type File from 'vinyl'
+import type Vinyl from 'vinyl'
 
 interface Prettier {
   tabWidth?: number
@@ -45,7 +45,7 @@ const logger = createLogger({ time: 'HH:mm:ss' })
  * @returns formatted HTML
  */
 export const prettyHTML = (options: Options = {}): Transform => {
-  return through.obj((file: File, _enc, next) => {
+  return through.obj((file: Vinyl, _enc, next) => {
     if (file.isNull()) return next(null, file)
 
     const pretty = (buf: FormatableContents, _: unknown, cb: TransformCallback): void => {

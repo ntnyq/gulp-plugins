@@ -17,11 +17,11 @@
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.0",
     "@changesets/cli": "^2.27.9",
-    "@ntnyq/eslint-config": "^3.1.2",
+    "@ntnyq/eslint-config": "^3.2.0",
     "@ntnyq/prettier-config": "^1.21.3",
     "@types/vinyl": "^2.0.12",
     "@vitest/coverage-v8": "^2.1.4",
-    "eslint": "^9.13.0",
+    "eslint": "^9.14.0",
     "husky": "^9.1.6",
     "nano-staged": "^0.8.0",
     "pnpm": "^9.12.3",

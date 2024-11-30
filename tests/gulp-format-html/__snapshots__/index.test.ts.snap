@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`default export > file-contents - buffer > Should format my HTML files as expected 1`] = `
+exports[`default export > file > Should format my HTML files as expected 1`] = `
 "<!DOCTYPE html>
 <html lang="en">
 
@@ -33,7 +33,7 @@ exports[`default export > file-contents - buffer > Should format my HTML files a
 </html>"
 `;
 
-exports[`default export > file-contents - buffer > Should works well when option verbose set 1`] = `
+exports[`default export > file > Should works well when option verbose set 1`] = `
 "<!DOCTYPE html>
 <html lang="en">
 
@@ -66,7 +66,7 @@ exports[`default export > file-contents - buffer > Should works well when option
 </html>"
 `;
 
-exports[`default export > file-contents - stream > Should format my HTML files 1`] = `
+exports[`default export > stream > Should format my HTML files 1`] = `
 "<!DOCTYPE html>
 <html lang="en">
 
@@ -99,7 +99,7 @@ exports[`default export > file-contents - stream > Should format my HTML files 1
 </html>"
 `;
 
-exports[`named export > file-contents - buffer > Should format my HTML files as expected 1`] = `
+exports[`named export > file > Should format my HTML files as expected 1`] = `
 "<!DOCTYPE html>
 <html lang="en">
 
@@ -132,7 +132,7 @@ exports[`named export > file-contents - buffer > Should format my HTML files as 
 </html>"
 `;
 
-exports[`named export > file-contents - buffer > Should works well when option verbose set 1`] = `
+exports[`named export > file > Should works well when option verbose set 1`] = `
 "<!DOCTYPE html>
 <html lang="en">
 
@@ -165,7 +165,7 @@ exports[`named export > file-contents - buffer > Should works well when option v
 </html>"
 `;
 
-exports[`named export > file-contents - stream > Should format my HTML files 1`] = `
+exports[`named export > stream > Should format my HTML files 1`] = `
 "<!DOCTYPE html>
 <html lang="en">
 

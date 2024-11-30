@@ -48,9 +48,9 @@ export const prettyHTML = (options: Options = {}): Transform => {
   return through.obj((file: Vinyl, _enc, next) => {
     if (file.isNull()) return next(null, file)
 
-    const pretty = (buf: FormatableContents, _: unknown, cb: TransformCallback): void => {
+    function transform(buffer: FormatableContents, _: unknown, cb: TransformCallback) {
       try {
-        const contents = Buffer.from(prettyHtml(buf?.toString() ?? '', options).contents)
+        const contents = Buffer.from(prettyHtml(buffer?.toString() ?? '', options).contents)
 
         if (next === cb) {
           file.contents = contents
@@ -60,8 +60,8 @@ export const prettyHTML = (options: Options = {}): Transform => {
         cb(null, contents)
         next(null, file)
       } catch (err: unknown) {
-        const opts = Object.assign({}, options, { fileName: file.path })
-        const error = new PluginError(PLUGIN_NAME, err as Error, opts)
+        const errorOptions = Object.assign({}, options, { fileName: file.path })
+        const error = new PluginError(PLUGIN_NAME, err as Error, errorOptions)
 
         if (next !== cb) {
           return next(error)
@@ -72,13 +72,13 @@ export const prettyHTML = (options: Options = {}): Transform => {
     }
 
     if (file.isStream()) {
-      file.contents = file.contents.pipe(through(pretty))
+      file.contents = file.contents.pipe(through(transform))
     } else {
       if (options.verbose) {
         logger.info(`${c.yellow(PLUGIN_NAME)}: ${c.green(relative(rootDir, file.path))}`)
       }
 
-      pretty(file.contents, null, next)
+      transform(file.contents, null, next)
     }
   })
 }

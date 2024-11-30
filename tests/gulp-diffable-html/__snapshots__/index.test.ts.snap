@@ -1,150 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`default export > file-contents - buffer > Should format my HTML files as expected 1`] = `
-"<!DOCTYPE html>
-<!--[if IE 9]>.... some HTML here ....<![endif]-->
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>
-      gulp-diffable-html
-    </title>
-  </head>
-  <body>
-    <header>
-      <h1>
-        <span>
-          I am h1 in header
-        </span>
-      </h1>
-    </header>
-    <main>
-      <p>
-        <span>
-        </span>
-        <b>
-          b
-        </b>
-        <strong>
-          strong
-        </strong>
-        <em>
-          &copy;
-        </em>
-      </p>
-    </main>
-    <footer>
-      <p>
-        <a
-          href="https://github.com/ntnyq/gulp-diffable-html"
-          rel="noopener"
-          target="_blank"
-        >
-          gulp-diffable-html
-        </a>
-      </p>
-    </footer>
-  </body>
-</html>"
-`;
-
-exports[`default export > file-contents - buffer > Should sort attributes as expected 1`] = `
-"<!DOCTYPE html>
-<!--[if IE 9]>.... some HTML here ....<![endif]-->
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>
-      gulp-diffable-html
-    </title>
-  </head>
-  <body>
-    <header>
-      <h1>
-        <span>
-          I am h1 in header
-        </span>
-      </h1>
-    </header>
-    <main>
-      <p>
-        <span>
-        </span>
-        <b>
-          b
-        </b>
-        <strong>
-          strong
-        </strong>
-        <em>
-          &copy;
-        </em>
-      </p>
-    </main>
-    <footer>
-      <p>
-        <a
-          href="https://github.com/ntnyq/gulp-diffable-html"
-          rel="noopener"
-          target="_blank"
-        >
-          gulp-diffable-html
-        </a>
-      </p>
-    </footer>
-  </body>
-</html>"
-`;
-
-exports[`default export > file-contents - buffer > Should works well when option verbose set 1`] = `
-"<!DOCTYPE html>
-<!--[if IE 9]>.... some HTML here ....<![endif]-->
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>
-      gulp-diffable-html
-    </title>
-  </head>
-  <body>
-    <header>
-      <h1>
-        <span>
-          I am h1 in header
-        </span>
-      </h1>
-    </header>
-    <main>
-      <p>
-        <span>
-        </span>
-        <b>
-          b
-        </b>
-        <strong>
-          strong
-        </strong>
-        <em>
-          &copy;
-        </em>
-      </p>
-    </main>
-    <footer>
-      <p>
-        <a
-          href="https://github.com/ntnyq/gulp-diffable-html"
-          rel="noopener"
-          target="_blank"
-        >
-          gulp-diffable-html
-        </a>
-      </p>
-    </footer>
-  </body>
-</html>"
-`;
-
-exports[`default export > file-contents - stream > Should format my HTML files 1`] = `
+exports[`default export > file > Should format my HTML files as expected 1`] = `
 "<!DOCTYPE html>
 <!--[if IE 9]>.... some HTML here ....<![endif]-->
 <html lang="en">
@@ -192,55 +48,7 @@ exports[`default export > file-contents - stream > Should format my HTML files 1
 </html>"
 `;
 
-exports[`named export > file-contents - buffer > Should format my HTML files as expected 1`] = `
-"<!DOCTYPE html>
-<!--[if IE 9]>.... some HTML here ....<![endif]-->
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>
-      gulp-diffable-html
-    </title>
-  </head>
-  <body>
-    <header>
-      <h1>
-        <span>
-          I am h1 in header
-        </span>
-      </h1>
-    </header>
-    <main>
-      <p>
-        <span>
-        </span>
-        <b>
-          b
-        </b>
-        <strong>
-          strong
-        </strong>
-        <em>
-          &copy;
-        </em>
-      </p>
-    </main>
-    <footer>
-      <p>
-        <a
-          href="https://github.com/ntnyq/gulp-diffable-html"
-          target="_blank"
-          rel="noopener"
-        >
-          gulp-diffable-html
-        </a>
-      </p>
-    </footer>
-  </body>
-</html>"
-`;
-
-exports[`named export > file-contents - buffer > Should sort attributes as expected 1`] = `
+exports[`default export > file > Should sort attributes as expected 1`] = `
 "<!DOCTYPE html>
 <!--[if IE 9]>.... some HTML here ....<![endif]-->
 <html lang="en">
@@ -288,7 +96,7 @@ exports[`named export > file-contents - buffer > Should sort attributes as expec
 </html>"
 `;
 
-exports[`named export > file-contents - buffer > Should works well when option verbose set 1`] = `
+exports[`default export > file > Should works well when option verbose set 1`] = `
 "<!DOCTYPE html>
 <!--[if IE 9]>.... some HTML here ....<![endif]-->
 <html lang="en">
@@ -336,7 +144,199 @@ exports[`named export > file-contents - buffer > Should works well when option v
 </html>"
 `;
 
-exports[`named export > file-contents - stream > Should format my HTML files 1`] = `
+exports[`default export > stream > Should format my HTML files 1`] = `
+"<!DOCTYPE html>
+<!--[if IE 9]>.... some HTML here ....<![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      gulp-diffable-html
+    </title>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <span>
+          I am h1 in header
+        </span>
+      </h1>
+    </header>
+    <main>
+      <p>
+        <span>
+        </span>
+        <b>
+          b
+        </b>
+        <strong>
+          strong
+        </strong>
+        <em>
+          &copy;
+        </em>
+      </p>
+    </main>
+    <footer>
+      <p>
+        <a
+          href="https://github.com/ntnyq/gulp-diffable-html"
+          target="_blank"
+          rel="noopener"
+        >
+          gulp-diffable-html
+        </a>
+      </p>
+    </footer>
+  </body>
+</html>"
+`;
+
+exports[`named export > file > Should format my HTML files as expected 1`] = `
+"<!DOCTYPE html>
+<!--[if IE 9]>.... some HTML here ....<![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      gulp-diffable-html
+    </title>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <span>
+          I am h1 in header
+        </span>
+      </h1>
+    </header>
+    <main>
+      <p>
+        <span>
+        </span>
+        <b>
+          b
+        </b>
+        <strong>
+          strong
+        </strong>
+        <em>
+          &copy;
+        </em>
+      </p>
+    </main>
+    <footer>
+      <p>
+        <a
+          href="https://github.com/ntnyq/gulp-diffable-html"
+          target="_blank"
+          rel="noopener"
+        >
+          gulp-diffable-html
+        </a>
+      </p>
+    </footer>
+  </body>
+</html>"
+`;
+
+exports[`named export > file > Should sort attributes as expected 1`] = `
+"<!DOCTYPE html>
+<!--[if IE 9]>.... some HTML here ....<![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      gulp-diffable-html
+    </title>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <span>
+          I am h1 in header
+        </span>
+      </h1>
+    </header>
+    <main>
+      <p>
+        <span>
+        </span>
+        <b>
+          b
+        </b>
+        <strong>
+          strong
+        </strong>
+        <em>
+          &copy;
+        </em>
+      </p>
+    </main>
+    <footer>
+      <p>
+        <a
+          href="https://github.com/ntnyq/gulp-diffable-html"
+          rel="noopener"
+          target="_blank"
+        >
+          gulp-diffable-html
+        </a>
+      </p>
+    </footer>
+  </body>
+</html>"
+`;
+
+exports[`named export > file > Should works well when option verbose set 1`] = `
+"<!DOCTYPE html>
+<!--[if IE 9]>.... some HTML here ....<![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      gulp-diffable-html
+    </title>
+  </head>
+  <body>
+    <header>
+      <h1>
+        <span>
+          I am h1 in header
+        </span>
+      </h1>
+    </header>
+    <main>
+      <p>
+        <span>
+        </span>
+        <b>
+          b
+        </b>
+        <strong>
+          strong
+        </strong>
+        <em>
+          &copy;
+        </em>
+      </p>
+    </main>
+    <footer>
+      <p>
+        <a
+          href="https://github.com/ntnyq/gulp-diffable-html"
+          target="_blank"
+          rel="noopener"
+        >
+          gulp-diffable-html
+        </a>
+      </p>
+    </footer>
+  </body>
+</html>"
+`;
+
+exports[`named export > stream > Should format my HTML files 1`] = `
 "<!DOCTYPE html>
 <!--[if IE 9]>.... some HTML here ....<![endif]-->
 <html lang="en">

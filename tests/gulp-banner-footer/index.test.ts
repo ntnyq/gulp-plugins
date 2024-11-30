@@ -1,14 +1,8 @@
-import fs from 'node:fs'
-import path from 'node:path'
-import File from 'vinyl'
 import { describe, expect, it } from 'vitest'
-import gulpAddBannerFooter, { addBannerOrFooter } from '../src'
-import type { Transform } from 'node:stream'
-import type { Options } from '../src'
-
-const resolve = (...args: string[]): string => path.resolve(__dirname, ...args)
-
-type StreamCreator = (options?: Options) => Transform
+import gulpAddBannerFooter, { addBannerOrFooter } from '../../packages/gulp-banner-footer/src'
+import { createFakeFileCreator, createFile } from '../utils'
+import type { Options } from '../../packages/gulp-banner-footer/src'
+import type { StreamCreator } from '../utils'
 
 const BANNER = `
 /**
@@ -16,17 +10,10 @@ const BANNER = `
  */
 `
 const FOOTER = `// @license MIT`
-const fakeFilePath = resolve('fixtures/app.ts')
-const fakeFileContent = fs.readFileSync(fakeFilePath)
 
-function getFakeFile() {
-  return new File({
-    path: fakeFilePath,
-    contents: fakeFileContent,
-  })
-}
+const crateFakeFile = createFakeFileCreator('tests/gulp-banner-footer/fixtures/app.ts')
 
-function runTests(streamCreator: StreamCreator) {
+function runTests(streamCreator: StreamCreator<Options>) {
   it('Should ignore empty file', () =>
     new Promise<void>((resolve, reject) => {
       const stream = streamCreator()
@@ -35,7 +22,7 @@ function runTests(streamCreator: StreamCreator) {
         expect(file.isNull()).toBeTruthy()
         resolve()
       })
-      stream.write(new File({}))
+      stream.write(createFile())
     }))
 
   it('Should add banner', () =>
@@ -51,7 +38,7 @@ function runTests(streamCreator: StreamCreator) {
         expect(file.contents.toString().trim()).toMatchSnapshot()
         resolve()
       })
-      stream.write(getFakeFile())
+      stream.write(crateFakeFile())
     }))
 
   it('Should add banner - function', () =>
@@ -69,7 +56,7 @@ function runTests(streamCreator: StreamCreator) {
         expect(file.contents.toString().trim()).toMatchSnapshot()
         resolve()
       })
-      stream.write(getFakeFile())
+      stream.write(crateFakeFile())
     }))
 
   it('Should add footer', () =>
@@ -85,7 +72,7 @@ function runTests(streamCreator: StreamCreator) {
         expect(file.contents.toString().trim()).toMatchSnapshot()
         resolve()
       })
-      stream.write(getFakeFile())
+      stream.write(crateFakeFile())
     }))
 
   it('Should add footer - function', () =>
@@ -101,7 +88,7 @@ function runTests(streamCreator: StreamCreator) {
         expect(file.contents.toString().trim()).toMatchSnapshot()
         resolve()
       })
-      stream.write(getFakeFile())
+      stream.write(crateFakeFile())
     }))
 
   it('Should verbose work', () =>
@@ -115,7 +102,7 @@ function runTests(streamCreator: StreamCreator) {
         expect(file.contents.toString().trim()).toMatchSnapshot()
         resolve()
       })
-      stream.write(getFakeFile())
+      stream.write(crateFakeFile())
     }))
 }
 

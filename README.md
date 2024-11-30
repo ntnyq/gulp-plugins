@@ -11,6 +11,7 @@ some gulp plugins
 - [gulp-format-html](./packages/gulp-format-html)
 - [gulp-diffable-html](./packages/gulp-diffable-html)
 - [@ntnyq/gulp-prettyhtml](./packages/gulp-prettyhtml)
+- [gulp-banner-footer](./packages/gulp-banner-footer)
 
 ## License
 

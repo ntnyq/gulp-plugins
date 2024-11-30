@@ -19,7 +19,7 @@
     "@changesets/cli": "^2.27.10",
     "@ntnyq/eslint-config": "^3.7.1",
     "@ntnyq/prettier-config": "^1.22.0",
-    "@types/vinyl": "^2.0.12",
+    "@types/vinyl": "catalog:",
     "@vitest/coverage-v8": "^2.1.6",
     "eslint": "^9.16.0",
     "husky": "^9.1.7",
@@ -30,7 +30,7 @@
     "tsup": "^8.3.5",
     "turbo": "^2.3.3",
     "typescript": "^5.7.2",
-    "vinyl": "^3.0.0",
+    "vinyl": "catalog:",
     "vitest": "^2.1.6"
   },
   "prettier": "@ntnyq/prettier-config",

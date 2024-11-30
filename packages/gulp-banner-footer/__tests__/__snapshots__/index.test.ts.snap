@@ -1,0 +1,59 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`default export > Should add banner - function 1`] = `
+"/**
+* app.ts
+*/
+export const name = 'foobar'"
+`;
+
+exports[`default export > Should add banner 1`] = `
+"/**
+ * @license MIT
+ */
+
+export const name = 'foobar'"
+`;
+
+exports[`default export > Should add footer - function 1`] = `
+"export const name = 'foobar'
+
+// app.ts"
+`;
+
+exports[`default export > Should add footer 1`] = `
+"export const name = 'foobar'
+
+// @license MIT"
+`;
+
+exports[`default export > Should verbose work 1`] = `"export const name = 'foobar'"`;
+
+exports[`named export > Should add banner - function 1`] = `
+"/**
+* app.ts
+*/
+export const name = 'foobar'"
+`;
+
+exports[`named export > Should add banner 1`] = `
+"/**
+ * @license MIT
+ */
+
+export const name = 'foobar'"
+`;
+
+exports[`named export > Should add footer - function 1`] = `
+"export const name = 'foobar'
+
+// app.ts"
+`;
+
+exports[`named export > Should add footer 1`] = `
+"export const name = 'foobar'
+
+// @license MIT"
+`;
+
+exports[`named export > Should verbose work 1`] = `"export const name = 'foobar'"`;

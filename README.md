@@ -8,10 +8,12 @@ some gulp plugins
 
 ## packages
 
-- [gulp-format-html](./packages/gulp-format-html)
-- [gulp-diffable-html](./packages/gulp-diffable-html)
-- [@ntnyq/gulp-prettyhtml](./packages/gulp-prettyhtml)
-- [gulp-banner-footer](./packages/gulp-banner-footer)
+| Package                | Description                                      |                                                           Version                                                           |                                                                                  Last release                                                                                  | Status |
+| :--------------------- | :----------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :----: |
+| gulp-format-html       | Gulp plugin formatting html via js-beautify.     |       [![NPM VERSION](https://img.shields.io/npm/v/gulp-format-html)](https://www.npmjs.com/package/gulp-format-html)       |       [![Last release](https://img.shields.io/npm/last-update/gulp-format-html?label=Last%20release)](https://www.npmjs.com/package/gulp-format-html?activeTab=versions)       |   🟢   |
+| gulp-diffable-html     | Gulp plugin formatting html via diffable-html.   |     [![NPM VERSION](https://img.shields.io/npm/v/gulp-diffable-html)](https://www.npmjs.com/package/gulp-diffable-html)     |     [![Last release](https://img.shields.io/npm/last-update/gulp-diffable-html?label=Last%20release)](https://www.npmjs.com/package/gulp-diffable-html?activeTab=versions)     |   🟢   |
+| gulp-banner-footer     | Gulp plugin for adding banner or footer to file. |     [![NPM VERSION](https://img.shields.io/npm/v/gulp-banner-footer)](https://www.npmjs.com/package/gulp-banner-footer)     |     [![Last release](https://img.shields.io/npm/last-update/gulp-banner-footer?label=Last%20release)](https://www.npmjs.com/package/gulp-banner-footer?activeTab=versions)     |   🟢   |
+| @ntnyq/gulp-prettyhtml | Gulp plugin formatting html via prettyhtml.      | [![NPM VERSION](https://img.shields.io/npm/v/@ntnyq/gulp-prettyhtml)](https://www.npmjs.com/package/@ntnyq/gulp-prettyhtml) | [![Last release](https://img.shields.io/npm/last-update/@ntnyq/gulp-prettyhtml?label=Last%20release)](https://www.npmjs.com/package/@ntnyq/gulp-prettyhtml?activeTab=versions) |   🟠   |
 
 ## License
 

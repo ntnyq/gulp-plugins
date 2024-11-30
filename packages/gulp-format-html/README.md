@@ -104,3 +104,7 @@ Display name of file from stream that is being formatting
 ## Related
 
 - [gulp-diffable-html](https://github.com/ntnyq/gulp-diffable-html) Zero config HTML formatter to make HTML more readable and to indent HTML tag text in a single newline.
+
+## License
+
+[MIT](./LICENSE) License © 2024-PRESENT [ntnyq](https://github.com/ntnyq)

@@ -133,3 +133,7 @@ Customize the order of attributes on HTML tag.
 - **default** `false`
 
 Display name of file from stream that is being formatting
+
+## License
+
+[MIT](./LICENSE) License © 2024-PRESENT [ntnyq](https://github.com/ntnyq)

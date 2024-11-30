@@ -1,7 +1,7 @@
 {
   "name": "@ntnyq/gulp-prettyhtml",
   "version": "3.0.0",
-  "description": "gulp plugin formatting html via prettyhtml",
+  "description": "gulp plugin formatting html via prettyhtml.",
   "keywords": [
     "format",
     "gulp",

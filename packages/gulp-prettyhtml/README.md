@@ -3,6 +3,11 @@
 [![NPM VERSION](https://img.shields.io/npm/v/@ntnyq/gulp-prettyhtml?logo=npm)](https://www.npmjs.com/package/@ntnyq/gulp-prettyhtml)
 [![NPM DOWNLOADS](https://img.shields.io/npm/dm/@ntnyq/gulp-prettyhtml?logo=npm)](https://www.npmjs.com/package/@ntnyq/gulp-prettyhtml)
 
+> [!IMPORTANT]
+> The formatter [@starptech/prettyhtml](https://github.com/Prettyhtml/prettyhtml#readme) is [no longer maintained](https://github.com/Prettyhtml/prettyhtml/issues/143#issuecomment-856633878).
+>
+> Please switch to other formatters ASAP. You can check [gulp-format-html](https://github.com/ntnyq/gulp-plugins/packages/gulp-format-html).
+
 ## Install
 
 ```bash
@@ -111,3 +116,7 @@ Display name of file from stream that is being formatting
 ## Related
 
 - [gulp-diffable-html](https://github.com/ntnyq/gulp-diffable-html) Zero config HTML formatter to make HTML more readable and to indent HTML tag text in a single newline.
+
+## License
+
+[MIT](./LICENSE) License © 2024-PRESENT [ntnyq](https://github.com/ntnyq)

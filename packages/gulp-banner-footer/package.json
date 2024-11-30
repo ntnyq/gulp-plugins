@@ -1,6 +1,6 @@
 {
   "name": "gulp-banner-footer",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "gulp plugin for adding banner or footer to file.",
   "keywords": [
     "gulp-banner",

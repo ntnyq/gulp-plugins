@@ -41,7 +41,7 @@ const logger = createLogger({ time: 'HH:mm:ss' })
 
 /**
  * format HTML via `@starptech/prettyhtml`
- * @param options format options `Options`
+ * @param options - format options `Options`
  * @returns formatted HTML
  */
 export const prettyHTML = (options: Options = {}): Transform => {

@@ -32,7 +32,7 @@ const beautifyHtml = jsBeautify.html
 
 /**
  * format HTML via `js-beautify`
- * @param options format options `Options`
+ * @param options - format options `Options`
  * @returns formatted HTML
  */
 export const formatHTML = (options: Options = {}): Transform => {

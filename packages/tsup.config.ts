@@ -1,18 +1,18 @@
 import { defineConfig } from 'tsup'
 
 export default defineConfig({
-  entry: ['./src/*.ts'],
-  format: ['cjs', 'esm'],
-  target: ['node18', 'es2022'],
+  cjsInterop: true,
+  clean: true,
   dts: {
     compilerOptions: {
-      paths: {},
       composite: false,
+      paths: {},
     },
   },
-  clean: true,
+  entry: ['./src/*.ts'],
+  format: ['cjs', 'esm'],
   shims: true,
-  cjsInterop: true,
   splitting: true,
+  target: ['node18', 'es2022'],
   tsconfig: '../../tsconfig.lib.json',
 })

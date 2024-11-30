@@ -31,7 +31,7 @@ type DiffableContents = Buffer | NodeJS.ReadableStream | null
 
 /**
  * format HTML via `diffable-html`
- * @param options format options `Options`
+ * @param options - format options `Options`
  * @returns formatted HTML
  */
 export const diffableHTML = (options: Options = {}): Transform =>

@@ -3,12 +3,12 @@
   "version": "3.0.0",
   "description": "gulp plugin formatting html via prettyhtml",
   "keywords": [
-    "prettyhtml",
     "format",
     "gulp",
     "gulp-plugin",
     "html",
-    "pretty"
+    "pretty",
+    "prettyhtml"
   ],
   "license": "MIT",
   "author": {

@@ -39,8 +39,8 @@ importers:
         specifier: ^3.12.3
         version: 3.12.3(@stylistic/eslint-plugin@2.12.1(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3))(@types/eslint@9.6.1)(@typescript-eslint/eslint-plugin@8.20.0(@typescript-eslint/parser@8.20.0(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3))(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3))(@typescript-eslint/utils@8.23.0(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-es-x@8.4.1(eslint@9.20.1(jiti@2.4.2)))(eslint@9.20.1(jiti@2.4.2))(typescript@5.7.3)(vitest@3.0.5(@types/debug@4.1.12)(@types/node@22.10.1)(jiti@2.4.2)(tsx@4.19.2)(yaml@2.6.1))
       '@ntnyq/prettier-config':
-        specifier: ^1.22.1
-        version: 1.22.1
+        specifier: ^2.0.0
+        version: 2.0.0
       '@types/through2':
         specifier: 'catalog:'
         version: 2.0.41
@@ -870,8 +870,8 @@ packages:
   '@ntnyq/logger@0.0.4':
     resolution: {integrity: sha512-k2JXKKnfx00Xp/mIg4Xwj5VPNXKb5lOvLSulTljWo7DqPwt7muR3zwyGFR3y9vINH7Y26erMaW8ETxAytt5qGg==}
 
-  '@ntnyq/prettier-config@1.22.1':
-    resolution: {integrity: sha512-xZUFm7AKtsbeIMXqylVto/mimFeP26vgzug6EjxyO8kbKYIssYJ4Mf+2t4O9wcECTN+LYfuV6AldpVWpyAMa5Q==}
+  '@ntnyq/prettier-config@2.0.0':
+    resolution: {integrity: sha512-cgb+VCW8+BJzZBSURgDEjMNt0JNiZ+Kx4k2rC54Igs+VmRiI2J8jPTVVqEKG2urhGLcUA2IuCE6ZDMMKuibN3Q==}
 
   '@ntnyq/utils@0.4.5':
     resolution: {integrity: sha512-A4ik6khNFMCdisUxUVINGwuQD51POdZDjbznK+Kf5XxHuFUfd6ayVfnzsIvfIXyPBZZO2N5NPxs5r9hPOubkpQ==}
@@ -4728,7 +4728,7 @@ snapshots:
       dayjs: 1.11.13
       picocolors: 1.1.1
 
-  '@ntnyq/prettier-config@1.22.1': {}
+  '@ntnyq/prettier-config@2.0.0': {}
 
   '@ntnyq/utils@0.4.5':
     dependencies:

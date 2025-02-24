@@ -51,7 +51,7 @@
   "dependencies": {
     "@ntnyq/logger": "catalog:",
     "@types/through2": "catalog:",
-    "diffable-html": "^5.0.0",
+    "diffable-html": "^6.0.1",
     "plugin-error": "catalog:",
     "through2": "catalog:"
   },

@@ -1,5 +1,11 @@
 # gulp-format-html
 
+## 3.0.1
+
+### Patch Changes
+
+- [#106](https://github.com/ntnyq/gulp-plugins/pull/106) [`8cfb0cc`](https://github.com/ntnyq/gulp-plugins/commit/8cfb0cca2840741c7a6f05ead36fc26034afc2f7) Thanks [@renovate](https://github.com/apps/renovate)! - fix(deps): bump js-beautify version
+
 ## 3.0.0
 
 ### Major Changes

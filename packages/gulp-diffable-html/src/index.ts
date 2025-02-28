@@ -38,9 +38,15 @@ export const diffableHTML = (options: Options = {}): Transform =>
   through.obj((file: Vinyl, _enc, next) => {
     if (file.isNull()) return next(null, file)
 
-    function transform(buffer: DiffableContents, _: unknown, cb: TransformCallback) {
+    function transform(
+      buffer: DiffableContents,
+      _: unknown,
+      cb: TransformCallback,
+    ) {
       try {
-        const contents = Buffer.from(toDiffableHtml(buffer?.toString() ?? '', options))
+        const contents = Buffer.from(
+          toDiffableHtml(buffer?.toString() ?? '', options),
+        )
 
         if (next === cb) {
           file.contents = contents
@@ -65,7 +71,9 @@ export const diffableHTML = (options: Options = {}): Transform =>
       file.contents = file.contents.pipe(through(transform))
     } else {
       if (options.verbose) {
-        logger.info(`${c.yellow(PLUGIN_NAME)}: ${c.green(relative(rootDir, file.path))}`)
+        logger.info(
+          `${c.yellow(PLUGIN_NAME)}: ${c.green(relative(rootDir, file.path))}`,
+        )
       }
 
       transform(file.contents, null, next)

@@ -76,9 +76,10 @@ export function testTransformFile<T extends PluginOptions, F extends File>(
   })
 }
 
-export function testTransformStream<T extends PluginOptions, F extends File.BufferFile>(
-  options: TestOptions<T, F>,
-) {
+export function testTransformStream<
+  T extends PluginOptions,
+  F extends File.BufferFile,
+>(options: TestOptions<T, F>) {
   return new Promise<void>((resolve, reject) => {
     const fixture = createFile({ contents: toStream(options.file.contents) })
     const stream = options.streamCreator(options.pluginOptions)

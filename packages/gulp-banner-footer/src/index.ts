@@ -37,19 +37,29 @@ export const addBannerOrFooter = (options: Options = {}): Transform => {
 
     if (file.isStream()) {
       const errorOptions = Object.assign({}, { fileName: file.path })
-      const error = new PluginError(PLUGIN_NAME, new Error('Streaming not supported'), errorOptions)
+      const error = new PluginError(
+        PLUGIN_NAME,
+        new Error('Streaming not supported'),
+        errorOptions,
+      )
       return cb(error)
     }
 
     if (options.verbose) {
-      logger.info(`${c.yellow(PLUGIN_NAME)}: ${c.green(relative(rootDir, file.path))}`)
+      logger.info(
+        `${c.yellow(PLUGIN_NAME)}: ${c.green(relative(rootDir, file.path))}`,
+      )
     }
 
     const contents = Buffer.from(
       [
-        typeof options.banner === 'function' ? options.banner(file) : options.banner,
+        typeof options.banner === 'function'
+          ? options.banner(file)
+          : options.banner,
         file.contents?.toString() ?? '',
-        typeof options.footer === 'function' ? options.footer(file) : options.footer,
+        typeof options.footer === 'function'
+          ? options.footer(file)
+          : options.footer,
       ].join('\n'),
     )
 

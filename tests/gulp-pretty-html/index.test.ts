@@ -1,11 +1,17 @@
-/* eslint-disable vitest/expect-expect */
 import { describe, it } from 'vitest'
 import gulpPrettyHTML, { prettyHTML } from '../../packages/gulp-prettyhtml/src'
-import { createFakeFileCreator, createFile, testTransformFile, testTransformStream } from '../utils'
+import {
+  createFakeFileCreator,
+  createFile,
+  testTransformFile,
+  testTransformStream,
+} from '../utils'
 import type { Options } from '../../packages/gulp-prettyhtml/src'
 import type { StreamCreator } from '../utils'
 
-const createFakeFile = createFakeFileCreator('tests/gulp-pretty-html/fixtures/index.html')
+const createFakeFile = createFakeFileCreator(
+  'tests/gulp-pretty-html/fixtures/index.html',
+)
 
 function runTests(streamCreator: StreamCreator<Options>) {
   describe('file', () => {

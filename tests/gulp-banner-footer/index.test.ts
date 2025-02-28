@@ -1,6 +1,7 @@
-/* eslint-disable vitest/expect-expect */
 import { describe, it } from 'vitest'
-import gulpAddBannerFooter, { addBannerOrFooter } from '../../packages/gulp-banner-footer/src'
+import gulpAddBannerFooter, {
+  addBannerOrFooter,
+} from '../../packages/gulp-banner-footer/src'
 import { createFakeFileCreator, createFile, testTransformFile } from '../utils'
 import type { Options } from '../../packages/gulp-banner-footer/src'
 import type { StreamCreator } from '../utils'
@@ -12,7 +13,9 @@ const BANNER = `
 `
 const FOOTER = `// @license MIT`
 
-const crateFakeFile = createFakeFileCreator('tests/gulp-banner-footer/fixtures/app.ts')
+const crateFakeFile = createFakeFileCreator(
+  'tests/gulp-banner-footer/fixtures/app.ts',
+)
 
 function runTests(streamCreator: StreamCreator<Options>) {
   it('Should ignore empty file', () =>

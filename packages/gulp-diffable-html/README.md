@@ -7,15 +7,15 @@
 
 ## Install
 
-```bash
+```shell
 npm install gulp-diffable-html -D
 ```
 
-```bash
+```shell
 yarn add gulp-diffable-html -D
 ```
 
-```bash
+```shell
 pnpm add gulp-diffable-html -D
 ```
 
@@ -28,7 +28,10 @@ const diffableHTML = require('gulp-diffable-html')
 // const { diffableHTML } = require(`gulp-diffable-html`)
 
 function views() {
-  return gulp.src('views/**/*.html').pipe(diffableHTML()).pipe(gulp.dest('dist'))
+  return gulp
+    .src('views/**/*.html')
+    .pipe(diffableHTML())
+    .pipe(gulp.dest('dist'))
 }
 
 exports.dev = gulp.series(views)
@@ -41,7 +44,10 @@ import diffableHTML from 'gulp-diffable-html'
 // import { diffableHTML } from 'gulp-diffable-html'
 
 function views() {
-  return gulp.src('views/**/*.html').pipe(diffableHTML()).pipe(gulp.dest('dist'))
+  return gulp
+    .src('views/**/*.html')
+    .pipe(diffableHTML())
+    .pipe(gulp.dest('dist'))
 }
 
 export const dev = gulp.series(views)

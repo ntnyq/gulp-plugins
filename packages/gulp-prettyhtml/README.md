@@ -10,15 +10,15 @@
 
 ## Install
 
-```bash
+```shell
 npm install @ntnyq/gulp-prettyhtml -D
 ```
 
-```bash
+```shell
 yarn add @ntnyq/gulp-prettyhtml -D
 ```
 
-```bash
+```shell
 pnpm add @ntnyq/gulp-prettyhtml -D
 ```
 

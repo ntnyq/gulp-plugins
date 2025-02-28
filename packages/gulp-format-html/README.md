@@ -5,15 +5,15 @@
 
 ## Install
 
-```bash
+```shell
 npm install gulp-format-html -D
 ```
 
-```bash
+```shell
 yarn add gulp-format-html -D
 ```
 
-```bash
+```shell
 pnpm add gulp-format-html -D
 ```
 

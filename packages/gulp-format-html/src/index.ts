@@ -21,7 +21,7 @@ type FormatableContents = Buffer | NodeJS.ReadableStream | null
 
 const rootDir = process.cwd()
 const PLUGIN_NAME = 'gulp-format-html'
-const DEFAULT_OPTIONS = {
+const DEFAULT_OPTIONS: HTMLBeautifyOptions = {
   indent_size: 2,
   inline: [],
   content_unformatted: ['pre', 'textarea', 'script'],

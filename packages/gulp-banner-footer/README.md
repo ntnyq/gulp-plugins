@@ -7,15 +7,15 @@
 
 ## Install
 
-```bash
+```shell
 npm install gulp-banner-footer -D
 ```
 
-```bash
+```shell
 yarn add gulp-banner-footer -D
 ```
 
-```bash
+```shell
 pnpm add gulp-banner-footer -D
 ```
 

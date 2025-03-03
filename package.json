@@ -24,11 +24,11 @@
     "eslint": "^9.21.0",
     "husky": "^9.1.7",
     "nano-staged": "^0.8.0",
-    "prettier": "^3.5.2",
+    "prettier": "^3.5.3",
     "through2": "catalog:",
     "tsup": "^8.4.0",
     "turbo": "^2.4.4",
-    "typescript": "^5.7.3",
+    "typescript": "^5.8.2",
     "vinyl": "catalog:",
     "vitest": "^3.0.7"
   },

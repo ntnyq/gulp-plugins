@@ -1,5 +1,11 @@
 # gulp-format-html
 
+## 3.1.0
+
+### Minor Changes
+
+- [`c4cb759`](https://github.com/ntnyq/gulp-plugins/commit/c4cb759d794f979ae2cd66a5a0a71e2f5a322a83) Thanks [@ntnyq](https://github.com/ntnyq)! - feat: migrate to ESM first
+
 ## 3.0.1
 
 ### Patch Changes

@@ -25,6 +25,7 @@
   "cSpell.allowCompoundWords": true,
   "cSpell.words": [
     "codecov",
+    "esbuild",
     "lcov",
     "noopener",
     "pnpm",

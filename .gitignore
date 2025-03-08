@@ -6,8 +6,5 @@ node_modules
 # TypeScript
 *.tsbuildinfo
 
-# Turbo
-.turbo
-
 dist
 coverage

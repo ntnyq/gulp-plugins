@@ -1,5 +1,11 @@
 # gulp-diffable-html
 
+## 3.2.0
+
+### Minor Changes
+
+- [`26b53ac`](https://github.com/ntnyq/gulp-plugins/commit/26b53ac8ac9b780ed0547e41ea7afed3ce0e3d81) Thanks [@ntnyq](https://github.com/ntnyq)! - fix: fix last release no dist files
+
 ## 3.1.0
 
 ### Minor Changes

@@ -1,3 +1,5 @@
+packages:
+  - packages/*
 catalog:
   '@ntnyq/logger': ^0.0.4
   '@types/through2': ^2.0.41
@@ -7,5 +9,3 @@ catalog:
   vinyl: ^3.0.0
 onlyBuiltDependencies:
   - esbuild
-packages:
-  - packages/*

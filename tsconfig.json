@@ -9,6 +9,8 @@
     "moduleResolution": "Bundler",
     "baseUrl": ".",
     "resolveJsonModule": true,
+    "erasableSyntaxOnly": true,
+    "libReplacement": false,
     "declaration": true,
     "declarationMap": false,
     "sourceMap": false,

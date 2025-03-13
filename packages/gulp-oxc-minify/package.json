@@ -1,0 +1,61 @@
+{
+  "name": "gulp-oxc-minify",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "gulp plugin ES6+ minifier via oxc-minify.",
+  "keywords": [
+    "gulp",
+    "gulp-plugin",
+    "minifier",
+    "minify",
+    "oxc"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "ntnyq",
+    "email": "ntnyq13@gmail.com"
+  },
+  "homepage": "https://github.com/ntnyq/gulp-plugins",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ntnyq/gulp-plugins.git",
+    "directory": "packages/gulp-oxc-minify"
+  },
+  "bugs": {
+    "url": "https://github.com/ntnyq/gulp-plugins/issues"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch src"
+  },
+  "dependencies": {
+    "@ntnyq/logger": "catalog:",
+    "@types/js-beautify": "^1.14.3",
+    "@types/through2": "catalog:",
+    "oxc-minify": "^0.58.1",
+    "plugin-error": "catalog:",
+    "through2": "catalog:"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}

@@ -141,6 +141,27 @@ importers:
         specifier: 'catalog:'
         version: 4.0.2
 
+  packages/gulp-oxc-minify:
+    dependencies:
+      '@ntnyq/logger':
+        specifier: 'catalog:'
+        version: 0.0.4
+      '@types/js-beautify':
+        specifier: ^1.14.3
+        version: 1.14.3
+      '@types/through2':
+        specifier: 'catalog:'
+        version: 2.0.41
+      oxc-minify:
+        specifier: ^0.58.1
+        version: 0.58.1
+      plugin-error:
+        specifier: 'catalog:'
+        version: 2.0.1
+      through2:
+        specifier: 'catalog:'
+        version: 4.0.2
+
   packages/gulp-prettyhtml:
     dependencies:
       '@ntnyq/logger':
@@ -275,6 +296,15 @@ packages:
 
   '@dprint/toml@0.6.4':
     resolution: {integrity: sha512-bZXIUjxr0LIuHWshZr/5mtUkOrnh0NKVZEF6ACojW5z7zkJu7s9sV2mMXm8XQDqN4cJzdHYUYzUyEGdfciaLJA==}
+
+  '@emnapi/core@1.3.1':
+    resolution: {integrity: sha512-pVGjBIt1Y6gg3EJN8jTcfpP/+uuRksIo055oE/OBkDNcjZqVbfkWCksG1Jp4yZnj3iKWyWX8fdG/j6UDYPbFog==}
+
+  '@emnapi/runtime@1.3.1':
+    resolution: {integrity: sha512-kEBmG8KyqtxJZv+ygbEim+KCGtIq1fC22Ms3S4ziXmYKm8uyoLX0MHONVKwp+9opg390VaKRNt4a7A9NwmpNhw==}
+
+  '@emnapi/wasi-threads@1.0.1':
+    resolution: {integrity: sha512-iIBu7mwkq4UQGeMEM8bLwNK962nXdhodeScX4slfQnRhEMMzvYivHhutCIk8uojvmASXXPC2WNEjwxFWk72Oqw==}
 
   '@es-joy/jsdoccomment@0.49.0':
     resolution: {integrity: sha512-xjZTSFgECpb9Ohuk5yMX5RhUEbfeQcuOp8IF60e+wyzWEF0M5xeSgqsfLtvPEX8BIyOX9saZqzuGPmZ8oWc+5Q==}
@@ -547,6 +577,9 @@ packages:
   '@manypkg/get-packages@1.1.3':
     resolution: {integrity: sha512-fo+QhuU3qE/2TQMQmbVMqaQ6EWbMhi4ABWP+O4AM1NqPBuy0OrApV5LO6BrrgnhtAHS2NH6RrVk9OL181tTi8A==}
 
+  '@napi-rs/wasm-runtime@0.2.7':
+    resolution: {integrity: sha512-5yximcFK5FNompXfJFoWanu5l8v1hNGqNHh9du1xETp9HWk/B/PzvchX55WYOPaIeNglG8++68AAiauBAtbnzw==}
+
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
     engines: {node: '>= 8'}
@@ -591,6 +624,65 @@ packages:
 
   '@one-ini/wasm@0.1.1':
     resolution: {integrity: sha512-XuySG1E38YScSJoMlqovLru4KTUNSjgVTIjyh7qMX6aNN5HY5Ct5LhRJdxO79JtTzKfzV/bnWpz+zquYrISsvw==}
+
+  '@oxc-minify/binding-darwin-arm64@0.58.1':
+    resolution: {integrity: sha512-LjyefBwJX8uSCA4cltpgdAKixMSOQYN5Mvz/ko1ZNAN7IBYVzViDA+Zx4gsUde7705fJtWcCjYWqwnL0q2YgGw==}
+    engines: {node: '>=14.0.0'}
+    cpu: [arm64]
+    os: [darwin]
+
+  '@oxc-minify/binding-darwin-x64@0.58.1':
+    resolution: {integrity: sha512-m+zqgo/wEj+XrrYjA8dlPavqoriY8xUr0kbd/fPr3XDek4O3dbmzLfb+oZGR/kKWcUztd8B+2W3DH3/hpDuQtw==}
+    engines: {node: '>=14.0.0'}
+    cpu: [x64]
+    os: [darwin]
+
+  '@oxc-minify/binding-linux-arm-gnueabihf@0.58.1':
+    resolution: {integrity: sha512-gal1zIPtAsYjkKqoUL4/YDVfn7XJe7PwT8tpn3fxamXyKA7WroWuz7Mexq3HUt6UM55RJvxISI1IC9KkXymyaQ==}
+    engines: {node: '>=14.0.0'}
+    cpu: [arm]
+    os: [linux]
+
+  '@oxc-minify/binding-linux-arm64-gnu@0.58.1':
+    resolution: {integrity: sha512-hje6zjlH044D7hz6ZArar0q6shfEGopGL6vE5FVdtkkNlXw6HDKvs1FCZpYVr7QY8UHu66DR62ZgYzLsXxpbeg==}
+    engines: {node: '>=14.0.0'}
+    cpu: [arm64]
+    os: [linux]
+
+  '@oxc-minify/binding-linux-arm64-musl@0.58.1':
+    resolution: {integrity: sha512-piMogrcGyg/priHTju/GgpNOtbrWMqDRIUb60ZWh5mw6rFQbcd2Aj5bGaUd6Z1+MB12B5cmHPPsDOqNQv3S0WA==}
+    engines: {node: '>=14.0.0'}
+    cpu: [arm64]
+    os: [linux]
+
+  '@oxc-minify/binding-linux-x64-gnu@0.58.1':
+    resolution: {integrity: sha512-6AwlfsH8ewftC8J4+jSy9Ggmq0EH8AfhXTMbyWUG62shOKi6mvlFD54CHR9KDbsuyJ/th+BIU3n5ZU6w80L6hg==}
+    engines: {node: '>=14.0.0'}
+    cpu: [x64]
+    os: [linux]
+
+  '@oxc-minify/binding-linux-x64-musl@0.58.1':
+    resolution: {integrity: sha512-Oxgns2XxtdSi3GsCIW7YZQbQRtu+gSpzylBclmgq/hIxP4yniYdA7l9XxCBwIQb7NgDAb8mSmvlFq6UXKYcwXQ==}
+    engines: {node: '>=14.0.0'}
+    cpu: [x64]
+    os: [linux]
+
+  '@oxc-minify/binding-wasm32-wasi@0.58.1':
+    resolution: {integrity: sha512-PvLQzjlgwvWJpSr8fpZ07fiYXcSvbxXJG7UKg2uXTkwezvL3lBpXsorUV8NAMhpQb5536CUEhn4Vm4vXxVQECA==}
+    engines: {node: '>=14.0.0'}
+    cpu: [wasm32]
+
+  '@oxc-minify/binding-win32-arm64-msvc@0.58.1':
+    resolution: {integrity: sha512-DCy4p+na8mx6+h06FONNnj5s3Zb6rC+LF3mURahVug/AGRS67XWsKAOiz+nnzwjOMVk5eZpo+TXIk7/tyAdIig==}
+    engines: {node: '>=14.0.0'}
+    cpu: [arm64]
+    os: [win32]
+
+  '@oxc-minify/binding-win32-x64-msvc@0.58.1':
+    resolution: {integrity: sha512-HCAtzSqXf4UGLQcXdr+ThSNZ+LQCTCPUoDEu2kGLHeLB9LD8cyqsb7PVeQw+BdIhtILjeL4BhMvpbiEx8uuelg==}
+    engines: {node: '>=14.0.0'}
+    cpu: [x64]
+    os: [win32]
 
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
@@ -733,6 +825,9 @@ packages:
   '@szmarczak/http-timer@1.1.2':
     resolution: {integrity: sha512-XIB2XbzHTN6ieIjfIMV9hlVcfPU26s2vafYWQcZHWXHOxiaRZYEDKEwdl129Zyg50+foYV2jCgtrqSA6qNuNSA==}
     engines: {node: '>=6'}
+
+  '@tybys/wasm-util@0.9.0':
+    resolution: {integrity: sha512-6+7nlbMVX/PVDCwaIQ8nTOPveOcFLSt8GcXdx8hD0bt39uWxYT88uXzqTd4fTvqta7oeUJqudepapKNt2DYJFw==}
 
   '@types/debug@4.1.12':
     resolution: {integrity: sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ==}
@@ -2603,6 +2698,10 @@ packages:
   outdent@0.5.0:
     resolution: {integrity: sha512-/jHxFIzoMXdqPzTaCpFzAAWhpkSjZPF4Vsn6jAfNpmbH/ymsmd7Qc6VE9BGn0L6YMj6uwpQLxCECpus4ukKS9Q==}
 
+  oxc-minify@0.58.1:
+    resolution: {integrity: sha512-laFFYJSJWR7AzN4AZVLb2qml8q7NEVN9DepkfEnNwF9uOEC2s3mb92YDtHrd0+a1fwDgKftkcbwqSei7Z2+DNA==}
+    engines: {node: '>=14.0.0'}
+
   p-cancelable@1.1.0:
     resolution: {integrity: sha512-s73XxOZ4zpt1edZYZzvhqFa6uvQc1vwUa0K0BdtIZgQMAJj9IbebH+JkgKZc9h+B05PKHLOTl4ajG1BmNrVZlw==}
     engines: {node: '>=6'}
@@ -3847,6 +3946,22 @@ snapshots:
   '@dprint/toml@0.6.4':
     optional: true
 
+  '@emnapi/core@1.3.1':
+    dependencies:
+      '@emnapi/wasi-threads': 1.0.1
+      tslib: 2.8.1
+    optional: true
+
+  '@emnapi/runtime@1.3.1':
+    dependencies:
+      tslib: 2.8.1
+    optional: true
+
+  '@emnapi/wasi-threads@1.0.1':
+    dependencies:
+      tslib: 2.8.1
+    optional: true
+
   '@es-joy/jsdoccomment@0.49.0':
     dependencies:
       comment-parser: 1.4.1
@@ -4062,6 +4177,13 @@ snapshots:
       globby: 11.1.0
       read-yaml-file: 1.1.0
 
+  '@napi-rs/wasm-runtime@0.2.7':
+    dependencies:
+      '@emnapi/core': 1.3.1
+      '@emnapi/runtime': 1.3.1
+      '@tybys/wasm-util': 0.9.0
+    optional: true
+
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
       '@nodelib/fs.stat': 2.0.5
@@ -4146,6 +4268,38 @@ snapshots:
       scule: 1.3.0
 
   '@one-ini/wasm@0.1.1': {}
+
+  '@oxc-minify/binding-darwin-arm64@0.58.1':
+    optional: true
+
+  '@oxc-minify/binding-darwin-x64@0.58.1':
+    optional: true
+
+  '@oxc-minify/binding-linux-arm-gnueabihf@0.58.1':
+    optional: true
+
+  '@oxc-minify/binding-linux-arm64-gnu@0.58.1':
+    optional: true
+
+  '@oxc-minify/binding-linux-arm64-musl@0.58.1':
+    optional: true
+
+  '@oxc-minify/binding-linux-x64-gnu@0.58.1':
+    optional: true
+
+  '@oxc-minify/binding-linux-x64-musl@0.58.1':
+    optional: true
+
+  '@oxc-minify/binding-wasm32-wasi@0.58.1':
+    dependencies:
+      '@napi-rs/wasm-runtime': 0.2.7
+    optional: true
+
+  '@oxc-minify/binding-win32-arm64-msvc@0.58.1':
+    optional: true
+
+  '@oxc-minify/binding-win32-x64-msvc@0.58.1':
+    optional: true
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
@@ -4305,6 +4459,11 @@ snapshots:
   '@szmarczak/http-timer@1.1.2':
     dependencies:
       defer-to-connect: 1.1.3
+
+  '@tybys/wasm-util@0.9.0':
+    dependencies:
+      tslib: 2.8.1
+    optional: true
 
   '@types/debug@4.1.12':
     dependencies:
@@ -6460,6 +6619,19 @@ snapshots:
   os-tmpdir@1.0.2: {}
 
   outdent@0.5.0: {}
+
+  oxc-minify@0.58.1:
+    optionalDependencies:
+      '@oxc-minify/binding-darwin-arm64': 0.58.1
+      '@oxc-minify/binding-darwin-x64': 0.58.1
+      '@oxc-minify/binding-linux-arm-gnueabihf': 0.58.1
+      '@oxc-minify/binding-linux-arm64-gnu': 0.58.1
+      '@oxc-minify/binding-linux-arm64-musl': 0.58.1
+      '@oxc-minify/binding-linux-x64-gnu': 0.58.1
+      '@oxc-minify/binding-linux-x64-musl': 0.58.1
+      '@oxc-minify/binding-wasm32-wasi': 0.58.1
+      '@oxc-minify/binding-win32-arm64-msvc': 0.58.1
+      '@oxc-minify/binding-win32-x64-msvc': 0.58.1
 
   p-cancelable@1.1.0: {}
 

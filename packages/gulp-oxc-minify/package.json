@@ -51,7 +51,7 @@
     "@ntnyq/logger": "catalog:",
     "@types/js-beautify": "^1.14.3",
     "@types/through2": "catalog:",
-    "oxc-minify": "^0.58.1",
+    "oxc-minify": "^0.61.2",
     "plugin-error": "catalog:",
     "through2": "catalog:"
   },

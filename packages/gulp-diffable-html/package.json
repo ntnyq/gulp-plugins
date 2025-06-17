@@ -46,8 +46,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch src"
+    "build": "tsdown",
+    "dev": "tsdown --watch src"
   },
   "dependencies": {
     "@ntnyq/logger": "catalog:",

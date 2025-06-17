@@ -33,7 +33,9 @@ const logger = createLogger({ time: 'HH:mm:ss' })
 
 export const addBannerOrFooter = (options: Options = {}): Transform => {
   function transform(file: Vinyl, _: unknown, cb: TransformCallback) {
-    if (file.isNull()) return cb(null, file)
+    if (file.isNull()) {
+      return cb(null, file)
+    }
 
     if (file.isStream()) {
       const errorOptions = Object.assign({}, { fileName: file.path })

@@ -1,9 +1,7 @@
 {
   "compilerOptions": {
-    "composite": true,
     "target": "ESNext",
     "lib": ["ES2022"],
-    "jsx": "preserve",
     "moduleDetection": "force",
     "module": "ESNext",
     "moduleResolution": "Bundler",
@@ -11,21 +9,10 @@
     "resolveJsonModule": true,
     "erasableSyntaxOnly": true,
     "libReplacement": false,
-    "declaration": true,
-    "declarationMap": false,
-    "sourceMap": false,
-    "outDir": "dist",
-    "newLine": "lf",
-    "noEmitOnError": true,
     "isolatedModules": true,
     "verbatimModuleSyntax": true,
-    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "strict": true,
-    "strictNullChecks": true,
-    "noImplicitAny": true,
     "skipLibCheck": true
-  },
-  "include": ["./packages/**/*.ts", "./scripts/**/*.ts", "./tests/**/*.ts"],
-  "exclude": ["**/dist", "**/tests"]
+  }
 }

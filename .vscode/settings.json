@@ -31,7 +31,8 @@
     "pnpm",
     "starptech",
     "tsbuildinfo",
-    "tsup",
+    "tsdown",
+    "unrs",
     "vitest"
   ]
 }

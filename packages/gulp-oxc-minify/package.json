@@ -44,14 +44,14 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch src"
+    "build": "tsdown",
+    "dev": "tsdown --watch src"
   },
   "dependencies": {
     "@ntnyq/logger": "catalog:",
     "@types/js-beautify": "^1.14.3",
     "@types/through2": "catalog:",
-    "oxc-minify": "^0.72.2",
+    "oxc-minify": "^0.76.0",
     "plugin-error": "catalog:",
     "through2": "catalog:"
   },

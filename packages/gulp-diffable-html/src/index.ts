@@ -36,7 +36,9 @@ type DiffableContents = Buffer | NodeJS.ReadableStream | null
  */
 export const diffableHTML = (options: Options = {}): Transform =>
   through.obj((file: Vinyl, _enc, next) => {
-    if (file.isNull()) return next(null, file)
+    if (file.isNull()) {
+      return next(null, file)
+    }
 
     function transform(
       buffer: DiffableContents,

@@ -1,13 +1,14 @@
 packages:
   - packages/*
 catalog:
-  '@ntnyq/logger': ^0.0.4
+  '@ntnyq/logger': 0.0.4
   '@types/through2': ^2.0.41
   '@types/vinyl': ^2.0.12
   plugin-error: ^2.0.1
   through2: ^4.0.2
   vinyl: ^3.0.1
 overrides:
-  esbuild: ^0.25.1
+  esbuild: ^0.25.6
 onlyBuiltDependencies:
   - esbuild
+  - unrs-resolver

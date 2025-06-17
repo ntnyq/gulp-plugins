@@ -39,7 +39,9 @@ export const formatHTML = (options: Options = {}): Transform => {
   options = Object.assign({}, DEFAULT_OPTIONS, options)
 
   return through.obj((file: Vinyl, _enc, next) => {
-    if (file.isNull()) return next(null, file)
+    if (file.isNull()) {
+      return next(null, file)
+    }
 
     function transform(
       buffer: FormatableContents,

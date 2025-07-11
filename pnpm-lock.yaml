@@ -7,8 +7,8 @@ settings:
 catalogs:
   default:
     '@ntnyq/logger':
-      specifier: 0.0.4
-      version: 0.0.4
+      specifier: 0.2.0
+      version: 0.2.0
     '@types/through2':
       specifier: ^2.0.41
       version: 2.0.41
@@ -82,7 +82,7 @@ importers:
     dependencies:
       '@ntnyq/logger':
         specifier: 'catalog:'
-        version: 0.0.4
+        version: 0.2.0
       '@types/through2':
         specifier: 'catalog:'
         version: 2.0.41
@@ -103,7 +103,7 @@ importers:
     dependencies:
       '@ntnyq/logger':
         specifier: 'catalog:'
-        version: 0.0.4
+        version: 0.2.0
       '@types/through2':
         specifier: 'catalog:'
         version: 2.0.41
@@ -121,7 +121,7 @@ importers:
     dependencies:
       '@ntnyq/logger':
         specifier: 'catalog:'
-        version: 0.0.4
+        version: 0.2.0
       '@types/js-beautify':
         specifier: ^1.14.3
         version: 1.14.3
@@ -142,7 +142,7 @@ importers:
     dependencies:
       '@ntnyq/logger':
         specifier: 'catalog:'
-        version: 0.0.4
+        version: 0.2.0
       '@types/js-beautify':
         specifier: ^1.14.3
         version: 1.14.3
@@ -163,7 +163,7 @@ importers:
     dependencies:
       '@ntnyq/logger':
         specifier: 'catalog:'
-        version: 0.0.4
+        version: 0.2.0
       '@starptech/prettyhtml':
         specifier: ^0.10.0
         version: 0.10.0
@@ -622,8 +622,8 @@ packages:
       svelte-eslint-parser:
         optional: true
 
-  '@ntnyq/logger@0.0.4':
-    resolution: {integrity: sha512-k2JXKKnfx00Xp/mIg4Xwj5VPNXKb5lOvLSulTljWo7DqPwt7muR3zwyGFR3y9vINH7Y26erMaW8ETxAytt5qGg==}
+  '@ntnyq/logger@0.2.0':
+    resolution: {integrity: sha512-dWNjyeLpoehLN623ve2H8ULsTrJQvyLSbPsKx0OX0cP9w7k/TDkmA9WJ4I/1z5ELp3lo1haFUOZ0En4y1kUSew==}
 
   '@ntnyq/prettier-config@3.0.1':
     resolution: {integrity: sha512-Mi8pvBu6Z0HsC6vFQQ9ucmEiot4GJ3AbwfU8J626m5oll9mgF5InO+pdGnFVtr9e82YHUHA67MihHLYT7CDhHw==}
@@ -4350,7 +4350,7 @@ snapshots:
       - typescript
       - vitest
 
-  '@ntnyq/logger@0.0.4':
+  '@ntnyq/logger@0.2.0':
     dependencies:
       dayjs: 1.11.13
       picocolors: 1.1.1

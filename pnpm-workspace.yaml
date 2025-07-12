@@ -1,7 +1,7 @@
 packages:
   - packages/*
 catalog:
-  '@ntnyq/logger': 0.2.0
+  '@ntnyq/logger': ^0.2.0
   '@types/through2': ^2.0.41
   '@types/vinyl': ^2.0.12
   plugin-error: ^2.0.1

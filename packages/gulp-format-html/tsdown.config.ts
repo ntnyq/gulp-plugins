@@ -7,5 +7,5 @@ export default defineConfig({
   format: ['cjs', 'esm'],
   platform: 'node',
   shims: true,
-  target: ['node18', 'es2022'],
+  target: ['node20', 'es2023'],
 })

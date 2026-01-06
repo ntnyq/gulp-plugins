@@ -2,7 +2,7 @@ import { Buffer } from 'node:buffer'
 import { relative } from 'node:path'
 import process from 'node:process'
 import { c, createLogger } from '@ntnyq/logger'
-import { minify } from 'oxc-minify'
+import { minifySync } from 'oxc-minify'
 import PluginError from 'plugin-error'
 import through from 'through2'
 import type { Transform } from 'node:stream'
@@ -42,7 +42,7 @@ export const oxcMinify = (options: Options = {}): Transform => {
       cb: TransformCallback,
     ) {
       try {
-        const minifyResult = minify(
+        const minifyResult = minifySync(
           file.isStream() ? DUMMY_FILENAME : file.path,
           buffer?.toString() ?? '',
           options,

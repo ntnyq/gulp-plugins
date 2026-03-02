@@ -1,36 +1,40 @@
 {
   "name": "gulp-plugins",
-  "type": "module",
   "private": true,
-  "packageManager": "pnpm@10.28.0",
+  "type": "module",
   "scripts": {
     "build": "pnpm -r run build",
     "dev": "pnpm -r run dev",
-    "lint": "eslint",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "lint": "oxlint",
     "prepare": "husky",
-    "prepublishOnly": "pnpm run build",
-    "publish": "changeset publish",
+    "release": "run-s release:check build release:publish",
+    "release:check": "run-s format:check lint typecheck test",
+    "release:publish": "changeset publish",
+    "release:version": "changeset version",
     "test": "vitest",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsgo --noEmit"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.2",
     "@changesets/cli": "^2.29.8",
-    "@ntnyq/eslint-config": "^5.9.0",
-    "@ntnyq/prettier-config": "^3.0.1",
     "@types/through2": "catalog:",
     "@types/vinyl": "catalog:",
-    "eslint": "^9.39.2",
+    "@typescript/native-preview": "^7.0.0-dev.20260302.1",
     "husky": "^9.1.7",
     "nano-staged": "^0.9.0",
-    "prettier": "^3.8.0",
+    "npm-run-all2": "^8.0.4",
+    "oxfmt": "^0.35.0",
+    "oxlint": "^1.50.0",
     "through2": "catalog:",
-    "tsdown": "^0.19.0",
-    "typescript": "^5.9.3",
+    "tsdown": "^0.21.0-beta.2",
     "vinyl": "catalog:",
-    "vitest": "^4.0.17"
+    "vitest": "^4.0.18"
   },
   "nano-staged": {
-    "*.{js,ts,mjs,cjs,md,yml,yaml,json}": "eslint --fix"
-  }
+    "*.{js,ts,mjs,tsx}": "oxlint --fix",
+    "*": "oxfmt --no-error-on-unmatched-pattern"
+  },
+  "packageManager": "pnpm@10.30.3"
 }

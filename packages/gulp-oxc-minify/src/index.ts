@@ -1,12 +1,12 @@
 import { Buffer } from 'node:buffer'
 import { relative } from 'node:path'
 import process from 'node:process'
+import type { Transform } from 'node:stream'
 import { c, createLogger } from '@ntnyq/logger'
 import { minifySync } from 'oxc-minify'
+import type { MinifyOptions } from 'oxc-minify'
 import PluginError from 'plugin-error'
 import through from 'through2'
-import type { Transform } from 'node:stream'
-import type { MinifyOptions } from 'oxc-minify'
 import type { TransformCallback } from 'through2'
 import type Vinyl from 'vinyl'
 
@@ -29,7 +29,7 @@ const DEFAULT_OPTIONS: Options = {}
 const logger = createLogger({ time: 'HH:mm:ss' })
 
 export const oxcMinify = (options: Options = {}): Transform => {
-  options = Object.assign({}, DEFAULT_OPTIONS, options)
+  options = { ...DEFAULT_OPTIONS, ...options }
 
   return through.obj((file: Vinyl, _enc, next) => {
     if (file.isNull()) {
@@ -56,15 +56,19 @@ export const oxcMinify = (options: Options = {}): Transform => {
 
         cb(null, contents)
         next(null, file)
-      } catch (err: unknown) {
-        const errorOptions = Object.assign({}, options, { fileName: file.path })
-        const error = new PluginError(PLUGIN_NAME, err as Error, errorOptions)
+      } catch (error: unknown) {
+        const errorOptions = { ...options, fileName: file.path }
+        const pluginError = new PluginError(
+          PLUGIN_NAME,
+          error as Error,
+          errorOptions,
+        )
 
         if (next !== cb) {
-          return next(error)
+          return next(pluginError)
         }
 
-        cb(error)
+        cb(pluginError)
       }
     }
 

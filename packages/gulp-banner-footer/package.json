@@ -1,6 +1,5 @@
 {
   "name": "gulp-banner-footer",
-  "type": "module",
   "version": "1.2.0",
   "description": "gulp plugin for adding banner or footer to file.",
   "keywords": [
@@ -8,20 +7,26 @@
     "gulp-footer",
     "gulp-plugin"
   ],
+  "homepage": "https://github.com/ntnyq/gulp-plugins",
+  "bugs": {
+    "url": "https://github.com/ntnyq/gulp-plugins/issues"
+  },
   "license": "MIT",
   "author": {
     "name": "ntnyq",
     "email": "ntnyq13@gmail.com"
   },
-  "homepage": "https://github.com/ntnyq/gulp-plugins",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ntnyq/gulp-plugins.git",
     "directory": "packages/gulp-banner-footer"
   },
-  "bugs": {
-    "url": "https://github.com/ntnyq/gulp-plugins/issues"
-  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
   "exports": {
     "./package.json": "./package.json",
     ".": {
@@ -35,11 +40,6 @@
       }
     }
   },
-  "main": "./dist/index.mjs",
-  "types": "./dist/index.d.mts",
-  "files": [
-    "dist"
-  ],
   "scripts": {
     "build": "tsdown",
     "dev": "tsdown --watch src"
@@ -53,6 +53,6 @@
     "vinyl": "catalog:"
   },
   "engines": {
-    "node": ">=18.18.0"
+    "node": ">=20.19.0"
   }
 }

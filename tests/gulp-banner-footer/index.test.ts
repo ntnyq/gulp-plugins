@@ -2,8 +2,8 @@ import { describe, it } from 'vitest'
 import gulpAddBannerFooter, {
   addBannerOrFooter,
 } from '../../packages/gulp-banner-footer/src'
-import { createFakeFileCreator, createFile, testTransformFile } from '../utils'
 import type { Options } from '../../packages/gulp-banner-footer/src'
+import { createFakeFileCreator, createFile, testTransformFile } from '../utils'
 import type { StreamCreator } from '../utils'
 
 const BANNER = `

@@ -1,12 +1,12 @@
 import { describe, it } from 'vitest'
 import gulpFormatHTML, { formatHTML } from '../../packages/gulp-format-html/src'
+import type { Options } from '../../packages/gulp-format-html/src'
 import {
   createFakeFileCreator,
   createFile,
   testTransformFile,
   testTransformStream,
 } from '../utils'
-import type { Options } from '../../packages/gulp-format-html/src'
 import type { StreamCreator } from '../utils'
 
 const createFakeFile = createFakeFileCreator(

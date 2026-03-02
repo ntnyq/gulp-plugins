@@ -1,10 +1,10 @@
+import type { Buffer } from 'node:buffer'
 import fs from 'node:fs'
+import type { Transform } from 'node:stream'
 import through from 'through2'
 import File from 'vinyl'
 import { expect } from 'vitest'
-import { resolve } from '../scripts/utils'
-import type { Buffer } from 'node:buffer'
-import type { Transform } from 'node:stream'
+import { resolve as resolvePath } from '../scripts/utils'
 
 /**
  * Create fake file creator
@@ -13,7 +13,7 @@ import type { Transform } from 'node:stream'
  * @returns fake file creator
  */
 export function createFakeFileCreator(fixture: string) {
-  const filePath = resolve(fixture)
+  const filePath = resolvePath(fixture)
   const fileContent = fs.readFileSync(filePath)
   return () =>
     new File({
@@ -42,6 +42,7 @@ export function createFile(options: CreateFileOptions = {}) {
 /**
  * Gulp plugin options
  */
+// oxlint-disable-next-line typescript/no-explicit-any
 type PluginOptions = Record<PropertyKey, any>
 
 /**

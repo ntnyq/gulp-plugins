@@ -2,13 +2,13 @@ import { describe, it } from 'vitest'
 import gulpDiffableHTML, {
   diffableHTML,
 } from '../../packages/gulp-diffable-html/src'
+import type { Options } from '../../packages/gulp-diffable-html/src'
 import {
   createFakeFileCreator,
   createFile,
   testTransformFile,
   testTransformStream,
 } from '../utils'
-import type { Options } from '../../packages/gulp-diffable-html/src'
 import type { StreamCreator } from '../utils'
 
 const createFakeFile = createFakeFileCreator(

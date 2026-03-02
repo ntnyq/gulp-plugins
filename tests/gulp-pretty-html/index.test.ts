@@ -1,12 +1,12 @@
 import { describe, it } from 'vitest'
 import gulpPrettyHTML, { prettyHTML } from '../../packages/gulp-prettyhtml/src'
+import type { Options } from '../../packages/gulp-prettyhtml/src'
 import {
   createFakeFileCreator,
   createFile,
   testTransformFile,
   testTransformStream,
 } from '../utils'
-import type { Options } from '../../packages/gulp-prettyhtml/src'
 import type { StreamCreator } from '../utils'
 
 const createFakeFile = createFakeFileCreator(

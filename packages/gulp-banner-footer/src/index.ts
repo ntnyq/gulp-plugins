@@ -1,10 +1,10 @@
 import { Buffer } from 'node:buffer'
 import { relative } from 'node:path'
 import process from 'node:process'
+import type { Transform } from 'node:stream'
 import { c, createLogger } from '@ntnyq/logger'
 import PluginError from 'plugin-error'
 import through from 'through2'
-import type { Transform } from 'node:stream'
 import type { TransformCallback } from 'through2'
 import type Vinyl from 'vinyl'
 
@@ -38,7 +38,7 @@ export const addBannerOrFooter = (options: Options = {}): Transform => {
     }
 
     if (file.isStream()) {
-      const errorOptions = Object.assign({}, { fileName: file.path })
+      const errorOptions = { fileName: file.path }
       const error = new PluginError(
         PLUGIN_NAME,
         new Error('Streaming not supported'),

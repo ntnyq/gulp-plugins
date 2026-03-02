@@ -1,11 +1,11 @@
 import { Buffer } from 'node:buffer'
 import { relative } from 'node:path'
 import process from 'node:process'
+import type { Transform } from 'node:stream'
 import { c, createLogger } from '@ntnyq/logger'
 import toDiffableHtml from 'diffable-html'
 import PluginError from 'plugin-error'
 import through from 'through2'
-import type { Transform } from 'node:stream'
 import type { TransformCallback } from 'through2'
 import type Vinyl from 'vinyl'
 
@@ -57,15 +57,19 @@ export const diffableHTML = (options: Options = {}): Transform =>
 
         cb(null, contents)
         next(null, file)
-      } catch (err: unknown) {
-        const errorOptions = Object.assign({}, { fileName: file.path })
-        const error = new PluginError(PLUGIN_NAME, err as Error, errorOptions)
+      } catch (error: unknown) {
+        const errorOptions = { fileName: file.path }
+        const pluginError = new PluginError(
+          PLUGIN_NAME,
+          error as Error,
+          errorOptions,
+        )
 
         if (next !== cb) {
-          return next(error)
+          return next(pluginError)
         }
 
-        cb(error)
+        cb(pluginError)
       }
     }
 

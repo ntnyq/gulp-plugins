@@ -1,12 +1,12 @@
 import { describe, it } from 'vitest'
 import gulpOxcMinify, { oxcMinify } from '../../packages/gulp-oxc-minify/src'
+import type { Options } from '../../packages/gulp-oxc-minify/src'
 import {
   createFakeFileCreator,
   createFile,
   testTransformFile,
   testTransformStream,
 } from '../utils'
-import type { Options } from '../../packages/gulp-oxc-minify/src'
 import type { StreamCreator } from '../utils'
 
 const createFakeFile = createFakeFileCreator(

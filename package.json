@@ -17,18 +17,18 @@
     "typecheck": "tsgo --noEmit"
   },
   "devDependencies": {
-    "@changesets/changelog-github": "^0.5.2",
-    "@changesets/cli": "^2.29.8",
+    "@changesets/changelog-github": "^0.6.0",
+    "@changesets/cli": "^2.30.0",
     "@types/through2": "catalog:",
     "@types/vinyl": "catalog:",
-    "@typescript/native-preview": "^7.0.0-dev.20260302.1",
+    "@typescript/native-preview": "^7.0.0-dev.20260308.1",
     "husky": "^9.1.7",
     "nano-staged": "^0.9.0",
     "npm-run-all2": "^8.0.4",
-    "oxfmt": "^0.35.0",
-    "oxlint": "^1.50.0",
+    "oxfmt": "^0.36.0",
+    "oxlint": "^1.51.0",
     "through2": "catalog:",
-    "tsdown": "^0.21.0-beta.2",
+    "tsdown": "^0.21.0",
     "vinyl": "catalog:",
     "vitest": "^4.0.18"
   },
@@ -36,5 +36,5 @@
     "*.{js,ts,mjs,tsx}": "oxlint --fix",
     "*": "oxfmt --no-error-on-unmatched-pattern"
   },
-  "packageManager": "pnpm@10.30.3"
+  "packageManager": "pnpm@10.31.0"
 }

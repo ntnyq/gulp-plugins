@@ -21,20 +21,20 @@
     "@changesets/cli": "^2.30.0",
     "@types/through2": "catalog:",
     "@types/vinyl": "catalog:",
-    "@typescript/native-preview": "^7.0.0-dev.20260308.1",
+    "@typescript/native-preview": "^7.0.0-dev.20260315.1",
     "husky": "^9.1.7",
     "nano-staged": "^0.9.0",
     "npm-run-all2": "^8.0.4",
-    "oxfmt": "^0.36.0",
-    "oxlint": "^1.51.0",
+    "oxfmt": "^0.40.0",
+    "oxlint": "^1.55.0",
     "through2": "catalog:",
-    "tsdown": "^0.21.0",
+    "tsdown": "^0.21.3",
     "vinyl": "catalog:",
-    "vitest": "^4.0.18"
+    "vitest": "^4.1.0"
   },
   "nano-staged": {
     "*.{js,ts,mjs,tsx}": "oxlint --fix",
     "*": "oxfmt --no-error-on-unmatched-pattern"
   },
-  "packageManager": "pnpm@10.31.0"
+  "packageManager": "pnpm@10.32.1"
 }

@@ -1,5 +1,11 @@
 # gulp-diffable-html
 
+## 4.0.0
+
+### Major Changes
+
+- [`c5ea24c`](https://github.com/ntnyq/gulp-plugins/commit/c5ea24c87efea2bc85bb06483a353530d26aec16) Thanks [@ntnyq](https://github.com/ntnyq)! - feat!: drop node v18 support
+
 ## 3.2.0
 
 ### Minor Changes

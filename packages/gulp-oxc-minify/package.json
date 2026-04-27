@@ -1,6 +1,6 @@
 {
   "name": "gulp-oxc-minify",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "gulp plugin ES6+ minifier via oxc-minify.",
   "keywords": [
     "gulp",

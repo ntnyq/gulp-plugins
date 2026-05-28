@@ -1,4 +1,4 @@
-import type { Buffer } from 'node:buffer'
+import { Buffer } from 'node:buffer'
 import fs from 'node:fs'
 import type { Transform } from 'node:stream'
 import through from 'through2'
@@ -22,9 +22,18 @@ export function createFakeFileCreator(fixture: string) {
     })
 }
 
-export function toStream(contents: Buffer): Transform {
+export function toStream(contents: Buffer, chunkSize?: number): Transform {
   const stream = through()
-  stream.write(contents)
+
+  if (chunkSize && chunkSize > 0) {
+    for (let index = 0; index < contents.length; index += chunkSize) {
+      stream.write(contents.subarray(index, index + chunkSize))
+    }
+  } else {
+    stream.write(contents)
+  }
+
+  stream.end()
   return stream
 }
 
@@ -54,6 +63,7 @@ export interface TestOptions<T extends PluginOptions, F extends File> {
   file: F
   pluginOptions?: T
   streamCreator: StreamCreator<T>
+  streamChunkSize?: number
 }
 
 export function testTransformFile<T extends PluginOptions, F extends File>(
@@ -73,7 +83,7 @@ export function testTransformFile<T extends PluginOptions, F extends File>(
       }
       resolve()
     })
-    stream.write(options.file)
+    stream.end(options.file)
   })
 }
 
@@ -82,17 +92,29 @@ export function testTransformStream<
   F extends File.BufferFile,
 >(options: TestOptions<T, F>) {
   return new Promise<void>((resolve, reject) => {
-    const fixture = createFile({ contents: toStream(options.file.contents) })
+    const fixture = createFile({
+      contents: toStream(options.file.contents, options.streamChunkSize),
+    })
     const stream = options.streamCreator(options.pluginOptions)
+    let emittedFiles = 0
+
     stream.on('error', reject)
     stream.on('data', (file: File.StreamFile) => {
+      emittedFiles += 1
+      expect(emittedFiles).toBe(1)
       expect(file).toBeDefined()
       expect(file.isStream()).toBeTruthy()
-      file.contents.on('data', (data: Buffer) => {
-        expect(data.toString().trim()).toMatchSnapshot()
+      const chunks: Buffer[] = []
+
+      file.contents.on('error', reject)
+      file.contents.on('data', (data: Buffer | string) => {
+        chunks.push(Buffer.isBuffer(data) ? data : Buffer.from(data))
+      })
+      file.contents.on('end', () => {
+        expect(Buffer.concat(chunks).toString().trim()).toMatchSnapshot()
         resolve()
       })
     })
-    stream.write(fixture)
+    stream.end(fixture)
   })
 }

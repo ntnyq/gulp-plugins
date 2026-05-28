@@ -18,13 +18,13 @@ const crateFakeFile = createFakeFileCreator(
 )
 
 function runTests(streamCreator: StreamCreator<Options>) {
-  it('Should ignore empty file', () =>
+  it('should ignore empty file', () =>
     testTransformFile({
       streamCreator,
       file: createFile(),
     }))
 
-  it('Should add banner', () =>
+  it('should add banner', () =>
     testTransformFile({
       streamCreator,
       file: crateFakeFile(),
@@ -33,7 +33,7 @@ function runTests(streamCreator: StreamCreator<Options>) {
       },
     }))
 
-  it('Should add banner - function', () =>
+  it('should add banner - function', () =>
     testTransformFile({
       streamCreator,
       file: crateFakeFile(),
@@ -44,7 +44,7 @@ function runTests(streamCreator: StreamCreator<Options>) {
       },
     }))
 
-  it('Should add footer', () =>
+  it('should add footer', () =>
     testTransformFile({
       file: crateFakeFile(),
       pluginOptions: {
@@ -53,7 +53,7 @@ function runTests(streamCreator: StreamCreator<Options>) {
       streamCreator,
     }))
 
-  it('Should add footer - function', () =>
+  it('should add footer - function', () =>
     testTransformFile({
       streamCreator,
       file: crateFakeFile(),
@@ -62,7 +62,13 @@ function runTests(streamCreator: StreamCreator<Options>) {
       },
     }))
 
-  it('Should verbose work', () =>
+  it('should not change file when banner/footer are missing', () =>
+    testTransformFile({
+      streamCreator,
+      file: crateFakeFile(),
+    }))
+
+  it('should verbose work', () =>
     testTransformFile({
       streamCreator,
       file: crateFakeFile(),

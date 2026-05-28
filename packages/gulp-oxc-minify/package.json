@@ -50,11 +50,11 @@
     "@ntnyq/logger": "catalog:",
     "@types/js-beautify": "^1.14.3",
     "@types/through2": "catalog:",
-    "oxc-minify": "^0.127.0",
+    "oxc-minify": "^0.133.0",
     "plugin-error": "catalog:",
     "through2": "catalog:"
   },
   "engines": {
-    "node": ">=20.19.0"
+    "node": "^22.19.0 || >=24.11.0"
   }
 }

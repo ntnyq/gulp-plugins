@@ -15,19 +15,19 @@ const createFakeFile = createFakeFileCreator(
 
 function runTests(streamCreator: StreamCreator<Options>) {
   describe('file', () => {
-    it('Should ignore empty file', () =>
+    it('should ignore empty file', () =>
       testTransformFile({
         streamCreator,
         file: createFile(),
       }))
 
-    it('Should format my HTML files as expected', () =>
+    it('should format my HTML files as expected', () =>
       testTransformFile({
         streamCreator,
         file: createFakeFile(),
       }))
 
-    it('Should works well when option verbose set', () =>
+    it('should works well when option verbose set', () =>
       testTransformFile({
         streamCreator,
         file: createFakeFile(),
@@ -38,10 +38,17 @@ function runTests(streamCreator: StreamCreator<Options>) {
   })
 
   describe('stream', () => {
-    it('Should format my HTML files', () =>
+    it('should format my HTML files', () =>
       testTransformStream({
         streamCreator,
         file: createFakeFile(),
+      }))
+
+    it('should format multi-chunk HTML stream', () =>
+      testTransformStream({
+        streamCreator,
+        file: createFakeFile(),
+        streamChunkSize: 8,
       }))
   })
 }

@@ -1,11 +1,10 @@
 import { Buffer } from 'node:buffer'
-import { relative } from 'node:path'
+import path from 'node:path'
 import process from 'node:process'
-import type { Transform } from 'node:stream'
+import type { Transform, TransformCallback } from 'node:stream'
 import { c, createLogger } from '@ntnyq/logger'
 import PluginError from 'plugin-error'
 import through from 'through2'
-import type { TransformCallback } from 'through2'
 import type Vinyl from 'vinyl'
 
 export interface Options {
@@ -49,21 +48,37 @@ export const addBannerOrFooter = (options: Options = {}): Transform => {
 
     if (options.verbose) {
       logger.info(
-        `${c.yellow(PLUGIN_NAME)}: ${c.green(relative(rootDir, file.path))}`,
+        `${c.yellow(PLUGIN_NAME)}: ${c.green(path.relative(rootDir, file.path))}`,
       )
     }
 
-    const contents = Buffer.from(
-      [
-        typeof options.banner === 'function'
-          ? options.banner(file)
-          : options.banner,
-        file.contents?.toString() ?? '',
-        typeof options.footer === 'function'
-          ? options.footer(file)
-          : options.footer,
-      ].join('\n'),
-    )
+    const banner =
+      typeof options.banner === 'function'
+        ? options.banner(file)
+        : options.banner
+    const footer =
+      typeof options.footer === 'function'
+        ? options.footer(file)
+        : options.footer
+    // oxlint-disable-next-line no-undefined
+    const hasBanner = banner !== null && banner !== undefined
+    // oxlint-disable-next-line no-undefined
+    const hasFooter = footer !== null && footer !== undefined
+
+    if (!hasBanner && !hasFooter) {
+      return cb(null, file)
+    }
+
+    const parts: string[] = []
+    if (hasBanner) {
+      parts.push(banner)
+    }
+    parts.push(file.contents?.toString() ?? '')
+    if (hasFooter) {
+      parts.push(footer)
+    }
+
+    const contents = Buffer.from(parts.join('\n'))
 
     file.contents = contents
 

@@ -9,32 +9,30 @@
     "format:check": "oxfmt --check",
     "lint": "oxlint",
     "prepare": "husky",
-    "release": "run-s release:check build release:publish",
-    "release:check": "run-s format:check lint typecheck test",
-    "release:publish": "changeset publish",
-    "release:version": "changeset version",
+    "publish": "pnpm run build && changeset publish",
     "test": "vitest",
-    "typecheck": "tsgo --noEmit"
+    "typecheck": "tsgo --noEmit",
+    "version": "changeset version"
   },
   "devDependencies": {
-    "@changesets/changelog-github": "^0.6.0",
+    "@changesets/changelog-github": "^0.7.0",
     "@changesets/cli": "^2.31.0",
     "@types/through2": "catalog:",
     "@types/vinyl": "catalog:",
-    "@typescript/native-preview": "^7.0.0-dev.20260426.1",
+    "@typescript/native-preview": "^7.0.0-dev.20260527.2",
     "husky": "^9.1.7",
     "nano-staged": "^1.0.2",
-    "npm-run-all2": "^8.0.4",
-    "oxfmt": "^0.46.0",
-    "oxlint": "^1.61.0",
+    "npm-run-all2": "^9.0.1",
+    "oxfmt": "^0.52.0",
+    "oxlint": "^1.67.0",
     "through2": "catalog:",
-    "tsdown": "^0.21.10",
+    "tsdown": "^0.22.0",
     "vinyl": "catalog:",
-    "vitest": "^4.1.5"
+    "vitest": "^4.1.7"
   },
   "nano-staged": {
     "*.{js,ts,mjs,tsx}": "oxlint --fix",
     "*": "oxfmt --no-error-on-unmatched-pattern"
   },
-  "packageManager": "pnpm@10.33.2"
+  "packageManager": "pnpm@11.4.0"
 }

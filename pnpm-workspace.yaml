@@ -1,11 +1,15 @@
 packages:
   - packages/*
+
+allowBuilds:
+  esbuild: true
+
 catalog:
   '@ntnyq/logger': ^0.2.0
   '@types/through2': ^2.0.41
   '@types/vinyl': ^2.0.12
   plugin-error: ^2.0.1
-  through2: ^4.0.2
+  through2: ^5.0.1
   vinyl: ^3.0.1
-onlyBuiltDependencies:
-  - esbuild
+
+minimumReleaseAge: 0

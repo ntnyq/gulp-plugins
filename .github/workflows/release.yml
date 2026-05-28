@@ -36,7 +36,7 @@ jobs:
         with:
           commit: 'chore: bump version'
           title: 'chore: bump version'
-          publish: pnpm run release
-          version: pnpm run release:version
+          publish: pnpm run publish
+          version: pnpm run version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

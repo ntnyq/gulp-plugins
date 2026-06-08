@@ -26,7 +26,7 @@
     "oxfmt": "^0.52.0",
     "oxlint": "^1.67.0",
     "through2": "catalog:",
-    "tsdown": "^0.22.0",
+    "tsdown": "^0.22.1",
     "vinyl": "catalog:",
     "vitest": "^4.1.7"
   },
@@ -34,5 +34,5 @@
     "*.{js,ts,mjs,tsx}": "oxlint --fix",
     "*": "oxfmt --no-error-on-unmatched-pattern"
   },
-  "packageManager": "pnpm@11.4.0"
+  "packageManager": "pnpm@11.5.0"
 }

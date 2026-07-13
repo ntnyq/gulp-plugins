@@ -10,8 +10,8 @@ catalogs:
       specifier: ^0.2.0
       version: 0.2.0
     '@types/through2':
-      specifier: ^2.0.41
-      version: 2.0.41
+      specifier: ^5.0.0
+      version: 5.0.0
     '@types/vinyl':
       specifier: ^2.0.12
       version: 2.0.12
@@ -37,7 +37,7 @@ importers:
         version: 2.31.0(@types/node@25.9.1)
       '@types/through2':
         specifier: 'catalog:'
-        version: 2.0.41
+        version: 5.0.0
       '@types/vinyl':
         specifier: 'catalog:'
         version: 2.0.12
@@ -79,7 +79,7 @@ importers:
         version: 0.2.0
       '@types/through2':
         specifier: 'catalog:'
-        version: 2.0.41
+        version: 5.0.0
       '@types/vinyl':
         specifier: 'catalog:'
         version: 2.0.12
@@ -100,7 +100,7 @@ importers:
         version: 0.2.0
       '@types/through2':
         specifier: 'catalog:'
-        version: 2.0.41
+        version: 5.0.0
       diffable-html:
         specifier: ^6.0.1
         version: 6.0.1
@@ -121,7 +121,7 @@ importers:
         version: 1.14.3
       '@types/through2':
         specifier: 'catalog:'
-        version: 2.0.41
+        version: 5.0.0
       js-beautify:
         specifier: ^1.15.4
         version: 1.15.4
@@ -142,7 +142,7 @@ importers:
         version: 1.14.3
       '@types/through2':
         specifier: 'catalog:'
-        version: 2.0.41
+        version: 5.0.0
       oxc-minify:
         specifier: ^0.134.0
         version: 0.134.0
@@ -163,7 +163,7 @@ importers:
         version: 0.10.0
       '@types/through2':
         specifier: 'catalog:'
-        version: 2.0.41
+        version: 5.0.0
       plugin-error:
         specifier: 'catalog:'
         version: 2.0.1
@@ -976,8 +976,9 @@ packages:
   '@types/responselike@1.0.3':
     resolution: {integrity: sha512-H/+L+UkTV33uf49PH5pCAUBVPNj2nDBXTN+qS1dOwyyg24l3CcicicCA7ca+HMvJBZcFgl5r8e+RR6elsb4Lyw==}
 
-  '@types/through2@2.0.41':
-    resolution: {integrity: sha512-ryQ0tidWkb1O1JuYvWKyMLYEtOWDqF5mHerJzKz/gQpoAaJq2l/dsMPBF0B5BNVT34rbARYJ5/tsZwLfUi2kwQ==}
+  '@types/through2@5.0.0':
+    resolution: {integrity: sha512-YyU370wADw76AgGLLRmlAp4wPNYXcQBCqvugUE3MjiVdp/7JSEYjt+LyH1wRBkfWNIIZenXsNISDSwGFNITN0g==}
+    deprecated: This is a stub types definition. through2 provides its own type definitions, so you do not need this installed.
 
   '@types/unist@2.0.11':
     resolution: {integrity: sha512-CmBKiL6NNo/OqgmMn95Fk9Whlp2mtvIv+KNpQKN2F4SjvrEesubTRWGYSg+BnWZOnlCaSTU1sMpsBOzgbYhnsA==}
@@ -3607,9 +3608,9 @@ snapshots:
     dependencies:
       '@types/node': 25.9.1
 
-  '@types/through2@2.0.41':
+  '@types/through2@5.0.0':
     dependencies:
-      '@types/node': 25.9.1
+      through2: 5.0.1
 
   '@types/unist@2.0.11': {}
 

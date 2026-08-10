@@ -22,9 +22,9 @@ export interface Options {
   verbose?: boolean
 }
 
-const rootDir = process.cwd()
-const PLUGIN_NAME = 'gulp-diffable-html'
-const logger = createLogger({ time: 'HH:mm:ss' })
+const rootDir = process.cwd(),
+ PLUGIN_NAME = 'gulp-diffable-html',
+ logger = createLogger({ time: 'HH:mm:ss' })
 
 type DiffableContents = Buffer | null
 
@@ -60,8 +60,8 @@ export const diffableHTML = (options: Options = {}): Transform =>
         }
         return cb(null, file)
       } catch (error: unknown) {
-        const errorOptions = { fileName: file.path }
-        const pluginError = new PluginError(
+        const errorOptions = { fileName: file.path },
+         pluginError = new PluginError(
           PLUGIN_NAME,
           error as Error,
           errorOptions,

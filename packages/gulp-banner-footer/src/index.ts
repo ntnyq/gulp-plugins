@@ -26,9 +26,9 @@ export interface Options {
   verbose?: boolean
 }
 
-const rootDir = process.cwd()
-const PLUGIN_NAME = 'gulp-banner-footer'
-const logger = createLogger({ time: 'HH:mm:ss' })
+const rootDir = process.cwd(),
+  PLUGIN_NAME = 'gulp-banner-footer',
+  logger = createLogger({ time: 'HH:mm:ss' })
 
 export const addBannerOrFooter = (options: Options = {}): Transform => {
   function transform(file: Vinyl, _: unknown, cb: TransformCallback) {
@@ -37,12 +37,12 @@ export const addBannerOrFooter = (options: Options = {}): Transform => {
     }
 
     if (file.isStream()) {
-      const errorOptions = { fileName: file.path }
-      const error = new PluginError(
-        PLUGIN_NAME,
-        new Error('Streaming not supported'),
-        errorOptions,
-      )
+      const errorOptions = { fileName: file.path },
+        error = new PluginError(
+          PLUGIN_NAME,
+          new Error('Streaming not supported'),
+          errorOptions,
+        )
       return cb(error)
     }
 
@@ -53,17 +53,17 @@ export const addBannerOrFooter = (options: Options = {}): Transform => {
     }
 
     const banner =
-      typeof options.banner === 'function'
-        ? options.banner(file)
-        : options.banner
-    const footer =
-      typeof options.footer === 'function'
-        ? options.footer(file)
-        : options.footer
-    // oxlint-disable-next-line no-undefined
-    const hasBanner = banner !== null && banner !== undefined
-    // oxlint-disable-next-line no-undefined
-    const hasFooter = footer !== null && footer !== undefined
+        typeof options.banner === 'function'
+          ? options.banner(file)
+          : options.banner,
+      footer =
+        typeof options.footer === 'function'
+          ? options.footer(file)
+          : options.footer,
+      // oxlint-disable-next-line no-undefined
+      hasBanner = banner !== null && banner !== undefined,
+      // oxlint-disable-next-line no-undefined
+      hasFooter = footer !== null && footer !== undefined
 
     if (!hasBanner && !hasFooter) {
       return cb(null, file)

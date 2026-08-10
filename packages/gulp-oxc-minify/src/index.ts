@@ -20,12 +20,11 @@ export interface Options extends MinifyOptions {
 
 type TransformableContent = Buffer | null
 
-const rootDir = process.cwd()
-const PLUGIN_NAME = 'gulp-oxc-minify'
-const DUMMY_FILENAME = 'dummy.ts'
-const DEFAULT_OPTIONS: Options = {}
-
-const logger = createLogger({ time: 'HH:mm:ss' })
+const rootDir = process.cwd(),
+  DUMMY_FILENAME = 'dummy.ts',
+  PLUGIN_NAME = 'gulp-oxc-minify',
+  DEFAULT_OPTIONS: Options = {},
+  logger = createLogger({ time: 'HH:mm:ss' })
 
 export const oxcMinify = (options: Options = {}): Transform => {
   options = { ...DEFAULT_OPTIONS, ...options }
@@ -44,11 +43,11 @@ export const oxcMinify = (options: Options = {}): Transform => {
     ) {
       try {
         const minifyResult = minifySync(
-          file.isStream() ? DUMMY_FILENAME : file.path,
-          buffer?.toString() ?? '',
-          options,
-        )
-        const contents = Buffer.from(minifyResult.code)
+            file.isStream() ? DUMMY_FILENAME : file.path,
+            buffer?.toString() ?? '',
+            options,
+          ),
+          contents = Buffer.from(minifyResult.code)
 
         if (streamInput) {
           const outputStream = through()
@@ -59,12 +58,12 @@ export const oxcMinify = (options: Options = {}): Transform => {
         }
         return cb(null, file)
       } catch (error: unknown) {
-        const errorOptions = { ...options, fileName: file.path }
-        const pluginError = new PluginError(
-          PLUGIN_NAME,
-          error as Error,
-          errorOptions,
-        )
+        const errorOptions = { ...options, fileName: file.path },
+          pluginError = new PluginError(
+            PLUGIN_NAME,
+            error as Error,
+            errorOptions,
+          )
         return cb(pluginError)
       }
     }

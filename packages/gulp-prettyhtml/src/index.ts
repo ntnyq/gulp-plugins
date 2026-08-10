@@ -34,9 +34,9 @@ export interface Options {
 
 type FormatableContents = Buffer | null
 
-const rootDir = process.cwd()
-const PLUGIN_NAME = 'gulp-prettyhtml'
-const logger = createLogger({ time: 'HH:mm:ss' })
+const rootDir = process.cwd(),
+  PLUGIN_NAME = 'gulp-prettyhtml',
+  logger = createLogger({ time: 'HH:mm:ss' })
 
 /**
  * format HTML via `@starptech/prettyhtml`
@@ -70,12 +70,12 @@ export const prettyHTML = (options: Options = {}): Transform =>
         }
         return cb(null, file)
       } catch (error: unknown) {
-        const errorOptions = { ...options, fileName: file.path }
-        const pluginError = new PluginError(
-          PLUGIN_NAME,
-          error as Error,
-          errorOptions,
-        )
+        const errorOptions = { ...options, fileName: file.path },
+          pluginError = new PluginError(
+            PLUGIN_NAME,
+            error as Error,
+            errorOptions,
+          )
         return cb(pluginError)
       }
     }

@@ -28,7 +28,7 @@
     "through2": "catalog:",
     "tsdown": "^0.22.2",
     "vinyl": "catalog:",
-    "vitest": "^4.1.8"
+    "vitest": "^5.0.0"
   },
   "nano-staged": {
     "*.{js,ts,mjs,tsx}": "oxlint --fix",

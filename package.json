@@ -15,8 +15,8 @@
     "version": "changeset version"
   },
   "devDependencies": {
-    "@changesets/changelog-github": "^0.7.0",
-    "@changesets/cli": "^2.31.1",
+    "@changesets/changelog-github": "^1.0.0",
+    "@changesets/cli": "^3.0.1",
     "@types/through2": "catalog:",
     "@types/vinyl": "catalog:",
     "@typescript/native-preview": "^7.0.0-dev.20260707.2",
@@ -28,11 +28,11 @@
     "through2": "catalog:",
     "tsdown": "^0.22.14",
     "vinyl": "catalog:",
-    "vitest": "^4.1.10"
+    "vitest": "^5.0.0"
   },
   "nano-staged": {
     "*.{js,ts,mjs,tsx}": "oxlint --fix",
     "*": "oxfmt --no-error-on-unmatched-pattern"
   },
-  "packageManager": "pnpm@11.20.0"
+  "packageManager": "pnpm@12.1.0"
 }

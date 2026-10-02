@@ -10,12 +10,11 @@ const BANNER = `
 /**
  * @license MIT
  */
-`
-const FOOTER = `// @license MIT`
-
-const crateFakeFile = createFakeFileCreator(
-  'tests/gulp-banner-footer/fixtures/app.ts',
-)
+`,
+  FOOTER = `// @license MIT`,
+  crateFakeFile = createFakeFileCreator(
+    'tests/gulp-banner-footer/fixtures/app.ts',
+  )
 
 function runTests(streamCreator: StreamCreator<Options>) {
   it('should ignore empty file', () =>

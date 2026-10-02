@@ -19,15 +19,15 @@ export interface Options extends HTMLBeautifyOptions {
 type FormatableContents = Buffer | null
 
 const rootDir = process.cwd(),
- PLUGIN_NAME = 'gulp-format-html',
- DEFAULT_OPTIONS: HTMLBeautifyOptions = {
-  indent_size: 2,
-  inline: [],
-  content_unformatted: ['pre', 'textarea', 'script'],
-},
- logger = createLogger({ time: 'HH:mm:ss' }),
-// Fix import html in esm
- beautifyHtml = jsBeautify.html
+  PLUGIN_NAME = 'gulp-format-html',
+  DEFAULT_OPTIONS: HTMLBeautifyOptions = {
+    indent_size: 2,
+    inline: [],
+    content_unformatted: ['pre', 'textarea', 'script'],
+  },
+  logger = createLogger({ time: 'HH:mm:ss' }),
+  // Fix import html in esm
+  beautifyHtml = jsBeautify.html
 
 /**
  * format HTML via `js-beautify`
@@ -64,11 +64,11 @@ export const formatHTML = (options: Options = {}): Transform => {
         return cb(null, file)
       } catch (error: unknown) {
         const errorOptions = { ...options, fileName: file.path },
-         pluginError = new PluginError(
-          PLUGIN_NAME,
-          error as Error,
-          errorOptions,
-        )
+          pluginError = new PluginError(
+            PLUGIN_NAME,
+            error as Error,
+            errorOptions,
+          )
         return cb(pluginError)
       }
     }

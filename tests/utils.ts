@@ -13,8 +13,8 @@ import { resolve as resolvePath } from '../scripts/utils'
  * @returns fake file creator
  */
 export function createFakeFileCreator(fixture: string) {
-  const filePath = resolvePath(fixture)
-  const fileContent = fs.readFileSync(filePath)
+  const filePath = resolvePath(fixture),
+   fileContent = fs.readFileSync(filePath)
   return () =>
     new File({
       path: filePath,
@@ -94,8 +94,8 @@ export function testTransformStream<
   return new Promise<void>((resolve, reject) => {
     const fixture = createFile({
       contents: toStream(options.file.contents, options.streamChunkSize),
-    })
-    const stream = options.streamCreator(options.pluginOptions)
+    }),
+     stream = options.streamCreator(options.pluginOptions)
     let emittedFiles = 0
 
     stream.on('error', reject)

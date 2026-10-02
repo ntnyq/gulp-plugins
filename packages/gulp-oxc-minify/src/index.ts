@@ -20,12 +20,12 @@ export interface Options extends MinifyOptions {
 
 type TransformableContent = Buffer | null
 
-const rootDir = process.cwd()
-const PLUGIN_NAME = 'gulp-oxc-minify'
-const DUMMY_FILENAME = 'dummy.ts'
-const DEFAULT_OPTIONS: Options = {}
+const rootDir = process.cwd(),
+ PLUGIN_NAME = 'gulp-oxc-minify',
+ DUMMY_FILENAME = 'dummy.ts',
+ DEFAULT_OPTIONS: Options = {},
 
-const logger = createLogger({ time: 'HH:mm:ss' })
+ logger = createLogger({ time: 'HH:mm:ss' })
 
 export const oxcMinify = (options: Options = {}): Transform => {
   options = { ...DEFAULT_OPTIONS, ...options }
@@ -47,8 +47,8 @@ export const oxcMinify = (options: Options = {}): Transform => {
           file.isStream() ? DUMMY_FILENAME : file.path,
           buffer?.toString() ?? '',
           options,
-        )
-        const contents = Buffer.from(minifyResult.code)
+        ),
+         contents = Buffer.from(minifyResult.code)
 
         if (streamInput) {
           const outputStream = through()
@@ -59,8 +59,8 @@ export const oxcMinify = (options: Options = {}): Transform => {
         }
         return cb(null, file)
       } catch (error: unknown) {
-        const errorOptions = { ...options, fileName: file.path }
-        const pluginError = new PluginError(
+        const errorOptions = { ...options, fileName: file.path },
+         pluginError = new PluginError(
           PLUGIN_NAME,
           error as Error,
           errorOptions,

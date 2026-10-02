@@ -10,10 +10,10 @@ const BANNER = `
 /**
  * @license MIT
  */
-`
-const FOOTER = `// @license MIT`
+`,
+ FOOTER = `// @license MIT`,
 
-const crateFakeFile = createFakeFileCreator(
+ crateFakeFile = createFakeFileCreator(
   'tests/gulp-banner-footer/fixtures/app.ts',
 )
 
